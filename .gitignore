@@ -1,0 +1,37 @@
+# Local executables and runtime state
+bin/
+data/*
+!data/
+!data/xhs-feed.json
+output/*
+logs/
+work/
+scripts/__pycache__/
+
+# Authentication, cookies, browser profiles and caches
+cookies/
+*cookies*
+*cookie*
+*profile*
+*browser*
+data/home/
+data/config/
+data/cache/
+data/localappdata/
+data/appdata/
+data/tmp/
+
+# Logs, databases, temporary files and local secrets
+*.log
+*.db
+*.sqlite
+*.sqlite3
+*.tmp
+.env
+.env.*
+*token*
+*credential*
+*secret*
+*session*
+credentials/
+secrets/
