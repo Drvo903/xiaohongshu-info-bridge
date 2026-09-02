@@ -20,7 +20,8 @@ D:\XHSCollector\
    ├─ collector.py              只读 MCP 采集器
    ├─ login.ps1                 手动扫码登录/重新登录
    ├─ run_collector.ps1         启动 MCP、采集、上传、清理进程
-   └─ sync_github.ps1           校验并上传 data\xhs-feed.json
+   ├─ sync_github.ps1           校验并上传 data\xhs-feed.json
+   └─ install_task.ps1          创建/更新 Windows 定时任务
 ```
 
 所有 Cookie、浏览器 profile、缓存、临时目录均应位于 `D:\XHSCollector\data\`。GitHub 只保存 `README.md`、必要的公开脚本/关键词配置，以及 `data/xhs-feed.json`。
@@ -77,6 +78,14 @@ Disable-ScheduledTask -TaskName XHSCollector-Workday
 Enable-ScheduledTask -TaskName XHSCollector-Workday
 Get-ScheduledTask -TaskName XHSCollector-Workday
 ```
+
+安装或更新定时任务：
+
+```powershell
+pwsh.exe -NoProfile -ExecutionPolicy Bypass -File D:\XHSCollector\scripts\install_task.ps1
+```
+
+任务使用当前 Windows 登录用户、默认本地时区，在工作日 09:30、13:30、16:30 触发；不唤醒关机电脑、不补跑错过的任务、不允许并发实例，失败最多延迟重试一次。
 
 ## GitHub 数据地址
 

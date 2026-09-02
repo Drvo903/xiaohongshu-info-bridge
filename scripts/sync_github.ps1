@@ -3,6 +3,24 @@ $root = [IO.Path]::GetFullPath((Split-Path -Parent $PSScriptRoot))
 $outputPath = Join-Path $root "output\xhs-feed.json"
 $publicPath = Join-Path $root "data\xhs-feed.json"
 
+$gitCommand = Get-Command git.exe -ErrorAction SilentlyContinue |
+    Select-Object -First 1
+if (-not $gitCommand) {
+    foreach ($candidate in @(
+        "C:\Program Files\Git\cmd\git.exe",
+        "C:\Users\87134\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\git\cmd\git.exe"
+    )) {
+        if (Test-Path -LiteralPath $candidate) {
+            $gitCommand = Get-Command $candidate
+            break
+        }
+    }
+}
+if (-not $gitCommand) {
+    throw "git.exe was not found"
+}
+$env:Path = "$(Split-Path $gitCommand.Source);$env:Path"
+
 if (-not (Test-Path -LiteralPath (Join-Path $root ".git"))) {
     throw "local Git repository is not initialized"
 }
