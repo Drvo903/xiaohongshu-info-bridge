@@ -466,6 +466,7 @@ def run(args: argparse.Namespace) -> int:
 
         seen_this_run: set[str] = set()
         detail_count = 0
+        detail_attempts = 0
         for index, keyword in enumerate(keywords):
             if stats.unique_seen >= args.max_total:
                 logger.info("MAX_TOTAL_LIMIT reached=%d", args.max_total)
@@ -533,7 +534,8 @@ def run(args: argparse.Namespace) -> int:
                         "first_seen_at": now_text,
                         "last_seen_at": now_text,
                     }
-                    if detail_count < args.max_details and feed.get("xsecToken") and feed.get("id"):
+                    if detail_attempts < args.max_details and feed.get("xsecToken") and feed.get("id"):
+                        detail_attempts += 1
                         time.sleep(random.uniform(args.detail_delay_min, args.detail_delay_max))
                         try:
                             detail_text = client.call_tool(
