@@ -2,7 +2,8 @@ param(
     [switch]$SkipGit,
     [int]$PerKeywordLimit = 10,
     [int]$MaxTotal = 80,
-    [int]$MaxDetails = 60,
+    [int]$MaxDetails = 20,
+    [int]$DetailTimeout = 45,
     [int]$MaxAgeDays = 60
 )
 
@@ -181,6 +182,7 @@ try {
         "--per-keyword-limit", $PerKeywordLimit,
         "--max-total", $MaxTotal,
         "--max-details", $MaxDetails,
+        "--detail-timeout", $DetailTimeout,
         "--max-age-days", $MaxAgeDays
     )
     $collector = Start-Process -FilePath $python `

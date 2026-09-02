@@ -42,7 +42,7 @@ $settings = New-ScheduledTaskSettingsSet `
 $userId = "$env:USERDOMAIN\$env:USERNAME"
 $principal = New-ScheduledTaskPrincipal `
     -UserId $userId `
-    -LogonType InteractiveToken `
+    -LogonType Interactive `
     -RunLevel Limited
 
 Register-ScheduledTask `

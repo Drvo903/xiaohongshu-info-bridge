@@ -28,7 +28,8 @@ DEFAULT_MCP_URL = "http://127.0.0.1:18060/mcp"
 DEFAULT_MAX_AGE_DAYS = 60
 DEFAULT_PER_KEYWORD_LIMIT = 10
 DEFAULT_MAX_TOTAL = 80
-DEFAULT_MAX_DETAILS = 60
+DEFAULT_MAX_DETAILS = 20
+DEFAULT_DETAIL_TIMEOUT = 45
 
 SENSITIVE_KEY_RE = re.compile(
     r"(cookie|token|session|authorization|password|secret|credential|"
@@ -226,7 +227,12 @@ class MCPClient:
         if not self.session_id:
             raise MCPToolError("MCP did not provide a session id")
 
-    def call_tool(self, name: str, arguments: dict[str, Any] | None = None) -> str:
+    def call_tool(
+        self,
+        name: str,
+        arguments: dict[str, Any] | None = None,
+        timeout: int | None = None,
+    ) -> str:
         self.request_id += 1
         response = self._post(
             {
@@ -234,7 +240,8 @@ class MCPClient:
                 "id": self.request_id,
                 "method": "tools/call",
                 "params": {"name": name, "arguments": arguments or {}},
-            }
+            },
+            timeout=timeout,
         )
         return text_from_tool_response(response)
 
@@ -532,6 +539,7 @@ def run(args: argparse.Namespace) -> int:
                             detail_text = client.call_tool(
                                 "get_feed_detail",
                                 {"feed_id": feed["id"], "xsec_token": feed["xsecToken"]},
+                                timeout=args.detail_timeout,
                             )
                             detail_record = detail_note(json_from_tool_text(detail_text))
                             merge_non_null(record, detail_record)
@@ -629,6 +637,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--per-keyword-limit", type=int, default=DEFAULT_PER_KEYWORD_LIMIT)
     parser.add_argument("--max-total", type=int, default=DEFAULT_MAX_TOTAL)
     parser.add_argument("--max-details", type=int, default=DEFAULT_MAX_DETAILS)
+    parser.add_argument("--detail-timeout", type=int, default=DEFAULT_DETAIL_TIMEOUT)
     parser.add_argument("--max-age-days", type=int, default=DEFAULT_MAX_AGE_DAYS)
     parser.add_argument("--keyword-delay-min", type=float, default=2.0)
     parser.add_argument("--keyword-delay-max", type=float, default=5.0)

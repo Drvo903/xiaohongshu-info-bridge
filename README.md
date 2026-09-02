@@ -36,7 +36,7 @@ pwsh.exe -NoProfile -ExecutionPolicy Bypass -File D:\XHSCollector\scripts\run_co
 
 ```powershell
 pwsh.exe -NoProfile -ExecutionPolicy Bypass -File D:\XHSCollector\scripts\run_collector.ps1 `
-  -SkipGit -PerKeywordLimit 3 -MaxTotal 3 -MaxDetails 3
+  -SkipGit -PerKeywordLimit 3 -MaxTotal 3 -MaxDetails 3 -DetailTimeout 45
 ```
 
 任务结束后，MCP 和本轮 Chromium 会自动关闭；清理只按本轮 MCP 进程树和本轮临时目录识别，不会结束日常 Chrome/Edge。
@@ -57,7 +57,7 @@ pwsh.exe -NoProfile -ExecutionPolicy Bypass -File D:\XHSCollector\scripts\login.
 D:\XHSCollector\config\keywords.json
 ```
 
-文件必须是字符串数组。采集器默认每个关键词最多取 10 条，本轮最多处理 80 条，详情请求最多 60 条，并在关键词和详情请求之间等待。
+文件必须是字符串数组。采集器默认每个关键词最多取 10 条，本轮最多处理 80 条，详情请求最多 20 条，单次详情请求超时 45 秒，并在关键词和详情请求之间等待。详情超时只记录日志，不覆盖已有成功数据。
 
 ## 查看日志和手动触发
 
