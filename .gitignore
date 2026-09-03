@@ -3,6 +3,8 @@ bin/
 data/*
 !data/
 !data/xhs-feed.json
+!data/latest.json
+!data/status.json
 output/*
 logs/
 work/

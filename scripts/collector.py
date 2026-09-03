@@ -16,7 +16,7 @@ import sys
 import time
 import urllib.error
 import urllib.request
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
 from logging.handlers import RotatingFileHandler
 from pathlib import Path
@@ -30,6 +30,9 @@ DEFAULT_PER_KEYWORD_LIMIT = 10
 DEFAULT_MAX_TOTAL = 80
 DEFAULT_MAX_DETAILS = 20
 DEFAULT_DETAIL_TIMEOUT = 45
+LATEST_WINDOW_DAYS = 7
+LATEST_MAX_RESULTS = 200
+BEIJING_TZ = timezone(timedelta(hours=8))
 
 SENSITIVE_KEY_RE = re.compile(
     r"(cookie|token|session|authorization|password|secret|credential|"
@@ -62,6 +65,13 @@ def utc_now() -> datetime:
 
 def iso_now() -> str:
     return utc_now().isoformat().replace("+00:00", "Z")
+
+
+def iso_beijing(now: datetime | None = None) -> str:
+    value = now or utc_now()
+    if value.tzinfo is None:
+        value = value.replace(tzinfo=timezone.utc)
+    return value.astimezone(BEIJING_TZ).isoformat()
 
 
 def safe_error(value: Any) -> str:
@@ -269,6 +279,29 @@ def timestamp_to_iso(value: Any) -> str | None:
         return None
 
 
+def parse_iso_datetime(value: Any) -> datetime | None:
+    if not isinstance(value, str) or not value.strip():
+        return None
+    text = value.strip()
+    if text.endswith("Z"):
+        text = text[:-1] + "+00:00"
+    try:
+        parsed = datetime.fromisoformat(text)
+    except ValueError:
+        return None
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=timezone.utc)
+    return parsed.astimezone(timezone.utc)
+
+
+def record_datetime(record: dict[str, Any]) -> datetime | None:
+    for field in ("published_at", "last_seen_at", "first_seen_at"):
+        parsed = parse_iso_datetime(record.get(field))
+        if parsed is not None:
+            return parsed
+    return None
+
+
 def clean_summary(value: Any) -> str | None:
     if not isinstance(value, str):
         return None
@@ -393,37 +426,196 @@ def trim_history(
     cutoff = now - timedelta(days=max_age_days)
     kept: dict[str, dict[str, Any]] = {}
     for key, record in records.items():
-        candidate = record.get("published_at") or record.get("last_seen_at")
-        try:
-            when = datetime.fromisoformat(str(candidate).replace("Z", "+00:00"))
-        except (TypeError, ValueError):
-            when = now
+        when = record_datetime(record) or now
         if when >= cutoff:
             kept[key] = record
     return kept
 
 
-def write_output(path: Path, records: dict[str, dict[str, Any]], now: datetime) -> None:
+def atomic_write_json(path: Path, document: dict[str, Any]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    ordered = list(records.values())
-    ordered.sort(
-        key=lambda item: (
-            item.get("published_at") or "",
-            item.get("last_seen_at") or "",
-        ),
+    temp_path = path.with_name(path.name + ".tmp")
+    try:
+        temp_path.write_text(
+            json.dumps(document, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
+        json.loads(temp_path.read_text(encoding="utf-8"))
+        temp_path.replace(path)
+    finally:
+        if temp_path.exists():
+            temp_path.unlink()
+
+
+def ordered_records(records: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
+    return sorted(
+        records.values(),
+        key=lambda item: record_datetime(item) or datetime.min.replace(tzinfo=timezone.utc),
         reverse=True,
     )
-    document = {
-        "updated_at": now.isoformat().replace("+00:00", "Z"),
-        "source": "xiaohongshu",
-        "results": ordered,
-    }
-    temp_path = path.with_name(path.name + ".tmp")
-    temp_path.write_text(
-        json.dumps(document, ensure_ascii=False, indent=2) + "\n",
-        encoding="utf-8",
+
+
+def write_output(path: Path, records: dict[str, dict[str, Any]], now: datetime) -> None:
+    atomic_write_json(
+        path,
+        {
+            "updated_at": now.isoformat().replace("+00:00", "Z"),
+            "source": "xiaohongshu",
+            "results": ordered_records(records),
+        },
     )
-    temp_path.replace(path)
+
+
+def read_json_document(path: Path) -> dict[str, Any] | None:
+    if not path.exists():
+        return None
+    try:
+        value = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return None
+    return value if isinstance(value, dict) else None
+
+
+def result_count_from_file(path: Path) -> int:
+    document = read_json_document(path)
+    results = document.get("results") if document else None
+    return len(results) if isinstance(results, list) else 0
+
+
+def previous_github_upload_status(root: Path) -> str:
+    status_path = root / "data" / "status.json"
+    previous = read_json_document(status_path) or {}
+    for field in ("github_upload_status", "last_github_upload_status"):
+        value = previous.get(field)
+        if value in {"ok", "failed", "pending", "unknown"}:
+            return value
+
+    run_log = root / "logs" / "run.log"
+    try:
+        lines = run_log.read_text(encoding="utf-8", errors="replace").splitlines()
+    except OSError:
+        return "unknown"
+    for line in reversed(lines):
+        if "GITHUB_UPLOAD_SUCCESS" in line:
+            return "ok"
+        if "GITHUB_UPLOAD_FAILED" in line:
+            return "failed"
+    return "unknown"
+
+
+def build_latest_document(
+    records: dict[str, dict[str, Any]],
+    now: datetime,
+) -> dict[str, Any]:
+    cutoff = now - timedelta(days=LATEST_WINDOW_DAYS)
+    eligible = [
+        record
+        for record in records.values()
+        if (when := record_datetime(record)) is not None and when >= cutoff
+    ]
+    eligible.sort(
+        key=lambda item: record_datetime(item) or datetime.min.replace(tzinfo=timezone.utc),
+        reverse=True,
+    )
+    eligible = eligible[:LATEST_MAX_RESULTS]
+    return {
+        "updated_at": iso_beijing(now),
+        "source": "xiaohongshu",
+        "window_days": LATEST_WINDOW_DAYS,
+        "max_results": LATEST_MAX_RESULTS,
+        "result_count": len(eligible),
+        "results": eligible,
+    }
+
+
+def build_status_document(
+    root: Path,
+    *,
+    now: datetime,
+    collector_status: str,
+    login_status: str,
+    full_result_count: int,
+    latest_result_count: int,
+    failed_keywords: list[str],
+    warnings: list[str],
+    last_successful_run: str | None,
+) -> dict[str, Any]:
+    return {
+        "updated_at": iso_beijing(now),
+        "collector_status": collector_status,
+        "login_status": login_status,
+        "last_github_upload_status": previous_github_upload_status(root),
+        "full_result_count": full_result_count,
+        "latest_result_count": latest_result_count,
+        "latest_window_days": LATEST_WINDOW_DAYS,
+        "last_successful_run": last_successful_run,
+        "failed_keywords": failed_keywords,
+        "warnings": warnings,
+    }
+
+
+def write_public_views(
+    root: Path,
+    records: dict[str, dict[str, Any]],
+    now: datetime,
+    *,
+    collector_status: str,
+    login_status: str,
+    failed_keywords: list[str],
+    warnings: list[str],
+) -> tuple[int, int]:
+    latest_document = build_latest_document(records, now)
+    latest_path = root / "data" / "latest.json"
+    atomic_write_json(latest_path, latest_document)
+    latest_count = len(latest_document["results"])
+    status_document = build_status_document(
+        root,
+        now=now,
+        collector_status=collector_status,
+        login_status=login_status,
+        full_result_count=len(records),
+        latest_result_count=latest_count,
+        failed_keywords=failed_keywords,
+        warnings=warnings,
+        last_successful_run=iso_beijing(now),
+    )
+    atomic_write_json(root / "data" / "status.json", status_document)
+    return len(records), latest_count
+
+
+def write_failure_status(
+    root: Path,
+    now: datetime,
+    *,
+    login_status: str,
+    failed_keywords: list[str],
+    warnings: list[str],
+    logger: logging.Logger,
+) -> None:
+    output_path = root / "output" / "xhs-feed.json"
+    latest_path = root / "data" / "latest.json"
+    previous_status = read_json_document(root / "data" / "status.json") or {}
+    last_successful_run = previous_status.get("last_successful_run")
+    document = build_status_document(
+        root,
+        now=now,
+        collector_status="failed",
+        login_status=login_status,
+        full_result_count=result_count_from_file(output_path),
+        latest_result_count=result_count_from_file(latest_path),
+        failed_keywords=failed_keywords,
+        warnings=warnings,
+        last_successful_run=last_successful_run,
+    )
+    try:
+        atomic_write_json(root / "data" / "status.json", document)
+        logger.info(
+            "STATUS_WRITTEN collector_status=failed full=%d latest=%d",
+            document["full_result_count"],
+            document["latest_result_count"],
+        )
+    except Exception as exc:
+        logger.error("STATUS_WRITE_FAILED reason=%s", safe_error(exc))
 
 
 def load_keywords(path: Path) -> list[str]:
@@ -443,6 +635,7 @@ class RunStats:
     details_failed: int = 0
     newly_added: int = 0
     deduped: int = 0
+    failed_keywords: list[str] = field(default_factory=list)
 
 
 def run(args: argparse.Namespace) -> int:
@@ -462,6 +655,14 @@ def run(args: argparse.Namespace) -> int:
         login_text = client.call_tool("check_login_status")
         if not login_text or "已登录" not in login_text:
             logger.error("LOGIN_REQUIRED")
+            write_failure_status(
+                root,
+                started,
+                login_status="login_required",
+                failed_keywords=[],
+                warnings=["LOGIN_REQUIRED"],
+                logger=logger,
+            )
             return 20
 
         seen_this_run: set[str] = set()
@@ -572,19 +773,71 @@ def run(args: argparse.Namespace) -> int:
                 classified = classify_exception(exc)
                 if isinstance(classified, LoginRequired):
                     logger.error("LOGIN_REQUIRED keyword=%s", keyword)
+                    if keyword not in stats.failed_keywords:
+                        stats.failed_keywords.append(keyword)
+                    write_failure_status(
+                        root,
+                        started,
+                        login_status="login_required",
+                        failed_keywords=stats.failed_keywords,
+                        warnings=["LOGIN_REQUIRED"],
+                        logger=logger,
+                    )
                     return 20
                 if isinstance(classified, RiskControlTriggered):
                     logger.error("RISK_CONTROL_TRIGGERED keyword=%s", keyword)
+                    if keyword not in stats.failed_keywords:
+                        stats.failed_keywords.append(keyword)
+                    write_failure_status(
+                        root,
+                        started,
+                        login_status="ok",
+                        failed_keywords=stats.failed_keywords,
+                        warnings=["RISK_CONTROL_TRIGGERED"],
+                        logger=logger,
+                    )
                     return 21
                 stats.searches_failed += 1
+                if keyword not in stats.failed_keywords:
+                    stats.failed_keywords.append(keyword)
                 logger.warning("SEARCH_FAILED keyword=%s reason=%s", keyword, safe_error(classified))
 
         if stats.searches_ok == 0:
             logger.error("MCP_FAILED all searches failed; previous output preserved")
+            write_failure_status(
+                root,
+                started,
+                login_status="ok",
+                failed_keywords=stats.failed_keywords,
+                warnings=["ALL_SEARCHES_FAILED"],
+                logger=logger,
+            )
             return 22
 
         trimmed = trim_history(records, args.max_age_days, started)
         write_output(output_path, trimmed, started)
+        warnings: list[str] = []
+        if stats.failed_keywords:
+            warnings.append(
+                f"{len(stats.failed_keywords)} keyword(s) failed or timed out and were skipped"
+            )
+        if stats.details_failed:
+            warnings.append(f"{stats.details_failed} public detail request(s) failed or timed out")
+        _, latest_count = write_public_views(
+            root,
+            trimmed,
+            started,
+            collector_status="partial" if stats.failed_keywords else "ok",
+            login_status="ok",
+            failed_keywords=stats.failed_keywords,
+            warnings=warnings,
+        )
+        logger.info(
+            "PUBLIC_VIEWS_WRITTEN full=%d latest=%d collector_status=%s",
+            len(trimmed),
+            latest_count,
+            "partial" if stats.failed_keywords else "ok",
+        )
         logger.info(
             "TASK_END success searches_ok=%d searches_failed=%d returned=%d unique=%d "
             "new=%d deduped=%d details_ok=%d details_failed=%d records=%d",
@@ -609,6 +862,9 @@ def run(args: argparse.Namespace) -> int:
                     "new": stats.newly_added,
                     "deduped": stats.deduped,
                     "details_ok": stats.details_ok,
+                    "details_failed": stats.details_failed,
+                    "failed_keywords": stats.failed_keywords,
+                    "latest_records": latest_count,
                     "records": len(trimmed),
                     "output": str(output_path),
                 },
@@ -618,12 +874,36 @@ def run(args: argparse.Namespace) -> int:
         return 0
     except LoginRequired:
         logger.error("LOGIN_REQUIRED")
+        write_failure_status(
+            root,
+            started,
+            login_status="login_required",
+            failed_keywords=stats.failed_keywords,
+            warnings=["LOGIN_REQUIRED"],
+            logger=logger,
+        )
         return 20
     except RiskControlTriggered:
         logger.error("RISK_CONTROL_TRIGGERED")
+        write_failure_status(
+            root,
+            started,
+            login_status="ok",
+            failed_keywords=stats.failed_keywords,
+            warnings=["RISK_CONTROL_TRIGGERED"],
+            logger=logger,
+        )
         return 21
     except Exception as exc:
         logger.exception("MCP_FAILED reason=%s", safe_error(exc))
+        write_failure_status(
+            root,
+            started,
+            login_status="ok",
+            failed_keywords=stats.failed_keywords,
+            warnings=["MCP_FAILED"],
+            logger=logger,
+        )
         return 22
     finally:
         for handler in logger.handlers:

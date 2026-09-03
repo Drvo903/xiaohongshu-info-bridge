@@ -1,7 +1,9 @@
 $ErrorActionPreference = "Stop"
 $root = [IO.Path]::GetFullPath((Split-Path -Parent $PSScriptRoot))
 $outputPath = Join-Path $root "output\xhs-feed.json"
-$publicPath = Join-Path $root "data\xhs-feed.json"
+$publicFeedPath = Join-Path $root "data\xhs-feed.json"
+$publicLatestPath = Join-Path $root "data\latest.json"
+$publicStatusPath = Join-Path $root "data\status.json"
 
 $gitCommand = Get-Command git.exe -ErrorAction SilentlyContinue |
     Select-Object -First 1
@@ -24,19 +26,47 @@ $env:Path = "$(Split-Path $gitCommand.Source);$env:Path"
 if (-not (Test-Path -LiteralPath (Join-Path $root ".git"))) {
     throw "local Git repository is not initialized"
 }
-if (-not (Test-Path -LiteralPath $outputPath)) {
-    throw "local collector output is missing"
+foreach ($path in @($outputPath, $publicFeedPath, $publicLatestPath, $publicStatusPath)) {
+    if (-not (Test-Path -LiteralPath $path)) {
+        throw "required JSON is missing: $path"
+    }
 }
 
-$document = Get-Content -LiteralPath $outputPath -Raw -Encoding UTF8 | ConvertFrom-Json
+try {
+    $document = Get-Content -LiteralPath $outputPath -Raw -Encoding UTF8 | ConvertFrom-Json
+    $latest = Get-Content -LiteralPath $publicLatestPath -Raw -Encoding UTF8 | ConvertFrom-Json
+    $status = Get-Content -LiteralPath $publicStatusPath -Raw -Encoding UTF8 | ConvertFrom-Json
+} catch {
+    throw "one of the public JSON files is invalid"
+}
+
 if ($document.source -ne "xiaohongshu" -or $null -eq $document.results) {
-    throw "output JSON failed the public-data validation"
+    throw "xhs-feed.json failed the public-data validation"
+}
+if ($latest.source -ne "xiaohongshu" -or
+    $null -eq $latest.results -or
+    [int]$latest.result_count -ne @($latest.results).Count -or
+    [int]$latest.result_count -gt [int]$latest.max_results -or
+    [int]$latest.max_results -gt 200) {
+    throw "latest.json failed the public-data validation"
+}
+if ($status.full_result_count -ne @($document.results).Count -or
+    $status.latest_result_count -ne @($latest.results).Count -or
+    (-not $status.last_github_upload_status -and -not $status.github_upload_status)) {
+    throw "status.json failed the consistency validation"
 }
 
-New-Item -ItemType Directory -Force -Path (Split-Path $publicPath) | Out-Null
-$tempPath = "$publicPath.tmp"
+New-Item -ItemType Directory -Force -Path (Split-Path $publicFeedPath) | Out-Null
+$tempPath = "$publicFeedPath.tmp"
 Copy-Item -LiteralPath $outputPath -Destination $tempPath -Force
-Move-Item -LiteralPath $tempPath -Destination $publicPath -Force
+try {
+    Get-Content -LiteralPath $tempPath -Raw -Encoding UTF8 | ConvertFrom-Json | Out-Null
+    Move-Item -LiteralPath $tempPath -Destination $publicFeedPath -Force
+} finally {
+    if (Test-Path -LiteralPath $tempPath) {
+        [IO.File]::Delete($tempPath)
+    }
+}
 
 $remote = git -C $root remote get-url origin 2>$null
 if (-not $remote) {
@@ -44,8 +74,8 @@ if (-not $remote) {
 }
 
 git -C $root pull --rebase --autostash
-git -C $root add -- "data/xhs-feed.json"
-git -C $root diff --cached --quiet -- "data/xhs-feed.json"
+git -C $root add -- "data/xhs-feed.json" "data/latest.json" "data/status.json"
+git -C $root diff --cached --quiet -- "data/xhs-feed.json" "data/latest.json" "data/status.json"
 if ($LASTEXITCODE -eq 0) {
     Write-Output "NO_CHANGE"
     exit 0

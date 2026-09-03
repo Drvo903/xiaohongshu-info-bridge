@@ -10,6 +10,8 @@ D:\XHSCollector\
 ├─ config\keywords.json         搜索关键词（可修改）
 ├─ data\
 │  ├─ xhs-feed.json             可公开数据镜像（GitHub 上传此文件）
+│  ├─ latest.json               最近 7 天、最多 200 条（GitHub 上传此文件）
+│  ├─ status.json               采集状态和数据新鲜度（GitHub 上传此文件）
 │  ├─ cookies.json              小红书登录状态（敏感，不上传）
 │  ├─ home\, config\, appdata\  运行配置（敏感，不上传）
 │  ├─ localappdata\             隔离的内置 Chromium（不上传）
@@ -24,7 +26,7 @@ D:\XHSCollector\
    └─ install_task.ps1          创建/更新 Windows 定时任务
 ```
 
-所有 Cookie、浏览器 profile、缓存、临时目录均应位于 `D:\XHSCollector\data\`。GitHub 只保存 `README.md`、必要的公开脚本/关键词配置，以及 `data/xhs-feed.json`。
+所有 Cookie、浏览器 profile、缓存、临时目录均应位于 `D:\XHSCollector\data\`。GitHub 只保存清洗后的公开数据、必要的公开脚本和关键词配置，不保存 Cookie、token、日志或浏览器文件。
 
 ## 手动运行
 
@@ -93,9 +95,13 @@ pwsh.exe -NoProfile -ExecutionPolicy Bypass -File D:\XHSCollector\scripts\instal
 
 ```text
 https://raw.githubusercontent.com/Drvo903/xiaohongshu-info-bridge/main/data/xhs-feed.json
+https://raw.githubusercontent.com/Drvo903/xiaohongshu-info-bridge/main/data/latest.json
+https://raw.githubusercontent.com/Drvo903/xiaohongshu-info-bridge/main/data/status.json
 ```
 
-本地同步只会在 JSON 合法且文件实际变化时提交；push 失败会保留本地 `output\xhs-feed.json` 和本地 Git 提交，下一轮可继续重试。不会把 PAT 写入脚本。
+`xhs-feed.json` 是完整历史，`latest.json` 是最近 7 天、最多 200 条，`status.json` 用于快速检查采集时间和状态。`status.json` 使用 `last_github_upload_status` 表示上一次 push 状态，避免为了把 pending 改成 ok 而额外制造递归提交。
+
+本地同步会先校验三个 JSON 合法、字段一致且没有超过最新数据上限，再只提交实际变化的公开文件；push 失败会保留本地数据，下一轮可继续重试。不会把 PAT 写入脚本。
 
 ## 常见故障
 
