@@ -1,12 +1,18 @@
 {
-  "updated_at": "2026-09-03T08:56:08.869898+08:00",
-  "collector_status": "ok",
+  "updated_at": "2026-09-03T13:41:24.097654+08:00",
+  "collector_status": "partial",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 159,
-  "latest_result_count": 158,
+  "full_result_count": 236,
+  "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-09-03T08:56:08.869898+08:00",
-  "failed_keywords": [],
-  "warnings": []
+  "last_successful_run": "2026-09-03T13:41:24.097654+08:00",
+  "failed_keywords": [
+    "杭州 跑团",
+    "杭州 TRPG"
+  ],
+  "warnings": [
+    "2 keyword(s) failed or timed out and were skipped",
+    "2 public detail request(s) failed or timed out"
+  ]
 }
