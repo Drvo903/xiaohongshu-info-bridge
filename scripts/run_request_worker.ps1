@@ -158,32 +158,37 @@ function Restore-ProjectEnvironment {
 
 function Invoke-GitPull {
     & $gitPath -C $root pull --rebase --autostash *> $null
-    if ($LASTEXITCODE -ne 0) {
+    $gitExit = $LASTEXITCODE
+    if ($gitExit -ne 0) {
         throw "GIT_PULL_FAILED"
     }
 }
 
 function Sync-RequestChanges([string]$commitMessage) {
     & $gitPath -C $root add -- "requests" *> $null
-    if ($LASTEXITCODE -ne 0) {
+    $gitExit = $LASTEXITCODE
+    if ($gitExit -ne 0) {
         throw "GIT_ADD_FAILED"
     }
 
     & $gitPath -C $root diff --cached --quiet -- "requests" *> $null
-    if ($LASTEXITCODE -eq 0) {
+    $gitExit = $LASTEXITCODE
+    if ($gitExit -eq 0) {
         Write-RequestRunLog "REQUEST_GIT_NO_CHANGE"
         return
     }
-    if ($LASTEXITCODE -ne 1) {
+    if ($gitExit -ne 1) {
         throw "GIT_DIFF_FAILED"
     }
 
     & $gitPath -C $root commit -m $commitMessage *> $null
-    if ($LASTEXITCODE -ne 0) {
+    $gitExit = $LASTEXITCODE
+    if ($gitExit -ne 0) {
         throw "GIT_COMMIT_FAILED"
     }
     & $gitPath -C $root push *> $null
-    if ($LASTEXITCODE -ne 0) {
+    $gitExit = $LASTEXITCODE
+    if ($gitExit -ne 0) {
         throw "GIT_PUSH_FAILED"
     }
     Write-RequestRunLog "REQUEST_GITHUB_UPLOAD_SUCCESS"
