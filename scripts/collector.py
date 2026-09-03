@@ -814,8 +814,9 @@ def run(args: argparse.Namespace) -> int:
             )
             return 22
 
-        trimmed = trim_history(records, args.max_age_days, started)
-        write_output(output_path, trimmed, started)
+        completed = utc_now()
+        trimmed = trim_history(records, args.max_age_days, completed)
+        write_output(output_path, trimmed, completed)
         warnings: list[str] = []
         if stats.failed_keywords:
             warnings.append(
@@ -826,7 +827,7 @@ def run(args: argparse.Namespace) -> int:
         _, latest_count = write_public_views(
             root,
             trimmed,
-            started,
+            completed,
             collector_status="partial" if stats.failed_keywords else "ok",
             login_status="ok",
             failed_keywords=stats.failed_keywords,
