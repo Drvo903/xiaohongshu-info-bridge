@@ -82,7 +82,8 @@ if ($LASTEXITCODE -eq 0) {
 }
 
 $message = "update xhs feed $(Get-Date -Format 'yyyy-MM-dd HH:mm')"
-git -C $root commit -m $message
+git -C $root commit --only -m $message -- `
+    "data/xhs-feed.json" "data/latest.json" "data/status.json"
 if ($LASTEXITCODE -ne 0) {
     throw "git commit failed"
 }

@@ -157,7 +157,7 @@ function Restore-ProjectEnvironment {
 }
 
 function Invoke-GitPull {
-    & $gitPath -C $root pull --rebase --autostash *> $null
+    & $gitPath -C $root pull --rebase --autostash 2>$null | Out-Null
     $gitExit = $LASTEXITCODE
     if ($gitExit -ne 0) {
         throw "GIT_PULL_FAILED"
@@ -165,13 +165,13 @@ function Invoke-GitPull {
 }
 
 function Sync-RequestChanges([string]$commitMessage) {
-    & $gitPath -C $root add -- "requests" *> $null
+    & $gitPath -C $root add -- "requests" 2>$null | Out-Null
     $gitExit = $LASTEXITCODE
     if ($gitExit -ne 0) {
         throw "GIT_ADD_FAILED"
     }
 
-    & $gitPath -C $root diff --cached --quiet -- "requests" *> $null
+    & $gitPath -C $root diff --cached --quiet -- "requests" 2>$null | Out-Null
     $gitExit = $LASTEXITCODE
     if ($gitExit -eq 0) {
         Write-RequestRunLog "REQUEST_GIT_NO_CHANGE"
@@ -181,12 +181,12 @@ function Sync-RequestChanges([string]$commitMessage) {
         throw "GIT_DIFF_FAILED"
     }
 
-    & $gitPath -C $root commit -m $commitMessage *> $null
+    & $gitPath -C $root commit --only -m $commitMessage -- "requests" 2>$null | Out-Null
     $gitExit = $LASTEXITCODE
     if ($gitExit -ne 0) {
         throw "GIT_COMMIT_FAILED"
     }
-    & $gitPath -C $root push *> $null
+    & $gitPath -C $root push 2>$null | Out-Null
     $gitExit = $LASTEXITCODE
     if ($gitExit -ne 0) {
         throw "GIT_PUSH_FAILED"
