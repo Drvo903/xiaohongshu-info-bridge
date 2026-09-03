@@ -18,10 +18,18 @@ D:\XHSCollector\
 │  └─ tmp\                      每次运行临时目录（不上传）
 ├─ output\xhs-feed.json         本地历史主文件（不上传）
 ├─ logs\                        采集、MCP、GitHub 和登录日志（不上传）
+├─ requests\
+│  ├─ pending\                  GitHub 上待处理的搜索请求
+│  ├─ completed\                已处理请求归档
+│  └─ results\                  专项搜索结果 JSON
 └─ scripts\
    ├─ collector.py              只读 MCP 采集器
+   ├─ request_worker.py         单次只读临时搜索 worker
    ├─ login.ps1                 手动扫码登录/重新登录
    ├─ run_collector.ps1         启动 MCP、采集、上传、清理进程
+   ├─ run_request_worker.ps1    检查并处理最多一个 pending 请求
+   ├─ install_request_task.ps1 创建 RequestWorker 定时任务
+   ├─ project_lock.ps1          固定采集与临时查询的全局互斥锁
    ├─ sync_github.ps1           校验并上传 data\xhs-feed.json
    └─ install_task.ps1          创建/更新 Windows 定时任务
 ```
@@ -102,6 +110,61 @@ https://raw.githubusercontent.com/Drvo903/xiaohongshu-info-bridge/main/data/stat
 `xhs-feed.json` 是完整历史，`latest.json` 是最近 7 天、最多 200 条，`status.json` 用于快速检查采集时间和状态。`status.json` 使用 `last_github_upload_status` 表示上一次 push 状态，避免为了把 pending 改成 ok 而额外制造递归提交。
 
 本地同步会先校验三个 JSON 合法、字段一致且没有超过最新数据上限，再只提交实际变化的公开文件；push 失败会保留本地数据，下一轮可继续重试。不会把 PAT 写入脚本。
+
+## 临时搜索请求
+
+临时查询使用 GitHub 仓库中的三个目录：
+
+```text
+requests/pending/       待处理请求
+requests/results/       对应的专项结果
+requests/completed/     已处理请求归档
+```
+
+RequestWorker 每 15 分钟轻量运行一次。它先执行 `git pull` 并检查 `requests/pending/`；没有请求时几秒内退出，不启动 MCP 或 Chromium。发现请求时只处理按文件时间排序的最旧一个请求，严格只接受 `type=xiaohongshu_search`、最多 10 个关键词、每个关键词最多 100 个字符、每关键词最多 30 条结果的白名单结构。请求 JSON 不能执行 PowerShell、cmd、Python、下载命令或指定本地路径。
+
+手动提交一个测试请求时，创建文件：
+
+```text
+requests/pending/20260903-160500-shentangqiao-food.json
+```
+
+内容示例：
+
+```json
+{
+  "request_id": "20260903-160500-shentangqiao-food",
+  "created_at": "2026-09-03T16:05:00+08:00",
+  "status": "pending",
+  "type": "xiaohongshu_search",
+  "query": "沈塘桥附近推荐的店",
+  "keywords": [
+    "杭州 沈塘桥 美食",
+    "沈塘桥 餐厅",
+    "沈塘桥 探店",
+    "沈塘桥 咖啡"
+  ],
+  "max_results_per_keyword": 10
+}
+```
+
+将该文件提交并 push 到当前仓库后，RequestWorker 会在下一次运行时处理它。结果位于同名的 `requests/results/` 文件，请求原文件会移动到 `requests/completed/`。结果只包含公开笔记字段、去重后的记录、`matched_keywords`、失败关键词和警告；不会保存 Cookie、token、浏览器信息或 MCP 内部参数。
+
+手动触发临时查询：
+
+```powershell
+pwsh.exe -NoProfile -ExecutionPolicy Bypass -File D:\XHSCollector\scripts\run_request_worker.ps1
+```
+
+暂停/恢复 RequestWorker：
+
+```powershell
+Disable-ScheduledTask -TaskName XHSCollector-RequestWorker
+Enable-ScheduledTask -TaskName XHSCollector-RequestWorker
+Get-ScheduledTask -TaskName XHSCollector-RequestWorker
+```
+
+RequestWorker 使用 `D:\XHSCollector\data\xhs.lock` 与固定采集互斥。两个任务不会同时启动 MCP 或操作同一份登录态；锁忙时本轮安全退出，留给下一次任务。`login_required`、`risk_controlled` 和整轮 `failed` 都会写入结果并归档请求，不会修改固定采集的三个数据文件。
 
 ## 常见故障
 

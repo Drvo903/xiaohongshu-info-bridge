@@ -14,6 +14,7 @@ $runId = Get-Date -Format "yyyyMMdd-HHmmss"
 $runTemp = Join-Path $root "data\tmp\run-$runId"
 $logPath = Join-Path $root "logs\run.log"
 $mcpPid = $null
+$lockStream = $null
 $exitCode = 22
 
 function Assert-UnderRoot([string]$path) {
@@ -124,6 +125,17 @@ try {
     New-Item -ItemType Directory -Force -Path (Split-Path $logPath) | Out-Null
     Write-RunLog "TASK_START run=$runId"
 
+    $lockHelper = Assert-UnderRoot (Join-Path $root "scripts\project_lock.ps1")
+    if (-not (Test-Path -LiteralPath $lockHelper)) {
+        throw "project lock helper not found"
+    }
+    . $lockHelper
+    $lockStream = Acquire-XHSProjectLock -Root $root
+    if (-not $lockStream) {
+        throw "LOCK_BUSY"
+    }
+    Write-RunLog "LOCK_ACQUIRED path=data\xhs.lock"
+
     $mcpExe = Assert-UnderRoot (Join-Path $root "bin\xiaohongshu-mcp-windows-amd64.exe")
     $collectorPy = Assert-UnderRoot (Join-Path $root "scripts\collector.py")
     if (-not (Test-Path -LiteralPath $mcpExe)) {
@@ -211,12 +223,22 @@ try {
         }
     }
 } catch {
-    Write-RunLog "RUN_FAILED reason=$($_.Exception.Message)"
-    $exitCode = 22
+    if ($_.Exception.Message -eq "LOCK_BUSY") {
+        Write-RunLog "LOCK_BUSY"
+        $exitCode = 24
+    } else {
+        Write-RunLog "RUN_FAILED reason=$($_.Exception.Message)"
+        $exitCode = 22
+    }
 } finally {
     if ($mcpPid) {
         Stop-ScopedProcessTree $mcpPid $runTemp
         Write-RunLog "MCP_STOP pid=$mcpPid"
+    }
+    if ($lockStream) {
+        $lockStream.Dispose()
+        $lockStream = $null
+        Write-RunLog "LOCK_RELEASED"
     }
     Write-RunLog "TASK_END code=$exitCode"
 }
