@@ -1,0 +1,14 @@
+{
+  "request_id": "20260903-160500-shentangqiao-food",
+  "created_at": "2026-09-03T16:05:00+08:00",
+  "status": "pending",
+  "type": "xiaohongshu_search",
+  "query": "沈塘桥附近推荐的店",
+  "keywords": [
+    "杭州 沈塘桥 美食",
+    "沈塘桥 餐厅",
+    "沈塘桥 探店",
+    "沈塘桥 咖啡"
+  ],
+  "max_results_per_keyword": 10
+}
