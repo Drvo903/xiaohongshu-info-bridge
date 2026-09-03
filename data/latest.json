@@ -1,6 +1,9 @@
 {
-  "updated_at": "2026-09-03T00:42:09.735001Z",
+  "updated_at": "2026-09-03T08:42:09.735001+08:00",
   "source": "xiaohongshu",
+  "window_days": 7,
+  "max_results": 200,
+  "result_count": 158,
   "results": [
     {
       "id": "6a985d32000000001001f657",
@@ -2845,24 +2848,6 @@
       "location": "天津",
       "first_seen_at": "2026-09-02T13:38:07.589148Z",
       "last_seen_at": "2026-09-02T13:38:07.589148Z"
-    },
-    {
-      "id": "6a81aa79000000003302e835",
-      "keyword": "杭州 ACG",
-      "matched_keywords": [
-        "杭州 ACG"
-      ],
-      "title": "江浙沪有自己的ijoy ido",
-      "author": "抱抱我的小月亮",
-      "published_at": "2026-08-16T12:18:01Z",
-      "url": "https://www.xiaohongshu.com/explore/6a81aa79000000003302e835",
-      "summary": "它叫iagf🤣 看起来2号应该还有一位老师的个人场才对，好奇奖池还会不会继续叠加[吧唧R] #iagf杭州[话题]# #配音演员线下[话题]#",
-      "likes": 118,
-      "comments": 72,
-      "collects": 4,
-      "location": "江苏",
-      "first_seen_at": "2026-09-03T00:45:10.784389Z",
-      "last_seen_at": "2026-09-03T00:45:10.784389Z"
     }
   ]
 }

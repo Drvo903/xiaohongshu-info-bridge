@@ -1,0 +1,19 @@
+{
+  "updated_at": "2026-09-03T08:42:09.735001+08:00",
+  "collector_status": "partial",
+  "login_status": "ok",
+  "last_github_upload_status": "ok",
+  "full_result_count": 159,
+  "latest_result_count": 158,
+  "latest_window_days": 7,
+  "last_successful_run": "2026-09-03T08:42:09.735001+08:00",
+  "failed_keywords": [
+    "杭州 动漫",
+    "杭州 漫展",
+    "杭州 DND"
+  ],
+  "warnings": [
+    "3 keyword(s) failed or timed out and were skipped",
+    "3 public detail request(s) failed or timed out"
+  ]
+}
