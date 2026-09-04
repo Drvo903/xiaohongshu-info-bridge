@@ -1,14 +1,18 @@
 {
-  "updated_at": "2026-09-04T13:41:17.676134+08:00",
-  "collector_status": "ok",
+  "updated_at": "2026-09-04T16:42:17.575649+08:00",
+  "collector_status": "partial",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 536,
+  "full_result_count": 623,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-09-04T13:41:17.676134+08:00",
-  "failed_keywords": [],
+  "last_successful_run": "2026-09-04T16:42:17.575649+08:00",
+  "failed_keywords": [
+    "杭州 DND",
+    "杭州 快闪"
+  ],
   "warnings": [
-    "4 public detail request(s) failed or timed out"
+    "2 keyword(s) failed or timed out and were skipped",
+    "2 public detail request(s) failed or timed out"
   ]
 }
