@@ -1,17 +1,14 @@
 {
-  "updated_at": "2026-09-04T09:39:41.017823+08:00",
-  "collector_status": "partial",
+  "updated_at": "2026-09-04T13:41:17.676134+08:00",
+  "collector_status": "ok",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 447,
+  "full_result_count": 536,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-09-04T09:39:41.017823+08:00",
-  "failed_keywords": [
-    "杭州 动漫",
-    "杭州 跑团"
-  ],
+  "last_successful_run": "2026-09-04T13:41:17.676134+08:00",
+  "failed_keywords": [],
   "warnings": [
-    "2 keyword(s) failed or timed out and were skipped"
+    "4 public detail request(s) failed or timed out"
   ]
 }
