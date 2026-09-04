@@ -4,7 +4,9 @@ param(
     [int]$MaxTotal = 80,
     [int]$MaxDetails = 20,
     [int]$DetailTimeout = 45,
-    [int]$MaxAgeDays = 60
+    [int]$MaxAgeDays = 60,
+    [int]$SecondaryPerKeywordLimit = 8,
+    [int]$SecondaryMaxTotal = 20
 )
 
 $ErrorActionPreference = "Stop"
@@ -138,11 +140,21 @@ try {
 
     $mcpExe = Assert-UnderRoot (Join-Path $root "bin\xiaohongshu-mcp-windows-amd64.exe")
     $collectorPy = Assert-UnderRoot (Join-Path $root "scripts\collector.py")
+    $secondaryKeywordPath = Assert-UnderRoot (Join-Path $root "config\keywords_shanghai.json")
     if (-not (Test-Path -LiteralPath $mcpExe)) {
         throw "MCP executable not found"
     }
     if (-not (Test-Path -LiteralPath $collectorPy)) {
         throw "collector.py not found"
+    }
+    if (-not (Test-Path -LiteralPath $secondaryKeywordPath)) {
+        throw "Shanghai keyword file not found"
+    }
+    if ($SecondaryPerKeywordLimit -lt 1 -or $SecondaryPerKeywordLimit -gt 30) {
+        throw "SecondaryPerKeywordLimit must be between 1 and 30"
+    }
+    if ($SecondaryMaxTotal -lt 1 -or $SecondaryMaxTotal -gt 30) {
+        throw "SecondaryMaxTotal must be between 1 and 30"
     }
 
     $occupied = @(Get-NetTCPConnection -LocalAddress "127.0.0.1" -LocalPort 18060 -State Listen -ErrorAction SilentlyContinue)
@@ -158,6 +170,15 @@ try {
     if (-not $python) {
         throw "Python 3 executable not found"
     }
+
+    $nowForRotation = Get-Date
+    $slot = 0
+    if ($nowForRotation.Hour -ge 12 -and $nowForRotation.Hour -lt 15) {
+        $slot = 1
+    } elseif ($nowForRotation.Hour -ge 15 -and $nowForRotation.Hour -lt 18) {
+        $slot = 2
+    }
+    $secondaryOffset = ((($nowForRotation.DayOfYear - 1) * 3) + ($slot * 3)) % 15
 
     # These variables apply only to this wrapper and its children.
     $env:COOKIES_PATH = Join-Path $root "data\cookies.json"
@@ -195,7 +216,11 @@ try {
         "--max-total", $MaxTotal,
         "--max-details", $MaxDetails,
         "--detail-timeout", $DetailTimeout,
-        "--max-age-days", $MaxAgeDays
+        "--max-age-days", $MaxAgeDays,
+        "--secondary-keywords", $secondaryKeywordPath,
+        "--secondary-per-keyword-limit", $SecondaryPerKeywordLimit,
+        "--secondary-max-total", $SecondaryMaxTotal,
+        "--secondary-offset", $secondaryOffset
     )
     $collector = Start-Process -FilePath $python `
         -ArgumentList $collectorArgs `

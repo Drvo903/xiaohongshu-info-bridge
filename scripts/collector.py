@@ -625,6 +625,13 @@ def load_keywords(path: Path) -> list[str]:
     return [item.strip() for item in data]
 
 
+def rotate_keywords(keywords: list[str], offset: int) -> list[str]:
+    if not keywords:
+        return []
+    shift = offset % len(keywords)
+    return keywords[shift:] + keywords[:shift]
+
+
 @dataclass
 class RunStats:
     searches_ok: int = 0
@@ -643,12 +650,53 @@ def run(args: argparse.Namespace) -> int:
     logger = setup_logger(root / "logs" / "collector.log")
     output_path = root / "output" / "xhs-feed.json"
     keyword_path = Path(args.keywords).resolve()
+    secondary_keyword_path = (
+        Path(args.secondary_keywords).resolve() if args.secondary_keywords else None
+    )
     started = utc_now()
     stats = RunStats()
-    logger.info("TASK_START mcp_url=%s keywords_file=%s", args.mcp_url, keyword_path)
+    logger.info(
+        "TASK_START mcp_url=%s keywords_file=%s secondary_keywords_file=%s",
+        args.mcp_url,
+        keyword_path,
+        secondary_keyword_path,
+    )
 
     try:
         keywords = load_keywords(keyword_path)
+        secondary_keywords: list[str] = []
+        if secondary_keyword_path:
+            secondary_keywords = rotate_keywords(
+                load_keywords(secondary_keyword_path),
+                args.secondary_offset,
+            )
+        keyword_plan: list[tuple[str, int, str, int, int]] = []
+        keyword_plan.extend(
+            ("primary", index, keyword, args.per_keyword_limit, args.max_total)
+            for index, keyword in enumerate(keywords)
+        )
+        keyword_plan.extend(
+            (
+                "secondary",
+                index,
+                keyword,
+                args.secondary_per_keyword_limit,
+                args.secondary_max_total,
+            )
+            for index, keyword in enumerate(secondary_keywords)
+        )
+        group_seen: dict[str, int] = {"primary": 0, "secondary": 0}
+        group_limit_logged: set[str] = set()
+        logger.info(
+            "KEYWORD_BUDGET primary_count=%d primary_limit=%d secondary_count=%d "
+            "secondary_limit=%d secondary_per_keyword=%d secondary_offset=%d",
+            len(keywords),
+            args.max_total,
+            len(secondary_keywords),
+            args.secondary_max_total,
+            args.secondary_per_keyword_limit,
+            args.secondary_offset,
+        )
         records = load_history(output_path, logger)
         client = MCPClient(args.mcp_url, logger)
         client.initialize()
@@ -668,10 +716,18 @@ def run(args: argparse.Namespace) -> int:
         seen_this_run: set[str] = set()
         detail_count = 0
         detail_attempts = 0
-        for index, keyword in enumerate(keywords):
-            if stats.unique_seen >= args.max_total:
-                logger.info("MAX_TOTAL_LIMIT reached=%d", args.max_total)
-                break
+        for index, (group_name, group_index, keyword, keyword_limit, group_max_total) in enumerate(
+            keyword_plan
+        ):
+            if group_seen[group_name] >= group_max_total:
+                if group_name not in group_limit_logged:
+                    logger.info(
+                        "MAX_TOTAL_LIMIT group=%s reached=%d",
+                        group_name,
+                        group_max_total,
+                    )
+                    group_limit_logged.add(group_name)
+                continue
             if index:
                 time.sleep(random.uniform(args.keyword_delay_min, args.keyword_delay_max))
             try:
@@ -696,7 +752,7 @@ def run(args: argparse.Namespace) -> int:
                 stats.returned += len(feeds)
                 keyword_new = 0
                 keyword_dedup = 0
-                for feed in feeds[: args.per_keyword_limit]:
+                for feed in feeds[:keyword_limit]:
                     if not isinstance(feed, dict):
                         continue
                     search_record = search_note(feed)
@@ -708,6 +764,7 @@ def run(args: argparse.Namespace) -> int:
                         continue
                     seen_this_run.add(key)
                     stats.unique_seen += 1
+                    group_seen[group_name] += 1
                     now_text = iso_now()
                     if key in records:
                         record = records[key]
@@ -763,7 +820,9 @@ def run(args: argparse.Namespace) -> int:
                     keyword_new += 1
                     stats.newly_added += 1
                 logger.info(
-                    "SEARCH keyword=%s returned=%d new=%d deduped=%d",
+                    "SEARCH group=%s index=%d keyword=%s returned=%d new=%d deduped=%d",
+                    group_name,
+                    group_index,
                     keyword,
                     len(feeds),
                     keyword_new,
@@ -865,6 +924,11 @@ def run(args: argparse.Namespace) -> int:
                     "details_ok": stats.details_ok,
                     "details_failed": stats.details_failed,
                     "failed_keywords": stats.failed_keywords,
+                    "primary_unique_seen": group_seen["primary"],
+                    "secondary_unique_seen": min(
+                        group_seen["secondary"],
+                        args.secondary_max_total,
+                    ),
                     "latest_records": latest_count,
                     "records": len(trimmed),
                     "output": str(output_path),
@@ -920,6 +984,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--per-keyword-limit", type=int, default=DEFAULT_PER_KEYWORD_LIMIT)
     parser.add_argument("--max-total", type=int, default=DEFAULT_MAX_TOTAL)
     parser.add_argument("--max-details", type=int, default=DEFAULT_MAX_DETAILS)
+    parser.add_argument("--secondary-keywords", default=None)
+    parser.add_argument("--secondary-per-keyword-limit", type=int, default=8)
+    parser.add_argument("--secondary-max-total", type=int, default=20)
+    parser.add_argument("--secondary-offset", type=int, default=0)
     parser.add_argument("--detail-timeout", type=int, default=DEFAULT_DETAIL_TIMEOUT)
     parser.add_argument("--max-age-days", type=int, default=DEFAULT_MAX_AGE_DAYS)
     parser.add_argument("--keyword-delay-min", type=float, default=2.0)

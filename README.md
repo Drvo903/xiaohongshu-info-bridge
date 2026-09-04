@@ -7,7 +7,8 @@ Windows 上的只读小红书公开信息采集器。它通过官方 `xiaohongsh
 ```text
 D:\XHSCollector\
 ├─ bin\                         官方 Windows x64 程序（本地敏感/运行文件，不上传）
-├─ config\keywords.json         搜索关键词（可修改）
+├─ config\keywords.json         杭州固定关键词（可修改）
+├─ config\keywords_shanghai.json 上海高价值定向关键词（可修改）
 ├─ data\
 │  ├─ xhs-feed.json             可公开数据镜像（GitHub 上传此文件）
 │  ├─ latest.json               最近 7 天、最多 200 条（GitHub 上传此文件）
@@ -61,13 +62,21 @@ pwsh.exe -NoProfile -ExecutionPolicy Bypass -File D:\XHSCollector\scripts\login.
 
 ## 修改关键词
 
-编辑：
+杭州关键词编辑：
 
 ```text
 D:\XHSCollector\config\keywords.json
 ```
 
-文件必须是字符串数组。采集器默认每个关键词最多取 10 条，本轮最多处理 80 条，详情请求最多 20 条，单次详情请求超时 45 秒，并在关键词和详情请求之间等待。详情超时只记录日志，不覆盖已有成功数据。
+上海关键词编辑：
+
+```text
+D:\XHSCollector\config\keywords_shanghai.json
+```
+
+两个文件都必须是字符串数组。固定采集始终先处理全部杭州关键词，杭州预算保持每轮最多 80 条；上海采用独立的保守预算，每词最多 8 条、每轮最多 20 条，并按固定任务的时间段轮换关键词。详情请求总量仍保持每轮最多 20 条，单次详情请求超时 45 秒，并在关键词和详情请求之间等待。详情超时只记录日志，不覆盖已有成功数据。
+
+上海目前采用高价值定向采集策略，重点覆盖大型展会、ONLY 和 TRPG/DND/COC 类活动；杭州仍采用更高密度的小型活动覆盖。
 
 ## 查看日志和手动触发
 
