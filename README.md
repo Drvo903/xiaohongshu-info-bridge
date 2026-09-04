@@ -2,6 +2,10 @@
 
 Windows 上的只读小红书公开信息采集器。它通过官方 `xiaohongshu-mcp` 搜索公开笔记、读取公开详情，去重后生成 JSON；不发帖、不评论、不点赞、不收藏、不关注、不私信，也不修改账号资料。
 
+## ChatGPT / AI 使用说明
+
+详细的固定数据读取、临时查询请求格式、结果检查和安全限制见 [CHATGPT_USAGE.md](CHATGPT_USAGE.md)。
+
 ## 目录结构
 
 ```text
