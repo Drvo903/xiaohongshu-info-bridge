@@ -1,24 +1,17 @@
 {
-  "updated_at": "2026-09-07T09:30:50.753981+08:00",
-  "collector_status": "partial",
+  "updated_at": "2026-09-07T10:41:53.822023+08:00",
+  "collector_status": "ok",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 732,
+  "full_result_count": 739,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-09-07T09:30:50.753981+08:00",
-  "failed_keywords": [
-    "杭州 二次元",
-    "杭州 ACG",
-    "杭州 漫展",
-    "杭州 动漫联动",
-    "上海 跑团",
-    "上海 跑团节",
-    "上海 COMICUP",
-    "上海 CP"
-  ],
-  "warnings": [
-    "8 keyword(s) failed or timed out and were skipped",
-    "2 public detail request(s) failed or timed out"
-  ]
+  "last_successful_run": "2026-09-07T10:41:53.822023+08:00",
+  "failed_keywords": [],
+  "warnings": [],
+  "failed_keyword_details": [],
+  "search_fallback_success": [],
+  "search_fallback_success_count": 0,
+  "search_failure_count": 0,
+  "detail_failure_count": 0
 }

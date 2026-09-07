@@ -1,10 +1,136 @@
 {
-  "updated_at": "2026-09-07T09:30:50.753981+08:00",
+  "updated_at": "2026-09-07T10:41:53.822023+08:00",
   "source": "xiaohongshu",
   "window_days": 7,
   "max_results": 200,
   "result_count": 200,
   "results": [
+    {
+      "id": "6a9d0db10000000028000af9",
+      "keyword": "上海 跑团",
+      "matched_keywords": [
+        "上海 跑团"
+      ],
+      "title": "悦她而行，为爱奔跑",
+      "author": "拿柠檬开心",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6a9d0db10000000028000af9",
+      "summary": null,
+      "likes": 16,
+      "comments": 0,
+      "collects": 0,
+      "location": null,
+      "first_seen_at": "2026-09-07T02:41:53.821881Z",
+      "last_seen_at": "2026-09-07T02:41:53.821881Z"
+    },
+    {
+      "id": "6a9e1edf000000001103b009",
+      "keyword": "杭州 动漫",
+      "matched_keywords": [
+        "杭州 动漫"
+      ],
+      "title": "小红书的FLCL粉丝真的很少",
+      "author": "西西弗型仿生人",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6a9e1edf000000001103b009",
+      "summary": null,
+      "likes": 8,
+      "comments": 2,
+      "collects": 0,
+      "location": null,
+      "first_seen_at": "2026-09-07T02:41:38.838705Z",
+      "last_seen_at": "2026-09-07T02:41:38.838705Z"
+    },
+    {
+      "id": "6a9e22ca0000000025036107",
+      "keyword": "杭州 动漫",
+      "matched_keywords": [
+        "杭州 动漫"
+      ],
+      "title": "🍰杭州｜手作立体玩偶蛋糕✨",
+      "author": "绘屿Cake",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6a9e22ca0000000025036107",
+      "summary": null,
+      "likes": 0,
+      "comments": 0,
+      "collects": 0,
+      "location": null,
+      "first_seen_at": "2026-09-07T02:41:38.838691Z",
+      "last_seen_at": "2026-09-07T02:41:38.838691Z"
+    },
+    {
+      "id": "6a9e0ed4000000001203d7f7",
+      "keyword": "杭州 ACG",
+      "matched_keywords": [
+        "杭州 ACG"
+      ],
+      "title": "我在朋友圈很想你",
+      "author": "。！",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6a9e0ed4000000001203d7f7",
+      "summary": null,
+      "likes": 1,
+      "comments": 0,
+      "collects": 0,
+      "location": null,
+      "first_seen_at": "2026-09-07T02:41:26.282898Z",
+      "last_seen_at": "2026-09-07T02:41:26.282898Z"
+    },
+    {
+      "id": "6a9e1862000000001001ceec",
+      "keyword": "杭州 ACG",
+      "matched_keywords": [
+        "杭州 ACG"
+      ],
+      "title": null,
+      "author": "小卿😄小卿",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6a9e1862000000001001ceec",
+      "summary": null,
+      "likes": 26,
+      "comments": 0,
+      "collects": 3,
+      "location": null,
+      "first_seen_at": "2026-09-07T02:41:26.282882Z",
+      "last_seen_at": "2026-09-07T02:41:26.282882Z"
+    },
+    {
+      "id": "6831ed850000000012007275",
+      "keyword": "杭州 二次元",
+      "matched_keywords": [
+        "杭州 二次元"
+      ],
+      "title": "二次元三巨头❗来杭州必去的地方❗",
+      "author": "栗子栗山",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6831ed850000000012007275",
+      "summary": null,
+      "likes": 5685,
+      "comments": 84,
+      "collects": 3144,
+      "location": null,
+      "first_seen_at": "2026-09-07T02:41:11.436965Z",
+      "last_seen_at": "2026-09-07T02:41:11.436965Z"
+    },
+    {
+      "id": "6a990c40000000002802fd3e",
+      "keyword": "杭州 二次元",
+      "matched_keywords": [
+        "杭州 二次元"
+      ],
+      "title": "婚向cos圆满✨这里也太适合拍cp啦‼️",
+      "author": "序场·有风里（有风营地）",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6a990c40000000002802fd3e",
+      "summary": null,
+      "likes": 5,
+      "comments": 0,
+      "collects": 0,
+      "location": null,
+      "first_seen_at": "2026-09-07T02:41:11.436941Z",
+      "last_seen_at": "2026-09-07T02:41:11.436941Z"
+    },
     {
       "id": "6a9d7f13000000000b0017da",
       "keyword": "上海 BW",
@@ -3481,134 +3607,6 @@
       "location": null,
       "first_seen_at": "2026-09-04T08:37:45.676627Z",
       "last_seen_at": "2026-09-04T08:37:45.676627Z"
-    },
-    {
-      "id": "6a9a7e52000000002b01ca5b",
-      "keyword": "杭州 动漫",
-      "matched_keywords": [
-        "杭州 动漫"
-      ],
-      "title": "IP 快闪店玻璃贴膜✨",
-      "author": "杭州嘉百顺广告设计",
-      "published_at": null,
-      "url": "https://www.xiaohongshu.com/explore/6a9a7e52000000002b01ca5b",
-      "summary": null,
-      "likes": 0,
-      "comments": 0,
-      "collects": 0,
-      "location": null,
-      "first_seen_at": "2026-09-04T08:37:45.676609Z",
-      "last_seen_at": "2026-09-04T08:37:45.676609Z"
-    },
-    {
-      "id": "6a9a82c80000000011033929",
-      "keyword": "杭州 动漫",
-      "matched_keywords": [
-        "杭州 动漫"
-      ],
-      "title": "二次元纹身｜昔涟",
-      "author": "-乌龟橙子Colin-",
-      "published_at": "2026-09-04T08:35:20Z",
-      "url": "https://www.xiaohongshu.com/explore/6a9a82c80000000011033929",
-      "summary": "感谢客人认领的稿子，欢迎来找我做二游题材！ #二次元纹身[话题]# #动漫纹身[话题]# #杭州纹身[话题]# #皮肤上画画[话题]# #崩铁[话题]# #昔涟[话题]# #昔涟厨[话题]# #崩坏星穹铁道[话题]# #二次元发现计划[话题]#",
-      "likes": 0,
-      "comments": 0,
-      "collects": 0,
-      "location": "浙江",
-      "first_seen_at": "2026-09-04T08:36:53.622083Z",
-      "last_seen_at": "2026-09-04T08:36:53.622083Z"
-    },
-    {
-      "id": "6a9a5c82000000000d0276f6",
-      "keyword": "杭州 ACG",
-      "matched_keywords": [
-        "杭州 ACG"
-      ],
-      "title": null,
-      "author": "杭州豪宅精选",
-      "published_at": null,
-      "url": "https://www.xiaohongshu.com/explore/6a9a5c82000000000d0276f6",
-      "summary": null,
-      "likes": 1,
-      "comments": 1,
-      "collects": 0,
-      "location": null,
-      "first_seen_at": "2026-09-04T08:34:45.117592Z",
-      "last_seen_at": "2026-09-04T08:34:45.117592Z"
-    },
-    {
-      "id": "6a990991000000002b0033cc",
-      "keyword": "杭州 漫展",
-      "matched_keywords": [
-        "杭州 ACG",
-        "杭州 漫展"
-      ],
-      "title": "接杭州iagf  填我身份信息抢票",
-      "author": "天早塌了",
-      "published_at": null,
-      "url": "https://www.xiaohongshu.com/explore/6a990991000000002b0033cc",
-      "summary": null,
-      "likes": 4,
-      "comments": 16,
-      "collects": 0,
-      "location": null,
-      "first_seen_at": "2026-09-03T08:37:44.195854Z",
-      "last_seen_at": "2026-09-04T08:34:45.117290Z"
-    },
-    {
-      "id": "6a9a817d000000000b000ef3",
-      "keyword": "杭州 ACG",
-      "matched_keywords": [
-        "杭州 ACG"
-      ],
-      "title": "小鸟久病不愈，是为什么呢？",
-      "author": "宠赢宠物科技",
-      "published_at": null,
-      "url": "https://www.xiaohongshu.com/explore/6a9a817d000000000b000ef3",
-      "summary": null,
-      "likes": 0,
-      "comments": 0,
-      "collects": 0,
-      "location": null,
-      "first_seen_at": "2026-09-04T08:32:28.787818Z",
-      "last_seen_at": "2026-09-04T08:32:28.787818Z"
-    },
-    {
-      "id": "6a99e289000000002502dc87",
-      "keyword": "杭州 动漫",
-      "matched_keywords": [
-        "杭州 二次元",
-        "杭州 动漫"
-      ],
-      "title": "久违的申请摄影自由行（互赞dd）",
-      "author": "月下的摄影日记（备战bw",
-      "published_at": null,
-      "url": "https://www.xiaohongshu.com/explore/6a99e289000000002502dc87",
-      "summary": null,
-      "likes": 54,
-      "comments": 43,
-      "collects": 0,
-      "location": null,
-      "first_seen_at": "2026-09-04T01:16:03.257785Z",
-      "last_seen_at": "2026-09-04T08:30:20.421030Z"
-    },
-    {
-      "id": "6a9a8181000000002902eb11",
-      "keyword": "杭州 动漫",
-      "matched_keywords": [
-        "杭州 动漫"
-      ],
-      "title": "杭州无料互换｜一筐小黎小梨报到",
-      "author": "是小金鱼吖_",
-      "published_at": "2026-09-04T08:29:53Z",
-      "url": "https://www.xiaohongshu.com/explore/6a9a8181000000002902eb11",
-      "summary": "滑铲成功，实物真的炒鸡萌呀₍^˶ ╸𖥦 ╸˵^₎⟆，希望茉莉也喜欢#黎深[话题]# #Zayne[话题]# 12份做互换无料，多的会做伸手（3/3） #黎深0905生日快乐[话题]# #黎深贺深辰[话题]# #杭州[话题]# #二次元生活存档[话题]#",
-      "likes": 2,
-      "comments": 2,
-      "collects": 0,
-      "location": "浙江",
-      "first_seen_at": "2026-09-04T08:37:20.208477Z",
-      "last_seen_at": "2026-09-04T08:37:20.208477Z"
     }
   ]
 }
