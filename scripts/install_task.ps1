@@ -25,10 +25,15 @@ $action = New-ScheduledTaskAction `
     -Execute $powershellExe `
     -Argument "-NoLogo -NoProfile -NonInteractive -WindowStyle Hidden -ExecutionPolicy Bypass -File `"$runScript`""
 
+$weekday = [System.DayOfWeek]::Monday,[System.DayOfWeek]::Tuesday,[System.DayOfWeek]::Wednesday,[System.DayOfWeek]::Thursday,[System.DayOfWeek]::Friday
+$weekend = [System.DayOfWeek]::Saturday,[System.DayOfWeek]::Sunday
+$today = (Get-Date).Date
 $triggers = @(
-    (New-ScheduledTaskTrigger -Weekly -DaysOfWeek Monday,Tuesday,Wednesday,Thursday,Friday -At "09:30"),
-    (New-ScheduledTaskTrigger -Weekly -DaysOfWeek Monday,Tuesday,Wednesday,Thursday,Friday -At "13:30"),
-    (New-ScheduledTaskTrigger -Weekly -DaysOfWeek Monday,Tuesday,Wednesday,Thursday,Friday -At "16:30")
+    (New-ScheduledTaskTrigger -Weekly -DaysOfWeek $weekday -At $today.AddHours(8)),
+    (New-ScheduledTaskTrigger -Weekly -DaysOfWeek $weekday -At $today.AddHours(13)),
+    (New-ScheduledTaskTrigger -Weekly -DaysOfWeek $weekday -At $today.AddHours(17.5)),
+    (New-ScheduledTaskTrigger -Weekly -DaysOfWeek $weekend -At $today.AddHours(11)),
+    (New-ScheduledTaskTrigger -Weekly -DaysOfWeek $weekend -At $today.AddHours(17))
 )
 
 $settings = New-ScheduledTaskSettingsSet `

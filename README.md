@@ -82,6 +82,8 @@ D:\XHSCollector\config\keywords_shanghai.json
 
 上海目前采用高价值定向采集策略，重点覆盖大型展会、ONLY 和 TRPG/DND/COC 类活动；杭州仍采用更高密度的小型活动覆盖。
 
+`search_feeds` 首次搜索使用 `filters.sort_by="最新"`。如果首次搜索遇到 `context deadline exceeded` 或筛选/点击类错误，会随机等待 4～8 秒后无筛选重试一次；每个关键词最多主搜索 1 次、fallback 1 次。fallback 成功不计入 `failed_keywords`。`status.json` 还会记录 `failed_keyword_details`、fallback 成功列表和数量、最终搜索失败数、详情失败数。
+
 ## 查看日志和手动触发
 
 ```powershell
@@ -108,7 +110,7 @@ Get-ScheduledTask -TaskName XHSCollector-Workday
 pwsh.exe -NoProfile -ExecutionPolicy Bypass -File D:\XHSCollector\scripts\install_task.ps1
 ```
 
-任务使用当前 Windows 登录用户、默认本地时区，在工作日 09:30、13:30、16:30 触发；不唤醒关机电脑、不补跑错过的任务、不允许并发实例，失败最多延迟重试一次。
+任务使用当前 Windows 登录用户、默认本地时区，在周一至周五 08:00、13:00、17:30，以及周六、周日 11:00、17:00 触发；不唤醒关机电脑、不补跑错过的任务、不允许并发实例，失败最多延迟重试一次。
 
 ## GitHub 数据地址
 

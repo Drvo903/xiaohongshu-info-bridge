@@ -41,6 +41,10 @@ SENSITIVE_KEY_RE = re.compile(
 )
 RISK_RE = re.compile(r"(验证码|风控|风险验证|risk.?control|captcha|verification)", re.IGNORECASE)
 LOGIN_RE = re.compile(r"(登录|login|未登录|login.?required|auth)", re.IGNORECASE)
+SEARCH_FALLBACK_RE = re.compile(
+    r"(context deadline exceeded|deadline exceeded|筛选|点击)",
+    re.IGNORECASE,
+)
 
 
 class CollectorError(RuntimeError):
@@ -176,6 +180,36 @@ def classify_exception(exc: BaseException) -> CollectorError:
     if isinstance(exc, CollectorError):
         return exc
     return CollectorError(message)
+
+
+def normalized_failure_reason(value: Any) -> str:
+    """Map internal errors to a small public-safe diagnostic vocabulary."""
+
+    message = str(value)
+    lowered = message.lower()
+    if RISK_RE.search(message):
+        return "risk_controlled"
+    if LOGIN_RE.search(message):
+        return "login_required"
+    if "context deadline exceeded" in lowered or "deadline exceeded" in lowered:
+        return "context_deadline_exceeded"
+    if "timed out" in lowered or "timeout" in lowered:
+        return "context_deadline_exceeded"
+    if "筛选" in message or "点击" in message:
+        return "filter_or_click_error"
+    if "mcp http" in lowered or "http error" in lowered:
+        return "mcp_http_error"
+    if "mcp connection failed" in lowered or "connection" in lowered:
+        return "mcp_connection_error"
+    if "empty response" in lowered or "no text" in lowered:
+        return "empty_response"
+    if "valid json" in lowered or "json payload" in lowered:
+        return "invalid_json"
+    return "other"
+
+
+def search_should_fallback(exc: BaseException) -> bool:
+    return bool(SEARCH_FALLBACK_RE.search(str(exc)))
 
 
 class MCPClient:
@@ -539,7 +573,12 @@ def build_status_document(
     failed_keywords: list[str],
     warnings: list[str],
     last_successful_run: str | None,
+    failed_keyword_details: list[dict[str, Any]] | None = None,
+    search_fallback_success: list[str] | None = None,
+    search_failure_count: int = 0,
+    detail_failure_count: int = 0,
 ) -> dict[str, Any]:
+    fallback_success = list(search_fallback_success or [])
     return {
         "updated_at": iso_beijing(now),
         "collector_status": collector_status,
@@ -551,6 +590,11 @@ def build_status_document(
         "last_successful_run": last_successful_run,
         "failed_keywords": failed_keywords,
         "warnings": warnings,
+        "failed_keyword_details": list(failed_keyword_details or []),
+        "search_fallback_success": fallback_success,
+        "search_fallback_success_count": len(fallback_success),
+        "search_failure_count": search_failure_count,
+        "detail_failure_count": detail_failure_count,
     }
 
 
@@ -563,6 +607,10 @@ def write_public_views(
     login_status: str,
     failed_keywords: list[str],
     warnings: list[str],
+    failed_keyword_details: list[dict[str, Any]] | None = None,
+    search_fallback_success: list[str] | None = None,
+    search_failure_count: int = 0,
+    detail_failure_count: int = 0,
 ) -> tuple[int, int]:
     latest_document = build_latest_document(records, now)
     latest_path = root / "data" / "latest.json"
@@ -578,6 +626,10 @@ def write_public_views(
         failed_keywords=failed_keywords,
         warnings=warnings,
         last_successful_run=iso_beijing(now),
+        failed_keyword_details=failed_keyword_details,
+        search_fallback_success=search_fallback_success,
+        search_failure_count=search_failure_count,
+        detail_failure_count=detail_failure_count,
     )
     atomic_write_json(root / "data" / "status.json", status_document)
     return len(records), latest_count
@@ -591,6 +643,10 @@ def write_failure_status(
     failed_keywords: list[str],
     warnings: list[str],
     logger: logging.Logger,
+    failed_keyword_details: list[dict[str, Any]] | None = None,
+    search_fallback_success: list[str] | None = None,
+    search_failure_count: int = 0,
+    detail_failure_count: int = 0,
 ) -> None:
     output_path = root / "output" / "xhs-feed.json"
     latest_path = root / "data" / "latest.json"
@@ -606,6 +662,10 @@ def write_failure_status(
         failed_keywords=failed_keywords,
         warnings=warnings,
         last_successful_run=last_successful_run,
+        failed_keyword_details=failed_keyword_details,
+        search_fallback_success=search_fallback_success,
+        search_failure_count=search_failure_count,
+        detail_failure_count=detail_failure_count,
     )
     try:
         atomic_write_json(root / "data" / "status.json", document)
@@ -643,6 +703,40 @@ class RunStats:
     newly_added: int = 0
     deduped: int = 0
     failed_keywords: list[str] = field(default_factory=list)
+    failed_keyword_details: list[dict[str, Any]] = field(default_factory=list)
+    search_fallback_success: list[str] = field(default_factory=list)
+
+
+def status_diagnostics(stats: RunStats) -> dict[str, Any]:
+    return {
+        "failed_keyword_details": stats.failed_keyword_details,
+        "search_fallback_success": stats.search_fallback_success,
+        "search_failure_count": stats.searches_failed,
+        "detail_failure_count": stats.details_failed,
+    }
+
+
+def build_run_warnings(stats: RunStats) -> list[str]:
+    warnings: list[str] = []
+    fallback_failed = sum(
+        1
+        for detail in stats.failed_keyword_details
+        if detail.get("fallback_used") is True
+    )
+    non_fallback_failed = max(0, len(stats.failed_keywords) - fallback_failed)
+    if fallback_failed:
+        warnings.append(f"{fallback_failed} keyword(s) failed after fallback")
+    if non_fallback_failed:
+        warnings.append(f"{non_fallback_failed} keyword(s) failed")
+    if stats.search_fallback_success:
+        warnings.append(
+            f"{len(stats.search_fallback_success)} keyword(s) recovered by fallback"
+        )
+    if stats.details_failed:
+        warnings.append(
+            f"{stats.details_failed} public detail request(s) failed or timed out"
+        )
+    return warnings
 
 
 def run(args: argparse.Namespace) -> int:
@@ -710,6 +804,7 @@ def run(args: argparse.Namespace) -> int:
                 failed_keywords=[],
                 warnings=["LOGIN_REQUIRED"],
                 logger=logger,
+                **status_diagnostics(stats),
             )
             return 20
 
@@ -730,6 +825,15 @@ def run(args: argparse.Namespace) -> int:
                 continue
             if index:
                 time.sleep(random.uniform(args.keyword_delay_min, args.keyword_delay_max))
+            search_started = time.monotonic()
+            search_attempts = 1
+            fallback_used = False
+            logger.info(
+                "SEARCH_START group=%s index=%d keyword=%s",
+                group_name,
+                group_index,
+                keyword,
+            )
             try:
                 try:
                     text = client.call_tool(
@@ -738,12 +842,28 @@ def run(args: argparse.Namespace) -> int:
                     )
                     search_payload = json_from_tool_text(text)
                 except Exception as first_exc:
-                    if "筛选" not in str(first_exc) and "点击" not in str(first_exc):
+                    first_classified = classify_exception(first_exc)
+                    if isinstance(first_classified, (LoginRequired, RiskControlTriggered)):
+                        raise first_classified
+                    if not search_should_fallback(first_exc):
                         raise
-                    logger.warning("search filter fallback keyword=%s", keyword)
-                    time.sleep(2.0)
+                    fallback_used = True
+                    search_attempts = 2
+                    logger.warning(
+                        "SEARCH_RETRY keyword=%s reason=%s mode=without_filters",
+                        keyword,
+                        normalized_failure_reason(first_exc),
+                    )
+                    time.sleep(random.uniform(4.0, 8.0))
                     text = client.call_tool("search_feeds", {"keyword": keyword})
                     search_payload = json_from_tool_text(text)
+                    if keyword not in stats.search_fallback_success:
+                        stats.search_fallback_success.append(keyword)
+                    logger.info(
+                        "SEARCH_FALLBACK_SUCCESS keyword=%s duration_seconds=%.1f",
+                        keyword,
+                        time.monotonic() - search_started,
+                    )
 
                 feeds = search_payload.get("feeds", []) if isinstance(search_payload, dict) else []
                 if not isinstance(feeds, list):
@@ -820,17 +940,36 @@ def run(args: argparse.Namespace) -> int:
                     keyword_new += 1
                     stats.newly_added += 1
                 logger.info(
-                    "SEARCH group=%s index=%d keyword=%s returned=%d new=%d deduped=%d",
+                    "SEARCH_OK group=%s index=%d keyword=%s returned=%d new=%d "
+                    "deduped=%d duration_seconds=%.1f",
                     group_name,
                     group_index,
                     keyword,
                     len(feeds),
                     keyword_new,
                     keyword_dedup,
+                    time.monotonic() - search_started,
                 )
             except Exception as exc:
                 classified = classify_exception(exc)
+                failure_detail = {
+                    "keyword": keyword,
+                    "stage": "search",
+                    "reason": normalized_failure_reason(classified),
+                    "attempts": search_attempts,
+                    "fallback_used": fallback_used,
+                }
+                stats.failed_keyword_details.append(failure_detail)
+                stats.searches_failed += 1
                 if isinstance(classified, LoginRequired):
+                    logger.error(
+                        "SEARCH_FAILED keyword=%s reason=login_required attempts=%d "
+                        "fallback_used=%s duration_seconds=%.1f",
+                        keyword,
+                        search_attempts,
+                        fallback_used,
+                        time.monotonic() - search_started,
+                    )
                     logger.error("LOGIN_REQUIRED keyword=%s", keyword)
                     if keyword not in stats.failed_keywords:
                         stats.failed_keywords.append(keyword)
@@ -841,9 +980,18 @@ def run(args: argparse.Namespace) -> int:
                         failed_keywords=stats.failed_keywords,
                         warnings=["LOGIN_REQUIRED"],
                         logger=logger,
+                        **status_diagnostics(stats),
                     )
                     return 20
                 if isinstance(classified, RiskControlTriggered):
+                    logger.error(
+                        "SEARCH_FAILED keyword=%s reason=risk_controlled attempts=%d "
+                        "fallback_used=%s duration_seconds=%.1f",
+                        keyword,
+                        search_attempts,
+                        fallback_used,
+                        time.monotonic() - search_started,
+                    )
                     logger.error("RISK_CONTROL_TRIGGERED keyword=%s", keyword)
                     if keyword not in stats.failed_keywords:
                         stats.failed_keywords.append(keyword)
@@ -854,12 +1002,20 @@ def run(args: argparse.Namespace) -> int:
                         failed_keywords=stats.failed_keywords,
                         warnings=["RISK_CONTROL_TRIGGERED"],
                         logger=logger,
+                        **status_diagnostics(stats),
                     )
                     return 21
-                stats.searches_failed += 1
                 if keyword not in stats.failed_keywords:
                     stats.failed_keywords.append(keyword)
-                logger.warning("SEARCH_FAILED keyword=%s reason=%s", keyword, safe_error(classified))
+                logger.warning(
+                    "SEARCH_FAILED keyword=%s reason=%s attempts=%d fallback_used=%s "
+                    "duration_seconds=%.1f",
+                    keyword,
+                    failure_detail["reason"],
+                    search_attempts,
+                    fallback_used,
+                    time.monotonic() - search_started,
+                )
 
         if stats.searches_ok == 0:
             logger.error("MCP_FAILED all searches failed; previous output preserved")
@@ -870,19 +1026,14 @@ def run(args: argparse.Namespace) -> int:
                 failed_keywords=stats.failed_keywords,
                 warnings=["ALL_SEARCHES_FAILED"],
                 logger=logger,
+                **status_diagnostics(stats),
             )
             return 22
 
         completed = utc_now()
         trimmed = trim_history(records, args.max_age_days, completed)
         write_output(output_path, trimmed, completed)
-        warnings: list[str] = []
-        if stats.failed_keywords:
-            warnings.append(
-                f"{len(stats.failed_keywords)} keyword(s) failed or timed out and were skipped"
-            )
-        if stats.details_failed:
-            warnings.append(f"{stats.details_failed} public detail request(s) failed or timed out")
+        warnings = build_run_warnings(stats)
         _, latest_count = write_public_views(
             root,
             trimmed,
@@ -891,6 +1042,7 @@ def run(args: argparse.Namespace) -> int:
             login_status="ok",
             failed_keywords=stats.failed_keywords,
             warnings=warnings,
+            **status_diagnostics(stats),
         )
         logger.info(
             "PUBLIC_VIEWS_WRITTEN full=%d latest=%d collector_status=%s",
@@ -924,6 +1076,8 @@ def run(args: argparse.Namespace) -> int:
                     "details_ok": stats.details_ok,
                     "details_failed": stats.details_failed,
                     "failed_keywords": stats.failed_keywords,
+                    "failed_keyword_details": stats.failed_keyword_details,
+                    "search_fallback_success": stats.search_fallback_success,
                     "primary_unique_seen": group_seen["primary"],
                     "secondary_unique_seen": min(
                         group_seen["secondary"],
@@ -946,6 +1100,7 @@ def run(args: argparse.Namespace) -> int:
             failed_keywords=stats.failed_keywords,
             warnings=["LOGIN_REQUIRED"],
             logger=logger,
+            **status_diagnostics(stats),
         )
         return 20
     except RiskControlTriggered:
@@ -957,6 +1112,7 @@ def run(args: argparse.Namespace) -> int:
             failed_keywords=stats.failed_keywords,
             warnings=["RISK_CONTROL_TRIGGERED"],
             logger=logger,
+            **status_diagnostics(stats),
         )
         return 21
     except Exception as exc:
@@ -968,6 +1124,7 @@ def run(args: argparse.Namespace) -> int:
             failed_keywords=stats.failed_keywords,
             warnings=["MCP_FAILED"],
             logger=logger,
+            **status_diagnostics(stats),
         )
         return 22
     finally:
