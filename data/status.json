@@ -1,21 +1,30 @@
 {
-  "updated_at": "2026-09-08T17:42:37.411334+08:00",
+  "updated_at": "2026-09-09T08:19:51.710227+08:00",
   "collector_status": "partial",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 1203,
+  "full_result_count": 1297,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-09-08T17:42:37.411334+08:00",
+  "last_successful_run": "2026-09-09T08:19:51.710227+08:00",
   "failed_keywords": [
+    "杭州 ONLY",
     "杭州 TRPG",
-    "杭州 DND"
+    "上海 同人展"
   ],
   "warnings": [
-    "2 keyword(s) failed after fallback",
-    "1 keyword(s) recovered by fallback"
+    "3 keyword(s) failed after fallback",
+    "3 keyword(s) recovered by fallback",
+    "2 public detail request(s) failed or timed out"
   ],
   "failed_keyword_details": [
+    {
+      "keyword": "杭州 ONLY",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
     {
       "keyword": "杭州 TRPG",
       "stage": "search",
@@ -24,7 +33,7 @@
       "fallback_used": true
     },
     {
-      "keyword": "杭州 DND",
+      "keyword": "上海 同人展",
       "stage": "search",
       "reason": "context_deadline_exceeded",
       "attempts": 2,
@@ -32,9 +41,11 @@
     }
   ],
   "search_fallback_success": [
-    "上海 DND"
+    "杭州 二次元",
+    "杭州 动漫",
+    "上海 ONLY"
   ],
-  "search_fallback_success_count": 1,
-  "search_failure_count": 2,
-  "detail_failure_count": 0
+  "search_fallback_success_count": 3,
+  "search_failure_count": 3,
+  "detail_failure_count": 2
 }
