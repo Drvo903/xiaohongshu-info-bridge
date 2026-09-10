@@ -1,31 +1,23 @@
 {
-  "updated_at": "2026-09-09T17:48:21.638402+08:00",
+  "updated_at": "2026-09-10T08:11:32.606169+08:00",
   "collector_status": "partial",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 1458,
+  "full_result_count": 1551,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-09-09T17:48:21.638402+08:00",
+  "last_successful_run": "2026-09-10T08:11:32.606169+08:00",
   "failed_keywords": [
-    "杭州 DND",
-    "杭州 快闪"
+    "上海 TRPG"
   ],
   "warnings": [
-    "2 keyword(s) failed after fallback",
-    "4 keyword(s) recovered by fallback",
-    "3 public detail request(s) failed or timed out"
+    "1 keyword(s) failed after fallback",
+    "1 keyword(s) recovered by fallback",
+    "1 public detail request(s) failed or timed out"
   ],
   "failed_keyword_details": [
     {
-      "keyword": "杭州 DND",
-      "stage": "search",
-      "reason": "context_deadline_exceeded",
-      "attempts": 2,
-      "fallback_used": true
-    },
-    {
-      "keyword": "杭州 快闪",
+      "keyword": "上海 TRPG",
       "stage": "search",
       "reason": "context_deadline_exceeded",
       "attempts": 2,
@@ -33,12 +25,9 @@
     }
   ],
   "search_fallback_success": [
-    "杭州 二次元",
-    "杭州 动漫",
-    "杭州 跑团",
-    "上海 跑团"
+    "上海 TRPG ONLY"
   ],
-  "search_fallback_success_count": 4,
-  "search_failure_count": 2,
-  "detail_failure_count": 3
+  "search_fallback_success_count": 1,
+  "search_failure_count": 1,
+  "detail_failure_count": 1
 }
