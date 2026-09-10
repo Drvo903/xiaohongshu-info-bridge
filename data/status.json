@@ -1,36 +1,21 @@
 {
-  "updated_at": "2026-09-10T13:17:43.154014+08:00",
+  "updated_at": "2026-09-10T17:43:35.055456+08:00",
   "collector_status": "partial",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 1625,
+  "full_result_count": 1696,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-09-10T13:17:43.154014+08:00",
+  "last_successful_run": "2026-09-10T17:43:35.055456+08:00",
   "failed_keywords": [
-    "杭州 二次元",
-    "杭州 跑团",
     "杭州 DND"
   ],
   "warnings": [
-    "3 keyword(s) failed after fallback",
-    "3 keyword(s) recovered by fallback"
+    "1 keyword(s) failed after fallback",
+    "2 keyword(s) recovered by fallback",
+    "3 public detail request(s) failed or timed out"
   ],
   "failed_keyword_details": [
-    {
-      "keyword": "杭州 二次元",
-      "stage": "search",
-      "reason": "context_deadline_exceeded",
-      "attempts": 2,
-      "fallback_used": true
-    },
-    {
-      "keyword": "杭州 跑团",
-      "stage": "search",
-      "reason": "context_deadline_exceeded",
-      "attempts": 2,
-      "fallback_used": true
-    },
     {
       "keyword": "杭州 DND",
       "stage": "search",
@@ -40,11 +25,10 @@
     }
   ],
   "search_fallback_success": [
-    "杭州 桌游",
-    "杭州 联动",
-    "上海 跑团"
+    "杭州 漫展",
+    "杭州 桌游"
   ],
-  "search_fallback_success_count": 3,
-  "search_failure_count": 3,
-  "detail_failure_count": 0
+  "search_fallback_success_count": 2,
+  "search_failure_count": 1,
+  "detail_failure_count": 3
 }
