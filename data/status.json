@@ -1,23 +1,22 @@
 {
-  "updated_at": "2026-09-11T13:17:05.513168+08:00",
+  "updated_at": "2026-09-11T17:40:22.825962+08:00",
   "collector_status": "partial",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 1844,
+  "full_result_count": 1917,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-09-11T13:17:05.513168+08:00",
+  "last_successful_run": "2026-09-11T17:40:22.825962+08:00",
   "failed_keywords": [
-    "杭州 DND"
+    "杭州 动漫"
   ],
   "warnings": [
     "1 keyword(s) failed after fallback",
-    "6 keyword(s) recovered by fallback",
-    "1 public detail request(s) failed or timed out"
+    "1 keyword(s) recovered by fallback"
   ],
   "failed_keyword_details": [
     {
-      "keyword": "杭州 DND",
+      "keyword": "杭州 动漫",
       "stage": "search",
       "reason": "context_deadline_exceeded",
       "attempts": 2,
@@ -25,14 +24,9 @@
     }
   ],
   "search_fallback_success": [
-    "杭州 漫展",
-    "杭州 ONLY",
-    "杭州 跑团",
-    "杭州 TRPG",
-    "杭州 快闪",
-    "上海 跑团"
+    "杭州 跑团"
   ],
-  "search_fallback_success_count": 6,
+  "search_fallback_success_count": 1,
   "search_failure_count": 1,
-  "detail_failure_count": 1
+  "detail_failure_count": 0
 }
