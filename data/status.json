@@ -1,33 +1,45 @@
 {
-  "updated_at": "2026-09-14T13:12:01.867488+08:00",
+  "updated_at": "2026-09-15T13:14:17.261966+08:00",
   "collector_status": "partial",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 2006,
+  "full_result_count": 2079,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-09-14T13:12:01.867488+08:00",
+  "last_successful_run": "2026-09-15T13:14:17.261966+08:00",
   "failed_keywords": [
-    "杭州 动漫"
+    "杭州 ACG",
+    "杭州 桌游",
+    "上海 COC"
   ],
   "warnings": [
-    "1 keyword(s) failed after fallback",
-    "2 keyword(s) recovered by fallback"
+    "3 keyword(s) failed after fallback"
   ],
   "failed_keyword_details": [
     {
-      "keyword": "杭州 动漫",
+      "keyword": "杭州 ACG",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "杭州 桌游",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "上海 COC",
       "stage": "search",
       "reason": "context_deadline_exceeded",
       "attempts": 2,
       "fallback_used": true
     }
   ],
-  "search_fallback_success": [
-    "杭州 漫展",
-    "杭州 DND"
-  ],
-  "search_fallback_success_count": 2,
-  "search_failure_count": 1,
+  "search_fallback_success": [],
+  "search_fallback_success_count": 0,
+  "search_failure_count": 3,
   "detail_failure_count": 0
 }
