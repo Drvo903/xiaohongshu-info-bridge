@@ -1,0 +1,17 @@
+{
+  "request_id": "20260916-2128-hangzhou-cat-outing",
+  "created_at": "2026-09-16T21:28:00+08:00",
+  "status": "pending",
+  "type": "xiaohongshu_search",
+  "query": "杭州带猫出去玩，适合几个人一起玩的地方",
+  "keywords": [
+    "杭州 带猫 出去玩",
+    "杭州 宠物友好 猫 周末",
+    "杭州 带猫 公园",
+    "杭州 带猫 露营",
+    "杭州 宠物友好 户外",
+    "杭州 带猫 咖啡",
+    "杭州 宠物友好 聚会"
+  ],
+  "max_results_per_keyword": 10
+}
