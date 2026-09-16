@@ -1,34 +1,22 @@
 {
-  "updated_at": "2026-09-16T13:12:14.000385+08:00",
-  "collector_status": "partial",
+  "updated_at": "2026-09-16T17:39:22.174134+08:00",
+  "collector_status": "ok",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 2231,
+  "full_result_count": 2263,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-09-16T13:12:14.000385+08:00",
-  "failed_keywords": [
-    "上海 跑团节"
-  ],
+  "last_successful_run": "2026-09-16T17:39:22.174134+08:00",
+  "failed_keywords": [],
   "warnings": [
-    "1 keyword(s) failed after fallback",
-    "2 keyword(s) recovered by fallback",
-    "1 public detail request(s) failed or timed out"
+    "2 keyword(s) recovered by fallback"
   ],
-  "failed_keyword_details": [
-    {
-      "keyword": "上海 跑团节",
-      "stage": "search",
-      "reason": "context_deadline_exceeded",
-      "attempts": 2,
-      "fallback_used": true
-    }
-  ],
+  "failed_keyword_details": [],
   "search_fallback_success": [
-    "杭州 TRPG",
-    "杭州 DND"
+    "杭州 二次元",
+    "杭州 跑团"
   ],
   "search_fallback_success_count": 2,
-  "search_failure_count": 1,
-  "detail_failure_count": 1
+  "search_failure_count": 0,
+  "detail_failure_count": 0
 }
