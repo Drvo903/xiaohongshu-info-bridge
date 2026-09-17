@@ -1,22 +1,24 @@
 {
-  "updated_at": "2026-09-16T17:39:22.174134+08:00",
+  "updated_at": "2026-09-17T08:11:12.843710+08:00",
   "collector_status": "ok",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 2263,
+  "full_result_count": 2318,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-09-16T17:39:22.174134+08:00",
+  "last_successful_run": "2026-09-17T08:11:12.843710+08:00",
   "failed_keywords": [],
   "warnings": [
-    "2 keyword(s) recovered by fallback"
+    "3 keyword(s) recovered by fallback",
+    "1 public detail request(s) failed or timed out"
   ],
   "failed_keyword_details": [],
   "search_fallback_success": [
-    "杭州 二次元",
-    "杭州 跑团"
+    "杭州 TRPG",
+    "杭州 DND",
+    "杭州 桌游"
   ],
-  "search_fallback_success_count": 2,
+  "search_fallback_success_count": 3,
   "search_failure_count": 0,
-  "detail_failure_count": 0
+  "detail_failure_count": 1
 }
