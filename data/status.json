@@ -1,24 +1,33 @@
 {
-  "updated_at": "2026-09-17T08:11:12.843710+08:00",
-  "collector_status": "ok",
+  "updated_at": "2026-09-17T13:12:39.358316+08:00",
+  "collector_status": "partial",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 2318,
+  "full_result_count": 2359,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-09-17T08:11:12.843710+08:00",
-  "failed_keywords": [],
-  "warnings": [
-    "3 keyword(s) recovered by fallback",
-    "1 public detail request(s) failed or timed out"
+  "last_successful_run": "2026-09-17T13:12:39.358316+08:00",
+  "failed_keywords": [
+    "杭州 TRPG"
   ],
-  "failed_keyword_details": [],
+  "warnings": [
+    "1 keyword(s) failed after fallback",
+    "2 keyword(s) recovered by fallback"
+  ],
+  "failed_keyword_details": [
+    {
+      "keyword": "杭州 TRPG",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    }
+  ],
   "search_fallback_success": [
-    "杭州 TRPG",
-    "杭州 DND",
+    "杭州 ACG",
     "杭州 桌游"
   ],
-  "search_fallback_success_count": 3,
-  "search_failure_count": 0,
-  "detail_failure_count": 1
+  "search_fallback_success_count": 2,
+  "search_failure_count": 1,
+  "detail_failure_count": 0
 }
