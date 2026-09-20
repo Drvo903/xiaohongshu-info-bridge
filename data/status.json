@@ -1,33 +1,22 @@
 {
-  "updated_at": "2026-09-20T11:12:04.530200+08:00",
-  "collector_status": "partial",
+  "updated_at": "2026-09-20T17:09:35.780932+08:00",
+  "collector_status": "ok",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 2699,
+  "full_result_count": 2747,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-09-20T11:12:04.530200+08:00",
-  "failed_keywords": [
-    "上海 DND ONLY"
-  ],
+  "last_successful_run": "2026-09-20T17:09:35.780932+08:00",
+  "failed_keywords": [],
   "warnings": [
-    "1 keyword(s) failed after fallback",
     "2 keyword(s) recovered by fallback"
   ],
-  "failed_keyword_details": [
-    {
-      "keyword": "上海 DND ONLY",
-      "stage": "search",
-      "reason": "context_deadline_exceeded",
-      "attempts": 2,
-      "fallback_used": true
-    }
-  ],
+  "failed_keyword_details": [],
   "search_fallback_success": [
-    "杭州 ACG",
-    "杭州 跑团"
+    "杭州 DND",
+    "上海 跑团节"
   ],
   "search_fallback_success_count": 2,
-  "search_failure_count": 1,
+  "search_failure_count": 0,
   "detail_failure_count": 0
 }
