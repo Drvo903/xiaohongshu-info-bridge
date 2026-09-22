@@ -1,43 +1,21 @@
 {
-  "updated_at": "2026-09-22T13:16:54.414024+08:00",
-  "collector_status": "partial",
+  "updated_at": "2026-09-22T17:38:06.058172+08:00",
+  "collector_status": "ok",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 3020,
+  "full_result_count": 3064,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-09-22T13:16:54.414024+08:00",
-  "failed_keywords": [
-    "上海 BilibiliWorld",
-    "上海 BW"
-  ],
+  "last_successful_run": "2026-09-22T17:38:06.058172+08:00",
+  "failed_keywords": [],
   "warnings": [
-    "2 keyword(s) failed after fallback",
-    "4 keyword(s) recovered by fallback"
+    "1 keyword(s) recovered by fallback"
   ],
-  "failed_keyword_details": [
-    {
-      "keyword": "上海 BilibiliWorld",
-      "stage": "search",
-      "reason": "context_deadline_exceeded",
-      "attempts": 2,
-      "fallback_used": true
-    },
-    {
-      "keyword": "上海 BW",
-      "stage": "search",
-      "reason": "context_deadline_exceeded",
-      "attempts": 2,
-      "fallback_used": true
-    }
-  ],
+  "failed_keyword_details": [],
   "search_fallback_success": [
-    "杭州 二次元",
-    "杭州 ACG",
-    "上海 COMICUP",
-    "上海 BML"
+    "杭州 漫展"
   ],
-  "search_fallback_success_count": 4,
-  "search_failure_count": 2,
+  "search_fallback_success_count": 1,
+  "search_failure_count": 0,
   "detail_failure_count": 0
 }
