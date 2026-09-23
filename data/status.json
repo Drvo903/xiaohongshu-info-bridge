@@ -1,21 +1,58 @@
 {
-  "updated_at": "2026-09-22T17:38:06.058172+08:00",
-  "collector_status": "ok",
+  "updated_at": "2026-09-23T08:19:06.699343+08:00",
+  "collector_status": "partial",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 3064,
+  "full_result_count": 3131,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-09-22T17:38:06.058172+08:00",
-  "failed_keywords": [],
+  "last_successful_run": "2026-09-23T08:19:06.699343+08:00",
+  "failed_keywords": [
+    "杭州 ONLY",
+    "上海 COMICUP",
+    "上海 BilibiliWorld",
+    "上海 BML"
+  ],
   "warnings": [
-    "1 keyword(s) recovered by fallback"
+    "4 keyword(s) failed after fallback",
+    "2 keyword(s) recovered by fallback",
+    "1 public detail request(s) failed or timed out"
   ],
-  "failed_keyword_details": [],
+  "failed_keyword_details": [
+    {
+      "keyword": "杭州 ONLY",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "上海 COMICUP",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "上海 BilibiliWorld",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "上海 BML",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    }
+  ],
   "search_fallback_success": [
-    "杭州 漫展"
+    "杭州 DND",
+    "上海 CP"
   ],
-  "search_fallback_success_count": 1,
-  "search_failure_count": 0,
-  "detail_failure_count": 0
+  "search_fallback_success_count": 2,
+  "search_failure_count": 4,
+  "detail_failure_count": 1
 }
