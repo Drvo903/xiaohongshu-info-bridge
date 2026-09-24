@@ -1,23 +1,17 @@
 {
-  "updated_at": "2026-09-24T13:10:19.160676+08:00",
+  "updated_at": "2026-09-24T17:37:34.646979+08:00",
   "collector_status": "ok",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 3316,
+  "full_result_count": 3366,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-09-24T13:10:19.160676+08:00",
+  "last_successful_run": "2026-09-24T17:37:34.646979+08:00",
   "failed_keywords": [],
-  "warnings": [
-    "2 keyword(s) recovered by fallback",
-    "1 public detail request(s) failed or timed out"
-  ],
+  "warnings": [],
   "failed_keyword_details": [],
-  "search_fallback_success": [
-    "杭州 动漫",
-    "上海 DND"
-  ],
-  "search_fallback_success_count": 2,
+  "search_fallback_success": [],
+  "search_fallback_success_count": 0,
   "search_failure_count": 0,
-  "detail_failure_count": 1
+  "detail_failure_count": 0
 }
