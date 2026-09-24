@@ -1,36 +1,23 @@
 {
-  "updated_at": "2026-09-24T08:15:40.385871+08:00",
-  "collector_status": "partial",
+  "updated_at": "2026-09-24T13:10:19.160676+08:00",
+  "collector_status": "ok",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 3279,
+  "full_result_count": 3316,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-09-24T08:15:40.385871+08:00",
-  "failed_keywords": [
-    "杭州 快闪"
-  ],
+  "last_successful_run": "2026-09-24T13:10:19.160676+08:00",
+  "failed_keywords": [],
   "warnings": [
-    "1 keyword(s) failed after fallback",
-    "4 keyword(s) recovered by fallback",
+    "2 keyword(s) recovered by fallback",
     "1 public detail request(s) failed or timed out"
   ],
-  "failed_keyword_details": [
-    {
-      "keyword": "杭州 快闪",
-      "stage": "search",
-      "reason": "context_deadline_exceeded",
-      "attempts": 2,
-      "fallback_used": true
-    }
-  ],
+  "failed_keyword_details": [],
   "search_fallback_success": [
-    "杭州 ACG",
-    "杭州 联动",
-    "上海 BML",
-    "上海 同人展"
+    "杭州 动漫",
+    "上海 DND"
   ],
-  "search_fallback_success_count": 4,
-  "search_failure_count": 1,
+  "search_fallback_success_count": 2,
+  "search_failure_count": 0,
   "detail_failure_count": 1
 }
