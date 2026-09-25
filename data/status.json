@@ -1,42 +1,29 @@
 {
-  "updated_at": "2026-09-25T13:15:49.840510+08:00",
+  "updated_at": "2026-09-25T17:40:29.307528+08:00",
   "collector_status": "partial",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 3472,
+  "full_result_count": 3532,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-09-25T13:15:49.840510+08:00",
+  "last_successful_run": "2026-09-25T17:40:29.307528+08:00",
   "failed_keywords": [
-    "杭州 ACG",
-    "杭州 快闪"
+    "杭州 动漫"
   ],
   "warnings": [
-    "2 keyword(s) failed after fallback",
-    "3 keyword(s) recovered by fallback"
+    "1 keyword(s) failed after fallback"
   ],
   "failed_keyword_details": [
     {
-      "keyword": "杭州 ACG",
-      "stage": "search",
-      "reason": "context_deadline_exceeded",
-      "attempts": 2,
-      "fallback_used": true
-    },
-    {
-      "keyword": "杭州 快闪",
+      "keyword": "杭州 动漫",
       "stage": "search",
       "reason": "context_deadline_exceeded",
       "attempts": 2,
       "fallback_used": true
     }
   ],
-  "search_fallback_success": [
-    "杭州 动漫",
-    "杭州 桌游",
-    "上海 COC"
-  ],
-  "search_fallback_success_count": 3,
-  "search_failure_count": 2,
+  "search_fallback_success": [],
+  "search_fallback_success_count": 0,
+  "search_failure_count": 1,
   "detail_failure_count": 0
 }
