@@ -1,22 +1,54 @@
 {
-  "updated_at": "2026-09-26T11:11:37.866452+08:00",
+  "updated_at": "2026-09-26T17:20:44.646846+08:00",
   "collector_status": "partial",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 3582,
+  "full_result_count": 3649,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-09-26T11:11:37.866452+08:00",
+  "last_successful_run": "2026-09-26T17:20:44.646846+08:00",
   "failed_keywords": [
-    "杭州 ONLY"
+    "杭州 TRPG",
+    "杭州 DND",
+    "杭州 联动",
+    "杭州 动漫联动",
+    "上海 CP"
   ],
   "warnings": [
-    "1 keyword(s) failed after fallback",
-    "1 keyword(s) recovered by fallback"
+    "5 keyword(s) failed after fallback",
+    "2 keyword(s) recovered by fallback"
   ],
   "failed_keyword_details": [
     {
-      "keyword": "杭州 ONLY",
+      "keyword": "杭州 TRPG",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "杭州 DND",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "杭州 联动",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "杭州 动漫联动",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "上海 CP",
       "stage": "search",
       "reason": "context_deadline_exceeded",
       "attempts": 2,
@@ -24,9 +56,10 @@
     }
   ],
   "search_fallback_success": [
-    "上海 跑团"
+    "杭州 ACG",
+    "上海 BilibiliWorld"
   ],
-  "search_fallback_success_count": 1,
-  "search_failure_count": 1,
+  "search_fallback_success_count": 2,
+  "search_failure_count": 5,
   "detail_failure_count": 0
 }
