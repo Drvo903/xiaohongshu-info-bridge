@@ -1,19 +1,22 @@
 {
-  "updated_at": "2026-09-27T11:08:22.628613+08:00",
+  "updated_at": "2026-09-27T17:10:09.121921+08:00",
   "collector_status": "ok",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 3727,
+  "full_result_count": 3776,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-09-27T11:08:22.628613+08:00",
+  "last_successful_run": "2026-09-27T17:10:09.121921+08:00",
   "failed_keywords": [],
   "warnings": [
+    "1 keyword(s) recovered by fallback",
     "1 public detail request(s) failed or timed out"
   ],
   "failed_keyword_details": [],
-  "search_fallback_success": [],
-  "search_fallback_success_count": 0,
+  "search_fallback_success": [
+    "杭州 ONLY"
+  ],
+  "search_fallback_success_count": 1,
   "search_failure_count": 0,
   "detail_failure_count": 1
 }
