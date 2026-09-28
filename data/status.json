@@ -1,24 +1,23 @@
 {
-  "updated_at": "2026-09-28T08:12:01.961052+08:00",
+  "updated_at": "2026-09-28T13:11:04.748134+08:00",
   "collector_status": "ok",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 3834,
+  "full_result_count": 3887,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-09-28T08:12:01.961052+08:00",
+  "last_successful_run": "2026-09-28T13:11:04.748134+08:00",
   "failed_keywords": [],
   "warnings": [
-    "4 keyword(s) recovered by fallback"
+    "2 keyword(s) recovered by fallback",
+    "1 public detail request(s) failed or timed out"
   ],
   "failed_keyword_details": [],
   "search_fallback_success": [
-    "杭州 ACG",
-    "杭州 动漫",
-    "杭州 快闪",
-    "上海 CP"
+    "杭州 DND",
+    "杭州 桌游"
   ],
-  "search_fallback_success_count": 4,
+  "search_fallback_success_count": 2,
   "search_failure_count": 0,
-  "detail_failure_count": 0
+  "detail_failure_count": 1
 }
