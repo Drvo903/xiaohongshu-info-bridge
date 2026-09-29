@@ -1,23 +1,21 @@
 {
-  "updated_at": "2026-09-29T13:11:22.854702+08:00",
+  "updated_at": "2026-09-29T17:38:41.606857+08:00",
   "collector_status": "ok",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 4057,
+  "full_result_count": 4112,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-09-29T13:11:22.854702+08:00",
+  "last_successful_run": "2026-09-29T17:38:41.606857+08:00",
   "failed_keywords": [],
   "warnings": [
-    "3 keyword(s) recovered by fallback"
+    "1 keyword(s) recovered by fallback"
   ],
   "failed_keyword_details": [],
   "search_fallback_success": [
-    "杭州 ACG",
-    "杭州 桌游",
-    "上海 ONLY"
+    "杭州 快闪"
   ],
-  "search_fallback_success_count": 3,
+  "search_fallback_success_count": 1,
   "search_failure_count": 0,
   "detail_failure_count": 0
 }
