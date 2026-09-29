@@ -1,18 +1,19 @@
 {
-  "updated_at": "2026-09-28T17:42:30.925124+08:00",
+  "updated_at": "2026-09-29T08:16:56.970758+08:00",
   "collector_status": "partial",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 3957,
+  "full_result_count": 4016,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-09-28T17:42:30.925124+08:00",
+  "last_successful_run": "2026-09-29T08:16:56.970758+08:00",
   "failed_keywords": [
     "杭州 DND",
-    "上海 DND ONLY"
+    "上海 BML"
   ],
   "warnings": [
     "2 keyword(s) failed after fallback",
+    "4 keyword(s) recovered by fallback",
     "1 public detail request(s) failed or timed out"
   ],
   "failed_keyword_details": [
@@ -24,15 +25,20 @@
       "fallback_used": true
     },
     {
-      "keyword": "上海 DND ONLY",
+      "keyword": "上海 BML",
       "stage": "search",
       "reason": "context_deadline_exceeded",
       "attempts": 2,
       "fallback_used": true
     }
   ],
-  "search_fallback_success": [],
-  "search_fallback_success_count": 0,
+  "search_fallback_success": [
+    "杭州 动漫",
+    "杭州 漫展",
+    "杭州 跑团",
+    "杭州 快闪"
+  ],
+  "search_fallback_success_count": 4,
   "search_failure_count": 2,
   "detail_failure_count": 1
 }
