@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-09-30T08:11:21.618680+08:00",
+  "updated_at": "2026-09-30T13:11:07.635871+08:00",
   "collector_status": "ok",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 4154,
+  "full_result_count": 4183,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-09-30T08:11:21.618680+08:00",
+  "last_successful_run": "2026-09-30T13:11:07.635871+08:00",
   "failed_keywords": [],
   "warnings": [
     "3 keyword(s) recovered by fallback"
   ],
   "failed_keyword_details": [],
   "search_fallback_success": [
+    "杭州 动漫",
     "杭州 TRPG",
-    "杭州 桌游",
-    "上海 TRPG"
+    "杭州 桌游"
   ],
   "search_fallback_success_count": 3,
   "search_failure_count": 0,
