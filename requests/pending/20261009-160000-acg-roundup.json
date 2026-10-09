@@ -1,0 +1,20 @@
+{
+  "request_id": "20261009-160000-acg-roundup",
+  "created_at": "2026-10-09T16:00:00+08:00",
+  "status": "pending",
+  "type": "xiaohongshu_search",
+  "query": "江浙沪近期ACG、ONLY、桌游、TRPG、Live与快闪活动补充检索",
+  "keywords": [
+    "杭州 10月 ONLY 同人展",
+    "杭州 ACG 活动 快闪 联动",
+    "杭州 桌游展 桌游活动",
+    "杭州 TRPG 跑团 坠入奇点",
+    "杭州 偶像大师 ONLY",
+    "上海 10月 ONLY 同人展",
+    "上海 初音未来 VOCALOID Live",
+    "上海 东方Project 幻奏盛宴",
+    "上海 桌游展 桌游活动",
+    "CP33 街道 摊主 招募"
+  ],
+  "max_results_per_keyword": 20
+}
