@@ -1,0 +1,949 @@
+{
+  "request_id": "20261009-1420-xiaomi-health-export-sync",
+  "query": "中国大陆版小米运动健康怎么导出或自动同步小米手环7 NFC的健康数据，重点找无需截图的方案，包括小米隐私中心数据下载、CSV/JSON导出、Health Connect/Google Health同步、第三方开源工具、MCP/API自动读取，以及实际可行性和踩坑经验",
+  "status": "completed",
+  "created_at": "2026-10-09T14:20:00+08:00",
+  "completed_at": "2026-10-09T15:07:25.594349+08:00",
+  "keywords": [
+    "小米运动健康 数据导出",
+    "小米运动健康 CSV 导出",
+    "小米运动健康 Health Connect",
+    "小米运动健康 Google Health 同步",
+    "小米手环7 数据导出",
+    "小米运动健康 API",
+    "小米运动健康 MCP",
+    "小米运动健康 数据下载"
+  ],
+  "result_count": 57,
+  "results": [
+    {
+      "id": "6ac7061f000000001b0307ba",
+      "keyword": "小米运动健康 数据导出",
+      "matched_keywords": [
+        "小米运动健康 数据下载",
+        "小米运动健康 数据导出"
+      ],
+      "title": "小米手环11 入手保姆级教程，一篇讲透！",
+      "author": "星途数码局",
+      "published_at": "2026-10-08T02:55:27Z",
+      "url": "https://www.xiaohongshu.com/explore/6ac7061f000000001b0307ba",
+      "summary": "拿到小米手环11别急着往手上戴，这25项保姆级教程，新手照着做能少走不少弯路。 ⚙️ 到手先别急着配对 先用原装磁吸线充约90分钟，小米运动健康的8个权限一次给全，配对完记得把它锁进后台——没锁后台，来电和通知提醒会时有时无。 📱 屏显才是手环最该调的地方 默认全天抬腕亮屏挺熬人的，尤其夜里翻身。改成「排程」、常亮别开全天，再把「手掌一盖就熄屏」打开，续航一下就宽裕了。 ❤️ 健康这块最值的是睡眠HRV 心率血氧全天测，偏低会震你一下。真正的新料是睡眠HRV，掉到你自己的基线以下就提示疲劳，再配上AI解读和周月报告，比单看睡眠时长有用得多。 🏃 运动其实不用手机跟着跑 150多种模式，跑走骑椭划绳这6种会自动识别。游泳能数趟数，跑步有10组课程，骑车时心率还能直接推给码表。 📲 买NFC版前先想清楚 刷公交地铁、碰一下付款、车钥匙这几样标准版都没有，小爱同学也只在NFC版上有。陶瓷版和全金属版贵100块，功能一样没多，只是外壳换了材料。 💜 收藏 + 关注，下次不迷路！ 💬 有问题评论区问我，有问必答 #小米手环11[话题]# #小米手环[话题]# #手环设置教程[话题]# #隐藏功能",
+      "likes": 39,
+      "comments": 8,
+      "collects": 38,
+      "location": "安徽"
+    },
+    {
+      "id": "6ac5944b000000001b02d5bd",
+      "keyword": "小米运动健康 CSV 导出",
+      "matched_keywords": [
+        "小米运动健康 CSV 导出"
+      ],
+      "title": null,
+      "author": "暖暖",
+      "published_at": "2026-10-07T00:37:31Z",
+      "url": "https://www.xiaohongshu.com/explore/6ac5944b000000001b02d5bd",
+      "summary": null,
+      "likes": 0,
+      "comments": 12,
+      "collects": 0,
+      "location": "山东"
+    },
+    {
+      "id": "6ac478710000000002011458",
+      "keyword": "小米运动健康 CSV 导出",
+      "matched_keywords": [
+        "小米运动健康 CSV 导出"
+      ],
+      "title": "急急急！小米怎么传动图给苹果？",
+      "author": "issing",
+      "published_at": "2026-10-06T04:26:25Z",
+      "url": "https://www.xiaohongshu.com/explore/6ac478710000000002011458",
+      "summary": null,
+      "likes": 0,
+      "comments": 10,
+      "collects": 0,
+      "location": "河南"
+    },
+    {
+      "id": "6ac326eb000000001b01efc1",
+      "keyword": "小米运动健康 CSV 导出",
+      "matched_keywords": [
+        "小米运动健康 CSV 导出"
+      ],
+      "title": "navicat求助！！",
+      "author": "N.N",
+      "published_at": "2026-10-05T04:26:19Z",
+      "url": "https://www.xiaohongshu.com/explore/6ac326eb000000001b01efc1",
+      "summary": "各位小红书的大佬，我用navicat导入csv文件的时候，一直出现这样的错误❌，为什么呢？😩😭#数据分析[话题]# #数据分析我在行[话题]# #数据库[话题]# #spss统计分析[话题]# #软件下载[话题]# #办公技巧[话题]# #Windows[话题]# #java[话题]# #电脑软件[话题]# #实证分析[话题]#",
+      "likes": 2,
+      "comments": 7,
+      "collects": 1,
+      "location": "广东"
+    },
+    {
+      "id": "6ac29197000000001c00dad4",
+      "keyword": "小米运动健康 CSV 导出",
+      "matched_keywords": [
+        "小米运动健康 CSV 导出"
+      ],
+      "title": "小米手环支持九号了！",
+      "author": "广东非凡",
+      "published_at": "2026-10-04T17:49:11Z",
+      "url": "https://www.xiaohongshu.com/explore/6ac29197000000001c00dad4",
+      "summary": "传输助手里面有音乐模块，可以配合耳机离线听歌，具体可以到ab上查看#小米手环[话题]# #小米手环11[话题]# #听歌[话题]# #九号电动车[话题]#",
+      "likes": 4,
+      "comments": 0,
+      "collects": 3,
+      "location": "广东"
+    },
+    {
+      "id": "6ac24a11000000001b022c15",
+      "keyword": "小米运动健康 CSV 导出",
+      "matched_keywords": [
+        "小米运动健康 CSV 导出"
+      ],
+      "title": "哭了，为啥我的导出是乱码",
+      "author": "看见",
+      "published_at": "2026-10-04T12:44:01Z",
+      "url": "https://www.xiaohongshu.com/explore/6ac24a11000000001b022c15",
+      "summary": "送给小普普的裙子，按照斯嘉丽绿裙子的印象做的，总觉得她们性格还挺像的。好不容易做完了，拍了几张美图结果发现导不出来[扶额R]以前没有导出过，改了后缀也没用，怎么办啊啊啊 #针影裁梦[话题]# #发出尖锐的爆鸣声[话题]# #什么东西啊[话题]#",
+      "likes": 250,
+      "comments": 15,
+      "collects": 53,
+      "location": "陕西"
+    },
+    {
+      "id": "6ac212fa0000000013018c71",
+      "keyword": "小米运动健康 CSV 导出",
+      "matched_keywords": [
+        "小米运动健康 CSV 导出"
+      ],
+      "title": "14电池已换～",
+      "author": "无名",
+      "published_at": "2026-10-04T08:48:59Z",
+      "url": "https://www.xiaohongshu.com/explore/6ac212fa0000000013018c71",
+      "summary": "很难想象过了三年才体验到满血小米14#手机电池[话题]# #小米[话题]# #小米14[话题]#",
+      "likes": 58,
+      "comments": 253,
+      "collects": 16,
+      "location": "山东"
+    },
+    {
+      "id": "6aabb88b000000000b000d60",
+      "keyword": "小米运动健康 CSV 导出",
+      "matched_keywords": [
+        "小米运动健康 CSV 导出"
+      ],
+      "title": "小米手机如何用数据线直接连接电脑导出照片",
+      "author": "萌萌的各类攻略",
+      "published_at": "2026-09-17T09:53:15Z",
+      "url": "https://www.xiaohongshu.com/explore/6aabb88b000000000b000d60",
+      "summary": "用原装数据线设置好直接连接电脑即可！ 系统不要版本太旧！",
+      "likes": 422,
+      "comments": 41,
+      "collects": 226,
+      "location": "湖北"
+    },
+    {
+      "id": "6a9ec0e2000000002802fe3d",
+      "keyword": "小米运动健康 数据导出",
+      "matched_keywords": [
+        "小米手环7 数据导出",
+        "小米运动健康 API",
+        "小米运动健康 数据下载",
+        "小米运动健康 数据导出"
+      ],
+      "title": "小米手环数据原来能自己接 API！再也不用手",
+      "author": "文汐汐汐",
+      "published_at": "2026-09-07T13:49:22Z",
+      "url": "https://www.xiaohongshu.com/explore/6a9ec0e2000000002802fe3d",
+      "summary": "使用MiSDK通过Python轻松获取小米手环睡眠、步数和心率数据，支持按天、按连续多天查询历史数据。授权后生成token，编写简单代码即可获取数据，可用于睡眠分析、周报生成等。注意睡眠数据按“醒来那天”计算，时间戳需转换为北京时间。#vibecoding大赏[话题]# #小米运动健康[话题]# #小米手环[话题]# #小米手环10[话题]# #小米手环11[话题]# #小米手环9[话题]##MCP[话题]# #mcp[话题]#",
+      "likes": 226,
+      "comments": 25,
+      "collects": 318,
+      "location": null
+    },
+    {
+      "id": "6a9ae77a00000000260211bf",
+      "keyword": "小米运动健康 数据导出",
+      "matched_keywords": [
+        "小米运动健康 数据导出"
+      ],
+      "title": "小米运动健康数据工具增加导出GPX/TCX格式",
+      "author": "嗯哼",
+      "published_at": "2026-09-04T15:44:59Z",
+      "url": "https://www.xiaohongshu.com/explore/6a9ae77a00000000260211bf",
+      "summary": "小米运动健康数据导出工具，增加了运动数据导出为更通用的 GPX/TCX 格式功能，方便导出后导入 Strava 等第三方穿戴设备。 #ai[话题]# #aigc[话题]# #ai编程[话题]# #ai应用[话题]# #AI[话题]# #AI编程[话题]# #vibecoding[话题]# #vibecoding大赏[话题]# #小米运动健康[话题]# #GPX[话题]#",
+      "likes": 0,
+      "comments": 2,
+      "collects": 0,
+      "location": null
+    },
+    {
+      "id": "6a961eb3000000002802c44f",
+      "keyword": "小米运动健康 数据导出",
+      "matched_keywords": [
+        "小米运动健康 数据下载",
+        "小米运动健康 数据导出"
+      ],
+      "title": "如何查找并导出小米月报",
+      "author": "谐音耿女士",
+      "published_at": "2026-09-01T00:39:15Z",
+      "url": "https://www.xiaohongshu.com/explore/6a961eb3000000002802c44f",
+      "summary": "1、先打开小米运动记录 2、点击最上方彩虹桥🌈 3、选择右上角分享键 4、选择月数据最后右击分享，就可以得到我们的#小米月运动[话题]# 数据了",
+      "likes": 0,
+      "comments": 0,
+      "collects": 0,
+      "location": null
+    },
+    {
+      "id": "6a71c71f0000000026035f2f",
+      "keyword": "小米运动健康 数据导出",
+      "matched_keywords": [
+        "小米运动健康 数据导出"
+      ],
+      "title": "小米运动健康数据同步到Strava教程",
+      "author": "荧屏在发光",
+      "published_at": "2026-08-04T11:03:59Z",
+      "url": "https://www.xiaohongshu.com/explore/6a71c71f0000000026035f2f",
+      "summary": "对于地区位于中国大陆的小米运动健康/国行版小米手环手表，是不能直接和Strava数据互通的，但其实可以手动导出再上传，跑步、徒步（远足）、骑行什么的都可以： 先把每个记录文件导出（p2），选择tcx文件(Training Center XML)，然后发到电脑。文件后缀记得也改成tcx.，最后在Strava官网上传运动记录就可以（p3）。路线、配速什么的可以同步，心率好像不行。 #小米运动健康[话题]# #Strava[话题]# #strava[话题]# #小米手表[话题]# #小米手环[话题]#",
+      "likes": 2,
+      "comments": 0,
+      "collects": 1,
+      "location": null
+    },
+    {
+      "id": "6a66d9ac000000000f03f3ef",
+      "keyword": "小米运动健康 数据导出",
+      "matched_keywords": [
+        "小米运动健康 数据导出"
+      ],
+      "title": "小米运动健康表盘本地导出教程",
+      "author": "めぐみん",
+      "published_at": "2026-07-27T04:08:12Z",
+      "url": "https://www.xiaohongshu.com/explore/6a66d9ac000000000f03f3ef",
+      "summary": "可以导出小米运动健康付费表盘，支持大部分官方表盘，照片定制类表盘导出后无法二次编辑图片。提供一对一解答操作问题，禁止倒卖付费表盘资源，严禁商用。如需帮助，可提供表盘ID进行提取。",
+      "likes": 1,
+      "comments": 1,
+      "collects": 0,
+      "location": null
+    },
+    {
+      "id": "6a5daebc00000000010301a1",
+      "keyword": "小米运动健康 数据导出",
+      "matched_keywords": [
+        "小米运动健康 数据导出"
+      ],
+      "title": "感觉小米运动健康APP导出gpx文件数据有问题",
+      "author": "xiaoyf",
+      "published_at": "2026-07-20T05:14:36Z",
+      "url": "https://www.xiaohongshu.com/explore/6a5daebc00000000010301a1",
+      "summary": "小米运动健康app导出gpx文件没做格式化，连回车换行都没加看图五，从头到尾连在一起。时间格式有问题我是上午9.43分左右开始徒步，他记录的时间是2026-07-20T09:43:44.000Z,Z代表UTC标准时间，可是小米放入的是中国时间，这就导致在其他软件中导入的时间对不上。加8以后变成了下午17点以后运动。也导致我自己写的程序无法写入照片的gps数据。看第七张图，佳明的导出数据时间就是正确的2026-07-20T01:44:21.000Z，这个正好加8是上午9点多。OPPO现在也支持导出gpx数据并且也是正确的。感觉小米太不用心了。我用的小米手表是h1e血压表。看图一在app中显示数据时间是正确的。不知道是我的错还是app的错。",
+      "likes": 0,
+      "comments": 0,
+      "collects": 0,
+      "location": null
+    },
+    {
+      "id": "6a268941000000003502aa46",
+      "keyword": "小米运动健康 数据导出",
+      "matched_keywords": [
+        "小米运动健康 数据下载",
+        "小米运动健康 数据导出"
+      ],
+      "title": "为了导出自己小米体重秤数据，把账号注销了",
+      "author": "Davidhu",
+      "published_at": "2026-06-08T09:20:01Z",
+      "url": "https://www.xiaohongshu.com/explore/6a268941000000003502aa46",
+      "summary": "先声明不是段子，是真的发生在我身上的事 😮‍💨 我有长期记录体重 + 运动训练数据的习惯，会结合AI做分析，看看哪种训练模式对自己最有效。 问题来了： 小米体脂秤 + 小米运动健康App，没有批量导出功能。 分析页面就一个趋势图，看完等于没看。所以我之前的操作有多离谱： 每天在App里截图体重图表 把截图丢给AI工具，让它从图片里识别数字 汇总成表格 没错，我把自己活成了人肉OCR 😂 最近终于忍不了了，开始找批量导出的办法。 知乎上搜到一篇文章，说App隐私设置里有\"导出个人数据\"功能，2022年的文章。我照着步骤操作，但界面已经变了，我没多想就继续…… 然后我的账号就没了。 几年体重数据全没了，客服说注销不可撤回。 后来扒出来一个\"可行\"的导出方法： 📍 小米云服务官网 → 登录 → 右上角头像 → 小米账号 → 管理个人数据 → 小米运动健康 → 提交 然后呢？等15个工作日。 15天，就为了拿我自己的数据 😮‍💨 而且入口藏得巨深。 最无语的： 2022年App里还有导出功能，现在取消了？ 体脂秤用几年，硬件没升级，App没像样更新 我的数据，我想导出来分析，就这么难？ 给小米",
+      "likes": 12,
+      "comments": 7,
+      "collects": 2,
+      "location": null
+    },
+    {
+      "id": "6a0030790000000035033790",
+      "keyword": "小米运动健康 数据导出",
+      "matched_keywords": [
+        "小米运动健康 Health Connect",
+        "小米运动健康 数据导出"
+      ],
+      "title": "成功让claude读到了国行米手环9pro的数据！",
+      "author": "0.3秒",
+      "published_at": "2026-05-10T07:15:05Z",
+      "url": "https://www.xiaohongshu.com/explore/6a0030790000000035033790",
+      "summary": "终于成功了！！！ 本来我以为要折腾 VPS、MCP 什么的，结果发现根本不用。 用到的有：cluade app（需要订阅版，必须是美区ip），health connect，小米运动健康，gadgetbrige 通过gadgetbrige连接小米手环，然后gadgetbrige自动同步数据到health connect 美区的claude开放了直接从health connect读取数据的功能 最后的链路是： 小米运动健康导出 log → 找 auth key → Gadgetbridge 连手环 → Health Connect 同步 → Claude 读取数据 记录一下我踩过的坑，真的太不容易了。 1. auth key 不是直接显示的，要去 log 里找 先用小米运动健康正常连接手环，然后进： 我的 → 关于 在里面那个图标上连续点 10 次，就可以导出 log。 导出来之后找到： XiaomiFit.main.log 用文档/文本编辑器打开，搜索： encryptKey 一定要翻到log文件里最后一个encryptKey，引号里的那串就是需要用的密钥。 然后打开 Gadgetbri",
+      "likes": 629,
+      "comments": 101,
+      "collects": 521,
+      "location": null
+    },
+    {
+      "id": "69f1b8130000000035029aff",
+      "keyword": "小米运动健康 CSV 导出",
+      "matched_keywords": [
+        "小米运动健康 CSV 导出"
+      ],
+      "title": "克能看小米手环数据了",
+      "author": "语言宕机模块",
+      "published_at": "2026-04-29T07:49:39Z",
+      "url": "https://www.xiaohongshu.com/explore/69f1b8130000000035029aff",
+      "summary": "但还没跑通全自动化流程… 目前只能人手动上传。 感谢D老师的鼎力支持。 #claude[话题]# #deepseek[话题]# #人机恋[话题]#",
+      "likes": 36,
+      "comments": 15,
+      "collects": 18,
+      "location": null
+    },
+    {
+      "id": "68c2e1f8000000001c00dc0c",
+      "keyword": "小米运动健康 数据导出",
+      "matched_keywords": [
+        "小米运动健康 数据导出"
+      ],
+      "title": "求助(已解决)小米手环数据如何同步到strava",
+      "author": "🏊AI小菜",
+      "published_at": "2025-09-11T14:51:36Z",
+      "url": "https://www.xiaohongshu.com/explore/68c2e1f8000000001c00dc0c",
+      "summary": "#小米手环和strava[话题]# 问题：新入小米手环9 Pro（大陆版），数据能记录到苹果健康，但是不能同步到strava（国外），有没有好办法同步。// 不想刷固件（懒） 解决方案：（2026.08.02更新） 1. 小米运动健康app 导出 .tcx文件 （原来建议.gpx, gpx文件没有心率），跑步/自行车可以 2. 在strava网页版（登陆账号），导入 .tcx文件 3. 游泳的.tcx上传出错…（找到原因了，希望小米能改进：1. activity的sport要写swimming 2. strava希望有2个以上trackpoints，缺省位空 — 现在手工app上输入，贴图）。strava对tcx的游泳运动支持不好 4. SUP桨板没有GPS信息 Update in 2026.08.22: 小米手环10 Pro，和9 Pro一样，软件格式数据没啥进度 或许有人有小的app自动同步[满月R]",
+      "likes": 54,
+      "comments": 24,
+      "collects": 39,
+      "location": null
+    },
+    {
+      "id": "68a8426b000000001b030b0a",
+      "keyword": "小米运动健康 CSV 导出",
+      "matched_keywords": [
+        "小米运动健康 CSV 导出",
+        "小米运动健康 数据下载"
+      ],
+      "title": null,
+      "author": "西风不竞",
+      "published_at": "2025-08-22T10:11:55Z",
+      "url": "https://www.xiaohongshu.com/explore/68a8426b000000001b030b0a",
+      "summary": "小米运动健康 骑行数据 导入到iGPSport 纯手动，需要有点耐心 1，登录到小米账号后台，在隐私中心->管理您的数据->选择小米运动健康右边的下载 2，下载解压找到结尾是sport_track_data.csv，里面有每条轨迹数据的gpx下载地址 3，让豆包写个下载脚本，把上一步的所有gpx文件下载下来 4，登录到igpsport官网，找到数据上传，把gpx文件传上去（每次最多9条，可以传很多次）重复上传会自动去重 5，上传后可以对单条记录点编辑修改名称 6，只有简单的时间距离轨迹，没有心率踏频，聊胜于无吧 #骑行友好计划[话题]# #通勤骑行[话题]# #igps迹驰[话题]#",
+      "likes": 11,
+      "comments": 8,
+      "collects": 15,
+      "location": null
+    },
+    {
+      "id": "6ac87dd6000000001b01fae0",
+      "keyword": "小米运动健康 数据下载",
+      "matched_keywords": [
+        "小米运动健康 数据下载"
+      ],
+      "title": "小米运动健康到底在更新什么",
+      "author": "残梦何必再重温",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6ac87dd6000000001b01fae0",
+      "summary": null,
+      "likes": 0,
+      "comments": 1,
+      "collects": 0,
+      "location": null
+    },
+    {
+      "id": "6ac74b27000000001801375b",
+      "keyword": "小米运动健康 Google Health 同步",
+      "matched_keywords": [
+        "小米运动健康 Google Health 同步"
+      ],
+      "title": "小米这波把苹果全家桶偷家了",
+      "author": "Sh???",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6ac74b27000000001801375b",
+      "summary": null,
+      "likes": 7,
+      "comments": 0,
+      "collects": 2,
+      "location": null
+    },
+    {
+      "id": "6ac5cf28000000001203a095",
+      "keyword": "小米运动健康 Google Health 同步",
+      "matched_keywords": [
+        "小米运动健康 Google Health 同步"
+      ],
+      "title": "小米手环睡眠数据丢失",
+      "author": "酸奶紫米露",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6ac5cf28000000001203a095",
+      "summary": null,
+      "likes": 0,
+      "comments": 3,
+      "collects": 0,
+      "location": null
+    },
+    {
+      "id": "6ac5387c000000001803ae06",
+      "keyword": "小米运动健康 Google Health 同步",
+      "matched_keywords": [
+        "小米运动健康 Google Health 同步"
+      ],
+      "title": null,
+      "author": "食言",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6ac5387c000000001803ae06",
+      "summary": null,
+      "likes": 0,
+      "comments": 5,
+      "collects": 0,
+      "location": null
+    },
+    {
+      "id": "6ac4f4d9000000001303cb2a",
+      "keyword": "小米运动健康 Google Health 同步",
+      "matched_keywords": [
+        "小米运动健康 Google Health 同步"
+      ],
+      "title": null,
+      "author": ":)",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6ac4f4d9000000001303cb2a",
+      "summary": null,
+      "likes": 0,
+      "comments": 8,
+      "collects": 0,
+      "location": null
+    },
+    {
+      "id": "6ac4a821000000001802e291",
+      "keyword": "小米运动健康 数据下载",
+      "matched_keywords": [
+        "小米运动健康 数据下载"
+      ],
+      "title": null,
+      "author": "阿M",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6ac4a821000000001802e291",
+      "summary": null,
+      "likes": 4,
+      "comments": 1,
+      "collects": 1,
+      "location": null
+    },
+    {
+      "id": "6ac25eb2000000001500fb34",
+      "keyword": "小米运动健康 API",
+      "matched_keywords": [
+        "小米运动健康 API"
+      ],
+      "title": "小米啊，你要知耻",
+      "author": "古菇顾！",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6ac25eb2000000001500fb34",
+      "summary": null,
+      "likes": 0,
+      "comments": 3,
+      "collects": 0,
+      "location": null
+    },
+    {
+      "id": "6aba02cd0000000018010b8f",
+      "keyword": "小米运动健康 数据下载",
+      "matched_keywords": [
+        "小米运动健康 数据下载"
+      ],
+      "title": "有没有能导入佳明，小米，vivo历史运动数据",
+      "author": "水瓶座猫猫",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6aba02cd0000000018010b8f",
+      "summary": null,
+      "likes": 0,
+      "comments": 11,
+      "collects": 0,
+      "location": null
+    },
+    {
+      "id": "6ab92bd70000000014038a12",
+      "keyword": "小米运动健康 API",
+      "matched_keywords": [
+        "小米运动健康 API"
+      ],
+      "title": "小米手机可以连接苹果手表 我惊呆了",
+      "author": "小米罗评评",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6ab92bd70000000014038a12",
+      "summary": null,
+      "likes": 27,
+      "comments": 29,
+      "collects": 12,
+      "location": null
+    },
+    {
+      "id": "6ab73c95000000001c00d937",
+      "keyword": "小米运动健康 Health Connect",
+      "matched_keywords": [
+        "小米运动健康 API",
+        "小米运动健康 Health Connect"
+      ],
+      "title": "小米运动健康这么烂的数据分析，applewatch",
+      "author": "Lucky苏",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6ab73c95000000001c00d937",
+      "summary": null,
+      "likes": 6,
+      "comments": 10,
+      "collects": 2,
+      "location": null
+    },
+    {
+      "id": "6ab3431700000000120397d3",
+      "keyword": "小米运动健康 Health Connect",
+      "matched_keywords": [
+        "小米运动健康 Health Connect"
+      ],
+      "title": "小米手环戴着戴着都闹心",
+      "author": "幸福大王",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6ab3431700000000120397d3",
+      "summary": null,
+      "likes": 38,
+      "comments": 42,
+      "collects": 0,
+      "location": null
+    },
+    {
+      "id": "6ab0920c000000002700a2b1",
+      "keyword": "小米运动健康 Health Connect",
+      "matched_keywords": [
+        "小米运动健康 API",
+        "小米运动健康 Google Health 同步",
+        "小米运动健康 Health Connect"
+      ],
+      "title": "小米手环连接血糖仪并展示血糖数据的方法",
+      "author": "对不对开心农场",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6ab0920c000000002700a2b1",
+      "summary": null,
+      "likes": 16,
+      "comments": 12,
+      "collects": 12,
+      "location": null
+    },
+    {
+      "id": "6aafdbf4000000002b01fb94",
+      "keyword": "小米运动健康 Health Connect",
+      "matched_keywords": [
+        "小米运动健康 Health Connect"
+      ],
+      "title": "嗯？居然有19项要注意",
+      "author": "你怎么呆呆的",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6aafdbf4000000002b01fb94",
+      "summary": null,
+      "likes": 0,
+      "comments": 4,
+      "collects": 0,
+      "location": null
+    },
+    {
+      "id": "6aaca04a000000001001e0cf",
+      "keyword": "小米运动健康 Health Connect",
+      "matched_keywords": [
+        "小米运动健康 Health Connect"
+      ],
+      "title": "✨小米健康研究，你真的懂我！",
+      "author": "momo",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6aaca04a000000001001e0cf",
+      "summary": null,
+      "likes": 0,
+      "comments": 0,
+      "collects": 0,
+      "location": null
+    },
+    {
+      "id": "6aaa32d40000000011036ed6",
+      "keyword": "小米运动健康 CSV 导出",
+      "matched_keywords": [
+        "小米运动健康 CSV 导出"
+      ],
+      "title": "公益打卡｜线上健步活动小技巧",
+      "author": "猪猪侠盗",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6aaa32d40000000011036ed6",
+      "summary": null,
+      "likes": 504,
+      "comments": 96,
+      "collects": 467,
+      "location": null
+    },
+    {
+      "id": "6aa962270000000027014c10",
+      "keyword": "小米运动健康 Health Connect",
+      "matched_keywords": [
+        "小米运动健康 API",
+        "小米运动健康 Health Connect"
+      ],
+      "title": "Zepp Life VS 小米健康运动",
+      "author": "Jane静静",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6aa962270000000027014c10",
+      "summary": null,
+      "likes": 1,
+      "comments": 0,
+      "collects": 0,
+      "location": null
+    },
+    {
+      "id": "6aa7c68a000000002602315b",
+      "keyword": "小米运动健康 Health Connect",
+      "matched_keywords": [
+        "小米运动健康 Health Connect"
+      ],
+      "title": "小米你家的健康app是给人类用的嘛？",
+      "author": "金半仙",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6aa7c68a000000002602315b",
+      "summary": null,
+      "likes": 1,
+      "comments": 6,
+      "collects": 1,
+      "location": null
+    },
+    {
+      "id": "6aa56692000000002902f2ea",
+      "keyword": "小米手环7 数据导出",
+      "matched_keywords": [
+        "小米手环7 数据导出"
+      ],
+      "title": "小米手环7使用说明",
+      "author": "吃饭饭",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6aa56692000000002902f2ea",
+      "summary": null,
+      "likes": 10,
+      "comments": 0,
+      "collects": 12,
+      "location": null
+    },
+    {
+      "id": "6a93df1d0000000024006538",
+      "keyword": "小米手环7 数据导出",
+      "matched_keywords": [
+        "小米手环7 数据导出"
+      ],
+      "title": "让AI读手环数据防踩坑指南：小米7× vivo",
+      "author": "空调君吃饱饱",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6a93df1d0000000024006538",
+      "summary": null,
+      "likes": 2,
+      "comments": 0,
+      "collects": 1,
+      "location": null
+    },
+    {
+      "id": "6a8e4293000000002003b5bf",
+      "keyword": "小米运动健康 API",
+      "matched_keywords": [
+        "小米运动健康 API"
+      ],
+      "title": "开源了一个小米运动健康的mcp",
+      "author": "幽灵系宝可梦训练大师",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6a8e4293000000002003b5bf",
+      "summary": null,
+      "likes": 125,
+      "comments": 8,
+      "collects": 99,
+      "location": null
+    },
+    {
+      "id": "6a47e3cd000000000f0339d9",
+      "keyword": "小米运动健康 Health Connect",
+      "matched_keywords": [
+        "小米运动健康 Health Connect"
+      ],
+      "title": "研究了一晚上机终于可以读到我的手环了！",
+      "author": "枯雨季",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6a47e3cd000000000f0339d9",
+      "summary": null,
+      "likes": 91,
+      "comments": 6,
+      "collects": 48,
+      "location": null
+    },
+    {
+      "id": "6a44fdf000000000110104c9",
+      "keyword": "小米运动健康 Health Connect",
+      "matched_keywords": [
+        "小米运动健康 Health Connect"
+      ],
+      "title": null,
+      "author": "枯雨季",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6a44fdf000000000110104c9",
+      "summary": null,
+      "likes": 24,
+      "comments": 13,
+      "collects": 20,
+      "location": null
+    },
+    {
+      "id": "6a3f7415000000001603d981",
+      "keyword": "小米运动健康 API",
+      "matched_keywords": [
+        "小米运动健康 API"
+      ],
+      "title": "免费mimov2.5pro，无需关注无需私信",
+      "author": "Ray",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6a3f7415000000001603d981",
+      "summary": null,
+      "likes": 36,
+      "comments": 55,
+      "collects": 28,
+      "location": null
+    },
+    {
+      "id": "6a30a386000000000f0302c1",
+      "keyword": "小米手环7 数据导出",
+      "matched_keywords": [
+        "小米手环7 数据导出"
+      ],
+      "title": "你不会不知道Zepp life的历史记录能导出吧",
+      "author": "运动健康转换工具",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6a30a386000000000f0302c1",
+      "summary": null,
+      "likes": 15,
+      "comments": 11,
+      "collects": 11,
+      "location": null
+    },
+    {
+      "id": "6a2f708f00000000160268cb",
+      "keyword": "小米运动健康 API",
+      "matched_keywords": [
+        "小米运动健康 API"
+      ],
+      "title": "小米运动健康APP到底能不能优化！",
+      "author": "Hello菜菜",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6a2f708f00000000160268cb",
+      "summary": null,
+      "likes": 10,
+      "comments": 16,
+      "collects": 0,
+      "location": null
+    },
+    {
+      "id": "6a2d93c80000000020039905",
+      "keyword": "小米运动健康 API",
+      "matched_keywords": [
+        "小米运动健康 API"
+      ],
+      "title": "表盘自定义工具在新版小米运动健康安装方法",
+      "author": "辰间备忘录（AI干的）",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6a2d93c80000000020039905",
+      "summary": null,
+      "likes": 67,
+      "comments": 21,
+      "collects": 43,
+      "location": null
+    },
+    {
+      "id": "69f21077000000001f005358",
+      "keyword": "小米手环7 数据导出",
+      "matched_keywords": [
+        "小米手环7 数据导出"
+      ],
+      "title": "Claude手动读取小米手环7数据",
+      "author": "ybsjQ",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/69f21077000000001f005358",
+      "summary": null,
+      "likes": 213,
+      "comments": 31,
+      "collects": 173,
+      "location": null
+    },
+    {
+      "id": "69c88e7c000000001a02fa0d",
+      "keyword": "小米手环7 数据导出",
+      "matched_keywords": [
+        "小米手环7 数据导出"
+      ],
+      "title": "如何将小米手环的数据同步到手机",
+      "author": "皮蛋瘦肉周",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/69c88e7c000000001a02fa0d",
+      "summary": null,
+      "likes": 0,
+      "comments": 2,
+      "collects": 0,
+      "location": null
+    },
+    {
+      "id": "69a17b35000000002800a93b",
+      "keyword": "小米运动健康 Google Health 同步",
+      "matched_keywords": [
+        "小米运动健康 Google Health 同步"
+      ],
+      "title": "🇲🇾抑郁4年｜无痛运动小tips🏃‍",
+      "author": "赛博话唠",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/69a17b35000000002800a93b",
+      "summary": null,
+      "likes": 11,
+      "comments": 1,
+      "collects": 3,
+      "location": null
+    },
+    {
+      "id": "6937a339000000001e00ddc4",
+      "keyword": "小米运动健康 Google Health 同步",
+      "matched_keywords": [
+        "小米运动健康 Google Health 同步"
+      ],
+      "title": "OtterLife 常见问题",
+      "author": "OtterLife",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6937a339000000001e00ddc4",
+      "summary": null,
+      "likes": 118,
+      "comments": 385,
+      "collects": 31,
+      "location": null
+    },
+    {
+      "id": "6909ec1e0000000005010148",
+      "keyword": "小米运动健康 Google Health 同步",
+      "matched_keywords": [
+        "小米运动健康 Google Health 同步"
+      ],
+      "title": "求助小米大神!！小米17 和 google fit",
+      "author": "布桑",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6909ec1e0000000005010148",
+      "summary": null,
+      "likes": 6,
+      "comments": 18,
+      "collects": 3,
+      "location": null
+    },
+    {
+      "id": "68e4da1e0000000003020da5",
+      "keyword": "小米运动健康 数据下载",
+      "matched_keywords": [
+        "小米运动健康 数据下载"
+      ],
+      "title": null,
+      "author": "OPPO孙",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/68e4da1e0000000003020da5",
+      "summary": null,
+      "likes": 1,
+      "comments": 1,
+      "collects": 0,
+      "location": null
+    },
+    {
+      "id": "68b0b0c7000000001c005d12",
+      "keyword": "小米运动健康 Google Health 同步",
+      "matched_keywords": [
+        "小米运动健康 Google Health 同步"
+      ],
+      "title": "谷歌健身，fitbit，小米健康终于数据互通了",
+      "author": "小红薯630838EA",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/68b0b0c7000000001c005d12",
+      "summary": null,
+      "likes": 21,
+      "comments": 17,
+      "collects": 14,
+      "location": null
+    },
+    {
+      "id": "689b48d7000000001c033ae7",
+      "keyword": "小米手环7 数据导出",
+      "matched_keywords": [
+        "小米手环7 数据导出",
+        "小米运动健康 数据下载"
+      ],
+      "title": "自定义导出小米手环运动记录一共分9步",
+      "author": "Tiana",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/689b48d7000000001c033ae7",
+      "summary": null,
+      "likes": 58,
+      "comments": 13,
+      "collects": 27,
+      "location": null
+    },
+    {
+      "id": "687a6c45000000001d00e07d",
+      "keyword": "小米运动健康 Google Health 同步",
+      "matched_keywords": [
+        "小米运动健康 Google Health 同步"
+      ],
+      "title": null,
+      "author": "Science baby",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/687a6c45000000001d00e07d",
+      "summary": null,
+      "likes": 0,
+      "comments": 4,
+      "collects": 2,
+      "location": null
+    },
+    {
+      "id": "65b9e2c700000000010316a9",
+      "keyword": "小米手环7 数据导出",
+      "matched_keywords": [
+        "小米手环7 数据导出"
+      ],
+      "title": "小米手环（华米）数据同步到RQ runner",
+      "author": "备啊",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/65b9e2c700000000010316a9",
+      "summary": null,
+      "likes": 38,
+      "comments": 22,
+      "collects": 20,
+      "location": null
+    },
+    {
+      "id": "6403042a000000000800e23d",
+      "keyword": "小米手环7 数据导出",
+      "matched_keywords": [
+        "小米手环7 数据导出"
+      ],
+      "title": "小米手环7导入课表教程",
+      "author": "Zmi",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6403042a000000000800e23d",
+      "summary": null,
+      "likes": 753,
+      "comments": 36,
+      "collects": 449,
+      "location": null
+    },
+    {
+      "id": "62dbf365000000001e01643b",
+      "keyword": "小米手环7 数据导出",
+      "matched_keywords": [
+        "小米手环7 数据导出"
+      ],
+      "title": "小米手环7，我应该不是最后一个知道的吧",
+      "author": "然后呢？",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/62dbf365000000001e01643b",
+      "summary": null,
+      "likes": 9,
+      "comments": 23,
+      "collects": 4,
+      "location": null
+    }
+  ],
+  "failed_keywords": [],
+  "warnings": [
+    "one public detail request failed or timed out"
+  ]
+}
