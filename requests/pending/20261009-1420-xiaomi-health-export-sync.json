@@ -1,0 +1,18 @@
+{
+  "request_id": "20261009-1420-xiaomi-health-export-sync",
+  "created_at": "2026-10-09T14:20:00+08:00",
+  "status": "pending",
+  "type": "xiaohongshu_search",
+  "query": "中国大陆版小米运动健康怎么导出或自动同步小米手环7 NFC的健康数据，重点找无需截图的方案，包括小米隐私中心数据下载、CSV/JSON导出、Health Connect/Google Health同步、第三方开源工具、MCP/API自动读取，以及实际可行性和踩坑经验",
+  "keywords": [
+    "小米运动健康 数据导出",
+    "小米运动健康 CSV 导出",
+    "小米运动健康 Health Connect",
+    "小米运动健康 Google Health 同步",
+    "小米手环7 数据导出",
+    "小米运动健康 API",
+    "小米运动健康 MCP",
+    "小米运动健康 数据下载"
+  ],
+  "max_results_per_keyword": 10
+}
