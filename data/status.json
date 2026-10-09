@@ -1,23 +1,42 @@
 {
-  "updated_at": "2026-10-08T13:11:18.079095+08:00",
-  "collector_status": "ok",
+  "updated_at": "2026-10-09T08:15:06.737699+08:00",
+  "collector_status": "partial",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 4327,
-  "latest_result_count": 109,
+  "full_result_count": 4393,
+  "latest_result_count": 184,
   "latest_window_days": 7,
-  "last_successful_run": "2026-10-08T13:11:18.079095+08:00",
-  "failed_keywords": [],
+  "last_successful_run": "2026-10-09T08:15:06.737699+08:00",
+  "failed_keywords": [
+    "杭州 动漫",
+    "杭州 快闪"
+  ],
   "warnings": [
+    "2 keyword(s) failed after fallback",
     "2 keyword(s) recovered by fallback",
     "1 public detail request(s) failed or timed out"
   ],
-  "failed_keyword_details": [],
+  "failed_keyword_details": [
+    {
+      "keyword": "杭州 动漫",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "杭州 快闪",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    }
+  ],
   "search_fallback_success": [
     "杭州 漫展",
-    "上海 同人展"
+    "杭州 桌游"
   ],
   "search_fallback_success_count": 2,
-  "search_failure_count": 0,
+  "search_failure_count": 2,
   "detail_failure_count": 1
 }
