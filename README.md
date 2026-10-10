@@ -11,7 +11,8 @@ Windows 上的只读小红书公开信息采集器。它通过官方 `xiaohongsh
 ```text
 D:\XHSCollector\
 ├─ bin\                         官方 Windows x64 程序（本地敏感/运行文件，不上传）
-├─ config\keywords.json         杭州固定关键词（可修改）
+├─ config\keywords.json         杭州高频固定关键词（可修改）
+├─ config\keywords_hangzhou_rotating.json 杭州商圈与活动轮换词（可修改）
 ├─ config\keywords_shanghai.json 上海高价值定向关键词（可修改）
 ├─ data\
 │  ├─ xhs-feed.json             可公开数据镜像（GitHub 上传此文件）
@@ -66,21 +67,15 @@ pwsh.exe -NoProfile -ExecutionPolicy Bypass -File D:\XHSCollector\scripts\login.
 
 ## 修改关键词
 
-杭州关键词编辑：
+杭州固定高频词在 `config/keywords.json`（15 项），商圈与长尾轮换词在 `config/keywords_hangzhou_rotating.json`（30 项），上海定向词仍在 `config/keywords_shanghai.json`（15 项）。三个文件均为 JSON 字符串数组。
 
-```text
-D:\XHSCollector\config\keywords.json
-```
+固定采集先处理全部 15 个杭州高频词（每词最多 4 条、每轮最多 60 条），然后从杭州轮换词中**每轮选择连续 5 个**（每词最多 4 条、每轮最多 20 条），最后按原有独立机制采集上海定向词（每词最多 8 条、每轮最多 20 条）。杭州两组最多 80 条，上海最多 20 条；正常情况下杭州每轮最多搜索 20 个词（原来 22 个），不会因为加入商圈词而无限增加请求。预算指单轮去重后处理的结果上限，不是对活动完整覆盖的保证。
 
-上海关键词编辑：
+杭州轮换规则：使用本地日期与时段计算偏移 `((DayOfYear-1)*3 + slot)*5`，对 30 个词取模；`slot=0` 为上午（08:00/周末11:00），`slot=1` 为工作日13:00，`slot=2` 为17:30/周末17:00。每轮取 5 个，正常运行时每约 6 个计划时段轮完一遍；周末少一轮，所以不承诺严格每 48 小时全覆盖。上海原有偏移规则与预算保持不变。
 
-```text
-D:\XHSCollector\config\keywords_shanghai.json
-```
+商圈重点：工联CC的 B1、B2、3F（animate、Good Smile Cafe/Store、JUMP SHOP&CAFE、HAPPY ZOO、TAPIOCA及新入驻店）；湖滨88的 COMIPLUS+、主题饮品、快闪；湖滨银泰in77的 A—F区快闪、签售、市集和新店。不限 ACG IP，同时留意三丽鸥、角落生物、潮玩、文创手作、宠物主题。用户问近期活动时，优先核查商场/品牌/主办方官方官宣、日期、预约、限量赠品、补货、提前闭店、排队限制、延期和取消；普通打卡帖仅作为待验证线索，不能据旧笔记断定仍在举办。**目前采集器仅抓取公开搜索记录，并未自动完成官方账号认证或活动日期核验；这些由消费数据的 ChatGPT 与公开来源交叉验证。**
 
-两个文件都必须是字符串数组。固定采集始终先处理全部杭州关键词，杭州预算保持每轮最多 80 条；上海采用独立的保守预算，每词最多 8 条、每轮最多 20 条，并按固定任务的时间段轮换关键词。详情请求总量仍保持每轮最多 20 条，单次详情请求超时 45 秒，并在关键词和详情请求之间等待。详情超时只记录日志，不覆盖已有成功数据。
-
-上海目前采用高价值定向采集策略，重点覆盖大型展会、ONLY 和 TRPG/DND/COC 类活动；杭州仍采用更高密度的小型活动覆盖。
+详情请求总量仍保持每轮最多 20 条，单次详情请求超时 45 秒，并在关键词和详情请求之间等待。详情超时只记录日志，不覆盖已有成功数据。
 
 `search_feeds` 首次搜索使用 `filters.sort_by="最新"`。如果首次搜索遇到 `context deadline exceeded` 或筛选/点击类错误，会随机等待 4～8 秒后无筛选重试一次；每个关键词最多主搜索 1 次、fallback 1 次。fallback 成功不计入 `failed_keywords`。`status.json` 还会记录 `failed_keyword_details`、fallback 成功列表和数量、最终搜索失败数、详情失败数。
 
