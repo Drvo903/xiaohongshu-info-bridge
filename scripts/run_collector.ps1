@@ -195,8 +195,19 @@ try {
         $slot = 2
     }
     $secondaryOffset = ((($nowForRotation.DayOfYear - 1) * 3) + ($slot * 3)) % 15
-    # Every scheduled time slot advances the Hangzhou rotation by five terms.
-    $hangzhouRotationOffset = ((($nowForRotation.DayOfYear - 1) * 3) + $slot) * 5
+
+    # Number the actual planned runs continuously: 3 x 5 weekdays + 2 x 2 weekend days
+    # = 19 runs per week. This avoids skipping rotation batches over the weekend.
+    $weekdayIndex = (([int]$nowForRotation.DayOfWeek + 6) % 7) # Monday=0 ... Sunday=6
+    $dayStartRun = @(0, 3, 6, 9, 12, 15, 17)
+    $weekStart = $nowForRotation.Date.AddDays(-$weekdayIndex)
+    $weeksFromAnchor = [int][Math]::Floor(($weekStart - [datetime]"2020-01-06").TotalDays / 7)
+    if ($weekdayIndex -ge 5) {
+        $runWithinDay = if ($nowForRotation.Hour -lt 15) { 0 } else { 1 }
+    } else {
+        $runWithinDay = $slot
+    }
+    $hangzhouRotationOffset = (($weeksFromAnchor * 19) + $dayStartRun[$weekdayIndex] + $runWithinDay) * 5
 
     # These variables apply only to this wrapper and its children.
     $env:COOKIES_PATH = Join-Path $root "data\cookies.json"
