@@ -764,10 +764,27 @@ def run(args: argparse.Namespace) -> int:
                 load_keywords(secondary_keyword_path),
                 args.secondary_offset,
             )
+        # Process a small Hangzhou rotation batch after all fixed core keywords.
+        rotating_keywords: list[str] = []
+        if args.rotating_keywords and args.rotating_count > 0:
+            rotating_keywords = rotate_keywords(
+                load_keywords(Path(args.rotating_keywords).resolve()),
+                args.rotating_offset,
+            )[:args.rotating_count]
         keyword_plan: list[tuple[str, int, str, int, int]] = []
         keyword_plan.extend(
             ("primary", index, keyword, args.per_keyword_limit, args.max_total)
             for index, keyword in enumerate(keywords)
+        )
+        keyword_plan.extend(
+            (
+                "rotating",
+                index,
+                keyword,
+                args.rotating_per_keyword_limit,
+                args.rotating_max_total,
+            )
+            for index, keyword in enumerate(rotating_keywords)
         )
         keyword_plan.extend(
             (
@@ -779,13 +796,18 @@ def run(args: argparse.Namespace) -> int:
             )
             for index, keyword in enumerate(secondary_keywords)
         )
-        group_seen: dict[str, int] = {"primary": 0, "secondary": 0}
+        group_seen: dict[str, int] = {"primary": 0, "rotating": 0, "secondary": 0}
         group_limit_logged: set[str] = set()
         logger.info(
-            "KEYWORD_BUDGET primary_count=%d primary_limit=%d secondary_count=%d "
-            "secondary_limit=%d secondary_per_keyword=%d secondary_offset=%d",
+            "KEYWORD_BUDGET primary_count=%d primary_limit=%d "
+            "rotating_count=%d rotating_limit=%d rotating_per_keyword=%d rotating_offset=%d "
+            "secondary_count=%d secondary_limit=%d secondary_per_keyword=%d secondary_offset=%d",
             len(keywords),
             args.max_total,
+            len(rotating_keywords),
+            args.rotating_max_total,
+            args.rotating_per_keyword_limit,
+            args.rotating_offset,
             len(secondary_keywords),
             args.secondary_max_total,
             args.secondary_per_keyword_limit,
@@ -1079,6 +1101,7 @@ def run(args: argparse.Namespace) -> int:
                     "failed_keyword_details": stats.failed_keyword_details,
                     "search_fallback_success": stats.search_fallback_success,
                     "primary_unique_seen": group_seen["primary"],
+                    "rotating_unique_seen": group_seen["rotating"],
                     "secondary_unique_seen": min(
                         group_seen["secondary"],
                         args.secondary_max_total,
@@ -1141,6 +1164,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--per-keyword-limit", type=int, default=DEFAULT_PER_KEYWORD_LIMIT)
     parser.add_argument("--max-total", type=int, default=DEFAULT_MAX_TOTAL)
     parser.add_argument("--max-details", type=int, default=DEFAULT_MAX_DETAILS)
+    parser.add_argument("--rotating-keywords", default=None)
+    parser.add_argument("--rotating-count", type=int, default=0)
+    parser.add_argument("--rotating-offset", type=int, default=0)
+    parser.add_argument("--rotating-per-keyword-limit", type=int, default=4)
+    parser.add_argument("--rotating-max-total", type=int, default=20)
     parser.add_argument("--secondary-keywords", default=None)
     parser.add_argument("--secondary-per-keyword-limit", type=int, default=8)
     parser.add_argument("--secondary-max-total", type=int, default=20)
