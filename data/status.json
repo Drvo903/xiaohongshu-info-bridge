@@ -1,31 +1,22 @@
 {
-  "updated_at": "2026-10-10T11:14:57.424375+08:00",
+  "updated_at": "2026-10-10T17:12:29.751153+08:00",
   "collector_status": "partial",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 4589,
+  "full_result_count": 4659,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-10-10T11:14:57.424375+08:00",
+  "last_successful_run": "2026-10-10T17:12:29.751153+08:00",
   "failed_keywords": [
-    "杭州 二次元",
-    "杭州 ACG"
+    "杭州 DND"
   ],
   "warnings": [
-    "2 keyword(s) failed after fallback",
-    "1 keyword(s) recovered by fallback",
-    "2 public detail request(s) failed or timed out"
+    "1 keyword(s) failed after fallback",
+    "2 keyword(s) recovered by fallback"
   ],
   "failed_keyword_details": [
     {
-      "keyword": "杭州 二次元",
-      "stage": "search",
-      "reason": "context_deadline_exceeded",
-      "attempts": 2,
-      "fallback_used": true
-    },
-    {
-      "keyword": "杭州 ACG",
+      "keyword": "杭州 DND",
       "stage": "search",
       "reason": "context_deadline_exceeded",
       "attempts": 2,
@@ -33,9 +24,10 @@
     }
   ],
   "search_fallback_success": [
-    "上海 DND ONLY"
+    "杭州 ACG",
+    "杭州 快闪"
   ],
-  "search_fallback_success_count": 1,
-  "search_failure_count": 2,
-  "detail_failure_count": 2
+  "search_fallback_success_count": 2,
+  "search_failure_count": 1,
+  "detail_failure_count": 0
 }
