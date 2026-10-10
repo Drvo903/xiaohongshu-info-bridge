@@ -1,7 +1,10 @@
 param(
     [switch]$SkipGit,
-    [int]$PerKeywordLimit = 10,
-    [int]$MaxTotal = 80,
+    [int]$PerKeywordLimit = 4,
+    [int]$MaxTotal = 60,
+    [int]$HangzhouRotationCount = 5,
+    [int]$HangzhouRotationPerKeywordLimit = 4,
+    [int]$HangzhouRotationMaxTotal = 20,
     [int]$MaxDetails = 20,
     [int]$DetailTimeout = 45,
     [int]$MaxAgeDays = 60,
@@ -140,6 +143,7 @@ try {
 
     $mcpExe = Assert-UnderRoot (Join-Path $root "bin\xiaohongshu-mcp-windows-amd64.exe")
     $collectorPy = Assert-UnderRoot (Join-Path $root "scripts\collector.py")
+    $hangzhouRotationKeywordPath = Assert-UnderRoot (Join-Path $root "config\keywords_hangzhou_rotating.json")
     $secondaryKeywordPath = Assert-UnderRoot (Join-Path $root "config\keywords_shanghai.json")
     if (-not (Test-Path -LiteralPath $mcpExe)) {
         throw "MCP executable not found"
@@ -149,6 +153,18 @@ try {
     }
     if (-not (Test-Path -LiteralPath $secondaryKeywordPath)) {
         throw "Shanghai keyword file not found"
+    }
+    if (-not (Test-Path -LiteralPath $hangzhouRotationKeywordPath)) {
+        throw "Hangzhou rotating keyword file not found"
+    }
+    if ($HangzhouRotationCount -lt 0 -or $HangzhouRotationCount -gt 5) {
+        throw "HangzhouRotationCount must be between 0 and 5"
+    }
+    if ($HangzhouRotationPerKeywordLimit -lt 1 -or $HangzhouRotationPerKeywordLimit -gt 4) {
+        throw "HangzhouRotationPerKeywordLimit must be between 1 and 4"
+    }
+    if ($HangzhouRotationMaxTotal -lt 1 -or $HangzhouRotationMaxTotal -gt 20) {
+        throw "HangzhouRotationMaxTotal must be between 1 and 20"
     }
     if ($SecondaryPerKeywordLimit -lt 1 -or $SecondaryPerKeywordLimit -gt 30) {
         throw "SecondaryPerKeywordLimit must be between 1 and 30"
@@ -179,6 +195,8 @@ try {
         $slot = 2
     }
     $secondaryOffset = ((($nowForRotation.DayOfYear - 1) * 3) + ($slot * 3)) % 15
+    # Every scheduled time slot advances the Hangzhou rotation by five terms.
+    $hangzhouRotationOffset = ((($nowForRotation.DayOfYear - 1) * 3) + $slot) * 5
 
     # These variables apply only to this wrapper and its children.
     $env:COOKIES_PATH = Join-Path $root "data\cookies.json"
@@ -217,6 +235,11 @@ try {
         "--max-details", $MaxDetails,
         "--detail-timeout", $DetailTimeout,
         "--max-age-days", $MaxAgeDays,
+        "--rotating-keywords", $hangzhouRotationKeywordPath,
+        "--rotating-count", $HangzhouRotationCount,
+        "--rotating-offset", $hangzhouRotationOffset,
+        "--rotating-per-keyword-limit", $HangzhouRotationPerKeywordLimit,
+        "--rotating-max-total", $HangzhouRotationMaxTotal,
         "--secondary-keywords", $secondaryKeywordPath,
         "--secondary-per-keyword-limit", $SecondaryPerKeywordLimit,
         "--secondary-max-total", $SecondaryMaxTotal,
