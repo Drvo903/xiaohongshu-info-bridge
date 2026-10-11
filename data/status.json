@@ -1,22 +1,22 @@
 {
-  "updated_at": "2026-10-10T17:12:29.751153+08:00",
+  "updated_at": "2026-10-11T11:18:45.827759+08:00",
   "collector_status": "partial",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 4659,
+  "full_result_count": 4727,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-10-10T17:12:29.751153+08:00",
+  "last_successful_run": "2026-10-11T11:18:45.827759+08:00",
   "failed_keywords": [
-    "杭州 DND"
+    "杭州 桌游"
   ],
   "warnings": [
     "1 keyword(s) failed after fallback",
-    "2 keyword(s) recovered by fallback"
+    "6 keyword(s) recovered by fallback"
   ],
   "failed_keyword_details": [
     {
-      "keyword": "杭州 DND",
+      "keyword": "杭州 桌游",
       "stage": "search",
       "reason": "context_deadline_exceeded",
       "attempts": 2,
@@ -24,10 +24,14 @@
     }
   ],
   "search_fallback_success": [
-    "杭州 ACG",
-    "杭州 快闪"
+    "杭州 湖滨88",
+    "杭州 in77 活动",
+    "杭州 VOCALOID",
+    "杭州 湖滨88 快闪",
+    "上海 COC",
+    "上海 跑团"
   ],
-  "search_fallback_success_count": 2,
+  "search_fallback_success_count": 6,
   "search_failure_count": 1,
   "detail_failure_count": 0
 }
