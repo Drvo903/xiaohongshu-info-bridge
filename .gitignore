@@ -23,6 +23,7 @@ data/cache/
 data/localappdata/
 data/appdata/
 data/tmp/
+data/login-alert.pending.json
 
 # Logs, databases, temporary files and local secrets
 *.log

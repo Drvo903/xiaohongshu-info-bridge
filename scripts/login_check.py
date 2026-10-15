@@ -53,7 +53,15 @@ def main() -> int:
     root = Path(args.root).resolve()
     logger = setup_logger(root / "logs" / "login-check.log")
     output_path = root / "data" / "login-status.json"
+    alert_path = root / "data" / "login-alert.pending.json"
     checked_at = iso_beijing()
+    previous_status = None
+    try:
+        previous = json.loads(output_path.read_text(encoding="utf-8"))
+        if isinstance(previous, dict):
+            previous_status = previous.get("login_status")
+    except (OSError, json.JSONDecodeError):
+        pass
 
     try:
         client = MCPClient(args.mcp_url, logger, timeout=45)
@@ -83,6 +91,22 @@ def main() -> int:
         logger.error("LOGIN_CHECK_FAILED reason=%s", message)
 
     atomic_write_json(output_path, document)
+    if document["login_status"] == "login_required":
+        if previous_status != "login_required":
+            atomic_write_json(
+                alert_path,
+                {
+                    "created_at": checked_at,
+                    "reason": "LOGIN_REQUIRED",
+                },
+            )
+            logger.warning("LOGIN_ALERT_PENDING")
+    elif document["login_status"] == "ok" and alert_path.exists():
+        try:
+            alert_path.unlink()
+            logger.info("LOGIN_ALERT_CLEARED")
+        except OSError as exc:
+            logger.warning("LOGIN_ALERT_CLEAR_FAILED reason=%s", safe_error(exc))
     print(json.dumps(document, ensure_ascii=False))
     return exit_code
 

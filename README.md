@@ -19,6 +19,7 @@ D:\XHSCollector\
 │  ├─ latest.json               最近 7 天、最多 200 条（GitHub 上传此文件）
 │  ├─ status.json               采集状态和数据新鲜度（GitHub 上传此文件）
 │  ├─ login-status.json         最近一次独立登录状态检查（GitHub 上传此文件）
+│  ├─ login-alert.pending.json  本地待提醒标记（不上传）
 │  ├─ cookies.json              小红书登录状态（敏感，不上传）
 │  ├─ home\, config\, appdata\  运行配置（敏感，不上传）
 │  ├─ localappdata\             隔离的内置 Chromium（不上传）
@@ -37,8 +38,10 @@ D:\XHSCollector\
    ├─ run_collector.ps1         启动 MCP、采集、上传、清理进程
    ├─ run_request_worker.ps1    检查并处理最多一个 pending 请求
    ├─ run_login_check.ps1       启动 MCP、检查登录、上传状态并清理进程
+   ├─ run_login_alert.ps1       登录会话中显示一次性失效提醒
    ├─ install_request_task.ps1 创建 RequestWorker 定时任务
    ├─ install_login_check_task.ps1 创建每两天一次的登录检查任务
+   ├─ install_login_alert_task.ps1 创建登录时的提醒任务
    ├─ project_lock.ps1          固定采集与临时查询的全局互斥锁
    ├─ sync_github.ps1           校验并上传 data\xhs-feed.json
    └─ install_task.ps1          创建/更新 Windows 定时任务
@@ -130,6 +133,8 @@ https://raw.githubusercontent.com/Drvo903/xiaohongshu-info-bridge/main/data/logi
 ```
 
 `login_status=ok` 表示最近一次检查已登录；`login_status=login_required` 表示需要运行 `scripts\login.ps1` 重新扫码；`login_status=failed` 表示本次检查本身失败，需要结合 `logs\login-check-run.log` 排查。登录检查每两天运行一次，默认在 07:00 启动；它只调用 `check_login_status`，不搜索笔记。无论用户是否登录，任务均可运行；不会唤醒电脑。
+
+登录失效时只在状态从 `ok` 首次变为 `login_required` 时生成一次本地提醒；如果当时没有登录 Windows，会保留提醒标记，并在下次登录时显示。登录恢复后提醒标记自动清除，不会每两天重复弹窗。
 
 本地同步会先校验三个 JSON 合法、字段一致且没有超过最新数据上限，再只提交实际变化的公开文件；push 失败会保留本地数据，下一轮可继续重试。不会把 PAT 写入脚本。
 

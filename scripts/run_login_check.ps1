@@ -311,6 +311,28 @@ try {
     }
     Restore-ProjectEnvironment
 
+    $alertScript = Assert-UnderRoot (Join-Path $root "scripts\run_login_alert.ps1")
+    if (Test-Path -LiteralPath $alertScript) {
+        try {
+            $alertProcess = Start-Process -FilePath "$env:SystemRoot\System32\WindowsPowerShell\v1.0\powershell.exe" `
+                -ArgumentList @(
+                    "-NoLogo",
+                    "-NoProfile",
+                    "-NonInteractive",
+                    "-WindowStyle", "Hidden",
+                    "-ExecutionPolicy", "Bypass",
+                    "-File", $alertScript
+                ) `
+                -WorkingDirectory $root `
+                -WindowStyle Hidden `
+                -Wait `
+                -PassThru
+            Write-LoginRunLog "LOGIN_ALERT_EXIT code=$($alertProcess.ExitCode)"
+        } catch {
+            Write-LoginRunLog "LOGIN_ALERT_FAILED"
+        }
+    }
+
     if (-not $SkipGit -and (Test-Path -LiteralPath (Join-Path $root "data\login-status.json")) -and $gitPath) {
         try {
             Sync-LoginStatus
