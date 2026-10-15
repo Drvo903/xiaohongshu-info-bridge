@@ -1,24 +1,41 @@
 {
-  "updated_at": "2026-10-15T13:14:55.752821+08:00",
-  "collector_status": "ok",
+  "updated_at": "2026-10-15T17:44:36.979775+08:00",
+  "collector_status": "partial",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 4938,
+  "full_result_count": 5004,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-10-15T13:14:55.752821+08:00",
-  "failed_keywords": [],
+  "last_successful_run": "2026-10-15T17:44:36.979775+08:00",
+  "failed_keywords": [
+    "杭州 in77 活动",
+    "杭州 模型展"
+  ],
   "warnings": [
-    "4 keyword(s) recovered by fallback"
+    "2 keyword(s) failed after fallback",
+    "1 keyword(s) recovered by fallback",
+    "1 public detail request(s) failed or timed out"
   ],
-  "failed_keyword_details": [],
+  "failed_keyword_details": [
+    {
+      "keyword": "杭州 in77 活动",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "杭州 模型展",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    }
+  ],
   "search_fallback_success": [
-    "杭州 湖滨88",
-    "杭州 TRPG",
-    "杭州 COC",
-    "杭州 ACG Live"
+    "杭州 角色生日"
   ],
-  "search_fallback_success_count": 4,
-  "search_failure_count": 0,
-  "detail_failure_count": 0
+  "search_fallback_success_count": 1,
+  "search_failure_count": 2,
+  "detail_failure_count": 1
 }
