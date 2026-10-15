@@ -99,18 +99,22 @@ function Stop-ScopedProcessTree([int]$parentId, [string]$tempPath) {
     Write-RunLog "PROCESS_CLEANUP parent=$parentId scoped=$($ids.Count) remaining=$($remaining.Count)"
 }
 
-function Wait-ForTcpPort([string]$hostName, [int]$port, [int]$timeoutSeconds) {
+function Wait-ForOwnedMcpPort([int]$expectedPid, [int]$port, [int]$timeoutSeconds) {
     $deadline = (Get-Date).AddSeconds($timeoutSeconds)
     while ((Get-Date) -lt $deadline) {
-        $client = [Net.Sockets.TcpClient]::new()
-        try {
-            $client.Connect($hostName, $port)
-            $client.Close()
-            return $true
-        } catch {
-            $client.Dispose()
-            Start-Sleep -Milliseconds 500
+        $process = Get-CimInstance Win32_Process -Filter "ProcessId=$expectedPid" -ErrorAction SilentlyContinue
+        if (-not $process) {
+            return $false
         }
+        $listeners = @(Get-NetTCPConnection -LocalPort $port -State Listen -ErrorAction SilentlyContinue)
+        if ($listeners.Count -gt 0) {
+            $owners = @($listeners | Select-Object -ExpandProperty OwningProcess -Unique)
+            if ($owners.Count -eq 1 -and [int]$owners[0] -eq $expectedPid) {
+                return $true
+            }
+            throw "MCP_PORT_OWNERSHIP_FAILED expected=$expectedPid actual=$($owners -join ',')"
+        }
+        Start-Sleep -Milliseconds 500
     }
     return $false
 }
@@ -173,9 +177,10 @@ try {
         throw "SecondaryMaxTotal must be between 1 and 30"
     }
 
-    $occupied = @(Get-NetTCPConnection -LocalAddress "127.0.0.1" -LocalPort 18060 -State Listen -ErrorAction SilentlyContinue)
+    $occupied = @(Get-NetTCPConnection -LocalPort 18060 -State Listen -ErrorAction SilentlyContinue)
     if ($occupied.Count -gt 0) {
-        throw "port 18060 is already in use; refusing to touch an unrelated process"
+        $owners = @($occupied | Select-Object -ExpandProperty OwningProcess -Unique)
+        throw "MCP_PORT_BUSY owners=$($owners -join ',')"
     }
 
     $python = Get-Command python.exe -ErrorAction SilentlyContinue |
@@ -231,7 +236,7 @@ try {
         -PassThru
     $mcpPid = $mcp.Id
     Write-RunLog "MCP_START pid=$mcpPid port=18060"
-    if (-not (Wait-ForTcpPort "127.0.0.1" 18060 60)) {
+    if (-not (Wait-ForOwnedMcpPort $mcpPid 18060 60)) {
         throw "MCP did not open port 18060 within 60 seconds"
     }
 
@@ -285,6 +290,10 @@ try {
     if ($_.Exception.Message -eq "LOCK_BUSY") {
         Write-RunLog "LOCK_BUSY"
         $exitCode = 24
+    } elseif ($_.Exception.Message -like "MCP_PORT_BUSY*" -or
+        $_.Exception.Message -like "MCP_PORT_OWNERSHIP_FAILED*") {
+        Write-RunLog "MCP_PORT_BUSY reason=$($_.Exception.Message)"
+        $exitCode = 22
     } else {
         Write-RunLog "RUN_FAILED reason=$($_.Exception.Message)"
         $exitCode = 22

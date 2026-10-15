@@ -43,18 +43,22 @@ function Write-RequestRunLog([string]$message) {
     Add-Content -LiteralPath $logPath -Value "$(Get-Date -Format o) $message" -Encoding UTF8
 }
 
-function Wait-ForTcpPort([string]$hostName, [int]$port, [int]$timeoutSeconds) {
+function Wait-ForOwnedMcpPort([int]$expectedPid, [int]$port, [int]$timeoutSeconds) {
     $deadline = (Get-Date).AddSeconds($timeoutSeconds)
     while ((Get-Date) -lt $deadline) {
-        $client = [Net.Sockets.TcpClient]::new()
-        try {
-            $client.Connect($hostName, $port)
-            $client.Close()
-            return $true
-        } catch {
-            $client.Dispose()
-            Start-Sleep -Milliseconds 500
+        $process = Get-CimInstance Win32_Process -Filter "ProcessId=$expectedPid" -ErrorAction SilentlyContinue
+        if (-not $process) {
+            return $false
         }
+        $listeners = @(Get-NetTCPConnection -LocalPort $port -State Listen -ErrorAction SilentlyContinue)
+        if ($listeners.Count -gt 0) {
+            $owners = @($listeners | Select-Object -ExpandProperty OwningProcess -Unique)
+            if ($owners.Count -eq 1 -and [int]$owners[0] -eq $expectedPid) {
+                return $true
+            }
+            throw "MCP_PORT_OWNERSHIP_FAILED expected=$expectedPid actual=$($owners -join ',')"
+        }
+        Start-Sleep -Milliseconds 500
     }
     return $false
 }
@@ -317,7 +321,7 @@ try {
         $validationPid = $null
 
         if ($validationExit -eq 0) {
-            $occupied = @(Get-NetTCPConnection -LocalAddress "127.0.0.1" -LocalPort 18060 -State Listen -ErrorAction SilentlyContinue)
+            $occupied = @(Get-NetTCPConnection -LocalPort 18060 -State Listen -ErrorAction SilentlyContinue)
             if ($occupied.Count -gt 0) {
                 throw "PORT_BUSY"
             }
@@ -334,7 +338,7 @@ try {
                 -PassThru
             $mcpPid = $mcp.Id
             Write-RequestRunLog "MCP_START pid=$mcpPid port=18060 request=$($pendingFile.BaseName)"
-            if (-not (Wait-ForTcpPort "127.0.0.1" 18060 60)) {
+            if (-not (Wait-ForOwnedMcpPort $mcpPid 18060 60)) {
                 $failureWarning = "MCP_START_FAILED"
                 throw "MCP_START_FAILED"
             }
@@ -383,7 +387,8 @@ try {
     } elseif ($message -eq "GIT_PUSH_FAILED") {
         Write-RequestRunLog "GIT_PUSH_FAILED"
         $exitCode = 30
-    } elseif ($message -eq "PORT_BUSY") {
+    } elseif ($message -eq "PORT_BUSY" -or
+        $message -like "MCP_PORT_OWNERSHIP_FAILED*") {
         $failureWarning = "MCP_PORT_BUSY"
         Write-RequestRunLog "MCP_PORT_BUSY"
         $exitCode = 22
