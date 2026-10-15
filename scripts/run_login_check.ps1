@@ -180,7 +180,8 @@ function Sync-LoginStatus {
     if ($LASTEXITCODE -ne 0) {
         throw "GIT_COMMIT_FAILED"
     }
-    $pushOutput = @(& $gitPath -C $root push 2>&1)
+    $pushOutputPath = Join-Path $runTemp "git-push-output.log"
+    & $gitPath -C $root push 2>$pushOutputPath | Out-Null
     $pushExit = $LASTEXITCODE
     $localHead = (& $gitPath -C $root rev-parse HEAD 2>$null).Trim()
     $remoteLine = @(& $gitPath -C $root ls-remote origin refs/heads/main 2>$null) |
