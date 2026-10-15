@@ -181,8 +181,14 @@ function Sync-LoginStatus {
         throw "GIT_COMMIT_FAILED"
     }
     $pushOutputPath = Join-Path $runTemp "git-push-output.log"
-    & $gitPath -C $root push 2>$pushOutputPath | Out-Null
-    $pushExit = $LASTEXITCODE
+    $savedErrorAction = $ErrorActionPreference
+    try {
+        $ErrorActionPreference = "Continue"
+        & $gitPath -C $root push 2>$pushOutputPath | Out-Null
+        $pushExit = $LASTEXITCODE
+    } finally {
+        $ErrorActionPreference = $savedErrorAction
+    }
     $localHead = (& $gitPath -C $root rev-parse HEAD 2>$null).Trim()
     $remoteLine = @(& $gitPath -C $root ls-remote origin refs/heads/main 2>$null) |
         Select-Object -First 1
