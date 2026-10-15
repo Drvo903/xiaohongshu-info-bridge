@@ -308,7 +308,7 @@ try {
         try {
             Sync-LoginStatus
         } catch {
-            Write-LoginRunLog "GITHUB_UPLOAD_FAILED"
+            Write-LoginRunLog "GITHUB_UPLOAD_FAILED reason=$($_.Exception.Message)"
             if ($exitCode -eq 0) {
                 $exitCode = 30
             }
