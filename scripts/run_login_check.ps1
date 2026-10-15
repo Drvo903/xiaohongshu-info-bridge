@@ -211,6 +211,17 @@ try {
 
     $gitCommand = Get-Command git.exe -ErrorAction SilentlyContinue | Select-Object -First 1
     if (-not $gitCommand) {
+        foreach ($candidate in @(
+            "C:\Program Files\Git\cmd\git.exe",
+            "C:\Users\87134\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\git\cmd\git.exe"
+        )) {
+            if (Test-Path -LiteralPath $candidate) {
+                $gitCommand = Get-Command $candidate
+                break
+            }
+        }
+    }
+    if (-not $gitCommand) {
         throw "GIT_NOT_FOUND"
     }
     $gitPath = $gitCommand.Source
