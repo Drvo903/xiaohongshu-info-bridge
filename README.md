@@ -18,6 +18,7 @@ D:\XHSCollector\
 │  ├─ xhs-feed.json             可公开数据镜像（GitHub 上传此文件）
 │  ├─ latest.json               最近 7 天、最多 200 条（GitHub 上传此文件）
 │  ├─ status.json               采集状态和数据新鲜度（GitHub 上传此文件）
+│  ├─ login-status.json         最近一次独立登录状态检查（GitHub 上传此文件）
 │  ├─ cookies.json              小红书登录状态（敏感，不上传）
 │  ├─ home\, config\, appdata\  运行配置（敏感，不上传）
 │  ├─ localappdata\             隔离的内置 Chromium（不上传）
@@ -31,10 +32,13 @@ D:\XHSCollector\
 └─ scripts\
    ├─ collector.py              只读 MCP 采集器
    ├─ request_worker.py         单次只读临时搜索 worker
+   ├─ login_check.py            只读检查 MCP 登录状态
    ├─ login.ps1                 手动扫码登录/重新登录
    ├─ run_collector.ps1         启动 MCP、采集、上传、清理进程
    ├─ run_request_worker.ps1    检查并处理最多一个 pending 请求
+   ├─ run_login_check.ps1       启动 MCP、检查登录、上传状态并清理进程
    ├─ install_request_task.ps1 创建 RequestWorker 定时任务
+   ├─ install_login_check_task.ps1 创建每两天一次的登录检查任务
    ├─ project_lock.ps1          固定采集与临时查询的全局互斥锁
    ├─ sync_github.ps1           校验并上传 data\xhs-feed.json
    └─ install_task.ps1          创建/更新 Windows 定时任务
@@ -119,6 +123,14 @@ https://raw.githubusercontent.com/Drvo903/xiaohongshu-info-bridge/main/data/stat
 
 `xhs-feed.json` 是完整历史，`latest.json` 是最近 7 天、最多 200 条，`status.json` 用于快速检查采集时间和状态。`status.json` 使用 `last_github_upload_status` 表示上一次 push 状态，避免为了把 pending 改成 ok 而额外制造递归提交。
 
+`login-status.json` 是独立的登录探针结果：
+
+```text
+https://raw.githubusercontent.com/Drvo903/xiaohongshu-info-bridge/main/data/login-status.json
+```
+
+`login_status=ok` 表示最近一次检查已登录；`login_status=login_required` 表示需要运行 `scripts\login.ps1` 重新扫码；`login_status=failed` 表示本次检查本身失败，需要结合 `logs\login-check-run.log` 排查。登录检查每两天运行一次，默认在 07:00 启动；它只调用 `check_login_status`，不搜索笔记。无论用户是否登录，任务均可运行；不会唤醒电脑。
+
 本地同步会先校验三个 JSON 合法、字段一致且没有超过最新数据上限，再只提交实际变化的公开文件；push 失败会保留本地数据，下一轮可继续重试。不会把 PAT 写入脚本。
 
 ## 临时搜索请求
@@ -179,6 +191,7 @@ RequestWorker 使用 `D:\XHSCollector\data\xhs.lock` 与固定采集互斥。两
 ## 常见故障
 
 - `LOGIN_REQUIRED` / 退出码 20：停止本轮，运行 `scripts\login.ps1` 重新扫码。
+- `XHSCollector-LoginCheck`：每两天 07:00 自动检查登录状态；查看 `data\login-status.json` 或上面的 Raw 地址即可判断。
 - `RISK_CONTROL_TRIGGERED` / 退出码 21：停止本轮，不绕过验证码或风控，也不暴力重试。
 - `MCP_FAILED` / 退出码 22：查看 `logs\mcp-*.stderr.log`；上一份成功 JSON 不会被覆盖。
 - `GITHUB_UPLOAD_FAILED` / 退出码 30：检查 GitHub 登录/远程仓库权限；本地采集结果会保留。
