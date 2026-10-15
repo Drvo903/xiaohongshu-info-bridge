@@ -180,11 +180,20 @@ function Sync-LoginStatus {
     if ($LASTEXITCODE -ne 0) {
         throw "GIT_COMMIT_FAILED"
     }
-    & $gitPath -C $root push 2>$null | Out-Null
-    if ($LASTEXITCODE -ne 0) {
+    $pushOutput = @(& $gitPath -C $root push 2>&1)
+    $pushExit = $LASTEXITCODE
+    $localHead = (& $gitPath -C $root rev-parse HEAD 2>$null).Trim()
+    $remoteLine = @(& $gitPath -C $root ls-remote origin refs/heads/main 2>$null) |
+        Select-Object -First 1
+    $remoteHead = if ($remoteLine) {
+        ([string]$remoteLine).Split("`t")[0].Trim()
+    } else {
+        ""
+    }
+    if ($remoteHead -ne $localHead) {
         throw "GIT_PUSH_FAILED"
     }
-    Write-LoginRunLog "GITHUB_UPLOAD_SUCCESS"
+    Write-LoginRunLog "GITHUB_UPLOAD_SUCCESS push_exit=$pushExit verified=1"
 }
 
 try {
