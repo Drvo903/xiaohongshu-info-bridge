@@ -1,31 +1,30 @@
 {
-  "updated_at": "2026-10-15T17:44:36.979775+08:00",
+  "updated_at": "2026-10-16T08:20:42.445728+08:00",
   "collector_status": "partial",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 5004,
+  "full_result_count": 5049,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-10-15T17:44:36.979775+08:00",
+  "last_successful_run": "2026-10-16T08:20:42.445728+08:00",
   "failed_keywords": [
-    "杭州 in77 活动",
-    "杭州 模型展"
+    "杭州 TRPG",
+    "杭州 潮玩 市集"
   ],
   "warnings": [
     "2 keyword(s) failed after fallback",
-    "1 keyword(s) recovered by fallback",
-    "1 public detail request(s) failed or timed out"
+    "7 keyword(s) recovered by fallback"
   ],
   "failed_keyword_details": [
     {
-      "keyword": "杭州 in77 活动",
+      "keyword": "杭州 TRPG",
       "stage": "search",
       "reason": "context_deadline_exceeded",
       "attempts": 2,
       "fallback_used": true
     },
     {
-      "keyword": "杭州 模型展",
+      "keyword": "杭州 潮玩 市集",
       "stage": "search",
       "reason": "context_deadline_exceeded",
       "attempts": 2,
@@ -33,9 +32,15 @@
     }
   ],
   "search_fallback_success": [
-    "杭州 角色生日"
+    "杭州 跑团",
+    "杭州 ACG Live",
+    "杭州 VOCALOID",
+    "杭州 角落生物 快闪",
+    "杭州 宠物主题 市集",
+    "上海 TRPG",
+    "上海 TRPG ONLY"
   ],
-  "search_fallback_success_count": 1,
+  "search_fallback_success_count": 7,
   "search_failure_count": 2,
-  "detail_failure_count": 1
+  "detail_failure_count": 0
 }
