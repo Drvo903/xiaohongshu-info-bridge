@@ -1,30 +1,22 @@
 {
-  "updated_at": "2026-10-16T08:20:42.445728+08:00",
+  "updated_at": "2026-10-16T13:16:21.169587+08:00",
   "collector_status": "partial",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 5049,
+  "full_result_count": 5100,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-10-16T08:20:42.445728+08:00",
+  "last_successful_run": "2026-10-16T13:16:21.169587+08:00",
   "failed_keywords": [
-    "杭州 TRPG",
-    "杭州 潮玩 市集"
+    "杭州 Good Smile Cafe"
   ],
   "warnings": [
-    "2 keyword(s) failed after fallback",
-    "7 keyword(s) recovered by fallback"
+    "1 keyword(s) failed after fallback",
+    "4 keyword(s) recovered by fallback"
   ],
   "failed_keyword_details": [
     {
-      "keyword": "杭州 TRPG",
-      "stage": "search",
-      "reason": "context_deadline_exceeded",
-      "attempts": 2,
-      "fallback_used": true
-    },
-    {
-      "keyword": "杭州 潮玩 市集",
+      "keyword": "杭州 Good Smile Cafe",
       "stage": "search",
       "reason": "context_deadline_exceeded",
       "attempts": 2,
@@ -32,15 +24,12 @@
     }
   ],
   "search_fallback_success": [
-    "杭州 跑团",
+    "杭州 工联CC",
+    "杭州 漫展",
     "杭州 ACG Live",
-    "杭州 VOCALOID",
-    "杭州 角落生物 快闪",
-    "杭州 宠物主题 市集",
-    "上海 TRPG",
-    "上海 TRPG ONLY"
+    "杭州 VOCALOID"
   ],
-  "search_fallback_success_count": 7,
-  "search_failure_count": 2,
+  "search_fallback_success_count": 4,
+  "search_failure_count": 1,
   "detail_failure_count": 0
 }
