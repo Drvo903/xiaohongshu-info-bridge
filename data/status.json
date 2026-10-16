@@ -1,22 +1,22 @@
 {
-  "updated_at": "2026-10-16T13:16:21.169587+08:00",
+  "updated_at": "2026-10-16T17:46:54.653024+08:00",
   "collector_status": "partial",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 5100,
+  "full_result_count": 5154,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-10-16T13:16:21.169587+08:00",
+  "last_successful_run": "2026-10-16T17:46:54.653024+08:00",
   "failed_keywords": [
-    "杭州 Good Smile Cafe"
+    "杭州 ONLY 同人展"
   ],
   "warnings": [
     "1 keyword(s) failed after fallback",
-    "4 keyword(s) recovered by fallback"
+    "5 keyword(s) recovered by fallback"
   ],
   "failed_keyword_details": [
     {
-      "keyword": "杭州 Good Smile Cafe",
+      "keyword": "杭州 ONLY 同人展",
       "stage": "search",
       "reason": "context_deadline_exceeded",
       "attempts": 2,
@@ -24,12 +24,13 @@
     }
   ],
   "search_fallback_success": [
-    "杭州 工联CC",
-    "杭州 漫展",
-    "杭州 ACG Live",
-    "杭州 VOCALOID"
+    "杭州 湖滨88",
+    "杭州 animate 活动",
+    "杭州 DND",
+    "上海 CP",
+    "上海 BilibiliWorld"
   ],
-  "search_fallback_success_count": 4,
+  "search_fallback_success_count": 5,
   "search_failure_count": 1,
   "detail_failure_count": 0
 }
