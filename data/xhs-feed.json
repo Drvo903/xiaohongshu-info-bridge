@@ -1,7 +1,778 @@
 {
-  "updated_at": "2026-10-18T03:25:16.185807Z",
+  "updated_at": "2026-10-18T09:37:30.348036Z",
   "source": "xiaohongshu",
   "results": [
+    {
+      "id": "6aaeae35000000000b00f397",
+      "keyword": "上海 TRPG",
+      "matched_keywords": [
+        "上海 TRPG"
+      ],
+      "title": "同济嘉定桌游社招新",
+      "author": "HiHo",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6aaeae35000000000b00f397",
+      "summary": null,
+      "likes": 27,
+      "comments": 20,
+      "collects": 4,
+      "location": null,
+      "first_seen_at": "2026-10-18T09:37:30.347832Z",
+      "last_seen_at": "2026-10-18T09:37:30.347832Z"
+    },
+    {
+      "id": "6ab1cbea000000003101ea22",
+      "keyword": "上海 DND",
+      "matched_keywords": [
+        "上海 DND",
+        "上海 TRPG"
+      ],
+      "title": "上海闵行非商团面团招募（已满）",
+      "author": "Acropolis",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6ab1cbea000000003101ea22",
+      "summary": null,
+      "likes": 15,
+      "comments": 11,
+      "collects": 2,
+      "location": null,
+      "first_seen_at": "2026-09-23T09:41:31.747204Z",
+      "last_seen_at": "2026-10-18T09:37:30.347827Z"
+    },
+    {
+      "id": "6aca2fed000000001a025d05",
+      "keyword": "上海 TRPG",
+      "matched_keywords": [
+        "上海 TRPG",
+        "上海 跑团"
+      ],
+      "title": "上海招募一些沉浸向pl非商跑团～",
+      "author": "lucasqiu",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6aca2fed000000001a025d05",
+      "summary": null,
+      "likes": 11,
+      "comments": 11,
+      "collects": 1,
+      "location": null,
+      "first_seen_at": "2026-10-11T03:15:51.281964Z",
+      "last_seen_at": "2026-10-18T09:37:30.347821Z"
+    },
+    {
+      "id": "6ac26275000000001800421f",
+      "keyword": "上海 COC",
+      "matched_keywords": [
+        "上海 COC",
+        "上海 TRPG"
+      ],
+      "title": "【置顶】一些自我介绍(=^‥^=)",
+      "author": "吴钩越剑",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6ac26275000000001800421f",
+      "summary": null,
+      "likes": 74,
+      "comments": 11,
+      "collects": 17,
+      "location": null,
+      "first_seen_at": "2026-10-11T03:17:26.271789Z",
+      "last_seen_at": "2026-10-18T09:37:30.347815Z"
+    },
+    {
+      "id": "6ac0ba2e0000000018012cb8",
+      "keyword": "上海 TRPG",
+      "matched_keywords": [
+        "上海 TRPG"
+      ],
+      "title": "擅长dnd世设的伟大dm在哪里",
+      "author": "ViewPointCity",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6ac0ba2e0000000018012cb8",
+      "summary": null,
+      "likes": 67,
+      "comments": 47,
+      "collects": 4,
+      "location": null,
+      "first_seen_at": "2026-10-16T00:19:15.495141Z",
+      "last_seen_at": "2026-10-18T09:37:30.347804Z"
+    },
+    {
+      "id": "6ad19ed400000000150042bd",
+      "keyword": "上海 TRPG",
+      "matched_keywords": [
+        "上海 TRPG"
+      ],
+      "title": "《铅毒之果》coc1920s恐怖美模",
+      "author": "牙牙的跑团调查手稿",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6ad19ed400000000150042bd",
+      "summary": null,
+      "likes": 24,
+      "comments": 4,
+      "collects": 5,
+      "location": null,
+      "first_seen_at": "2026-10-18T09:37:30.347452Z",
+      "last_seen_at": "2026-10-18T09:37:30.347452Z"
+    },
+    {
+      "id": "69ec52c80000000036000fbd",
+      "keyword": "上海 跑团",
+      "matched_keywords": [
+        "上海 TRPG",
+        "上海 跑团"
+      ],
+      "title": "今天谁带团丨三年上千场团的从容，他叫稀饭",
+      "author": "灰镜-trpg",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/69ec52c80000000036000fbd",
+      "summary": null,
+      "likes": 47,
+      "comments": 36,
+      "collects": 11,
+      "location": null,
+      "first_seen_at": "2026-09-21T00:09:10.207059Z",
+      "last_seen_at": "2026-10-18T09:37:30.347407Z"
+    },
+    {
+      "id": "6ad4511d000000002f029660",
+      "keyword": "上海 TRPG",
+      "matched_keywords": [
+        "上海 TRPG"
+      ],
+      "title": "上海面团《失踪的猫》招募",
+      "author": "有树的跑团笔记",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6ad4511d000000002f029660",
+      "summary": null,
+      "likes": 2,
+      "comments": 3,
+      "collects": 0,
+      "location": null,
+      "first_seen_at": "2026-10-18T09:37:30.347074Z",
+      "last_seen_at": "2026-10-18T09:37:30.347074Z"
+    },
+    {
+      "id": "6ac63be8000000001a03107c",
+      "keyword": "上海 DND",
+      "matched_keywords": [
+        "上海 DND",
+        "上海 DND ONLY"
+      ],
+      "title": "这个龙太酷了",
+      "author": "圆满",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6ac63be8000000001a03107c",
+      "summary": null,
+      "likes": 16,
+      "comments": 4,
+      "collects": 1,
+      "location": null,
+      "first_seen_at": "2026-10-09T05:14:01.252251Z",
+      "last_seen_at": "2026-10-18T09:36:10.194390Z"
+    },
+    {
+      "id": "6ac36df1000000000f0397ac",
+      "keyword": "上海 DND ONLY",
+      "matched_keywords": [
+        "上海 DND ONLY"
+      ],
+      "title": "【CQ5.0&D&D Only 摊宣和纪念】",
+      "author": "The Leaf",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6ac36df1000000000f0397ac",
+      "summary": null,
+      "likes": 17,
+      "comments": 3,
+      "collects": 0,
+      "location": null,
+      "first_seen_at": "2026-10-10T03:14:57.424263Z",
+      "last_seen_at": "2026-10-18T09:36:10.194380Z"
+    },
+    {
+      "id": "6acb9aa1000000001301a175",
+      "keyword": "上海 DND ONLY",
+      "matched_keywords": [
+        "上海 DND ONLY"
+      ],
+      "title": "挑战dndo4最晚返图",
+      "author": "九十一",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6acb9aa1000000001301a175",
+      "summary": null,
+      "likes": 19,
+      "comments": 13,
+      "collects": 1,
+      "location": null,
+      "first_seen_at": "2026-10-18T09:36:10.194170Z",
+      "last_seen_at": "2026-10-18T09:36:10.194170Z"
+    },
+    {
+      "id": "6ac4ffe2000000000100b276",
+      "keyword": "上海 DND ONLY",
+      "matched_keywords": [
+        "上海 DND ONLY"
+      ],
+      "title": "dndonly好幸福呀",
+      "author": "一人食十翅桶",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6ac4ffe2000000000100b276",
+      "summary": null,
+      "likes": 32,
+      "comments": 6,
+      "collects": 0,
+      "location": null,
+      "first_seen_at": "2026-10-18T09:36:10.194157Z",
+      "last_seen_at": "2026-10-18T09:36:10.194157Z"
+    },
+    {
+      "id": "6ab289310000000031008119",
+      "keyword": "上海 DND",
+      "matched_keywords": [
+        "上海 DND",
+        "上海 DND ONLY",
+        "上海 ONLY"
+      ],
+      "title": "高考冲刺一个月终于关窗了💪",
+      "author": "北极兔生产中心",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6ab289310000000031008119",
+      "summary": null,
+      "likes": 120,
+      "comments": 21,
+      "collects": 1,
+      "location": null,
+      "first_seen_at": "2026-09-23T09:41:31.747189Z",
+      "last_seen_at": "2026-10-18T09:36:10.193558Z"
+    },
+    {
+      "id": "6ac51995000000001501068a",
+      "keyword": "上海 TRPG ONLY",
+      "matched_keywords": [
+        "上海 DND ONLY",
+        "上海 TRPG ONLY"
+      ],
+      "title": "dndo4结算画面",
+      "author": "随风飘荡的花花（展会版）",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6ac51995000000001501068a",
+      "summary": null,
+      "likes": 28,
+      "comments": 3,
+      "collects": 0,
+      "location": null,
+      "first_seen_at": "2026-10-09T09:40:08.020722Z",
+      "last_seen_at": "2026-10-18T09:36:10.193551Z"
+    },
+    {
+      "id": "6abb7ef3000000001303f4af",
+      "keyword": "杭州 跑团",
+      "matched_keywords": [
+        "上海 DND ONLY",
+        "杭州 跑团"
+      ],
+      "title": "2026年底跑团展会汇总！",
+      "author": "念魔王",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6abb7ef3000000001303f4af",
+      "summary": null,
+      "likes": 65,
+      "comments": 7,
+      "collects": 15,
+      "location": null,
+      "first_seen_at": "2026-09-29T09:35:43.582127Z",
+      "last_seen_at": "2026-10-18T09:36:10.193543Z"
+    },
+    {
+      "id": "6ac91d8d0000000015001bf1",
+      "keyword": "上海 DND",
+      "matched_keywords": [
+        "上海 DND",
+        "上海 DND ONLY"
+      ],
+      "title": "《轻游记：地球真棒！》",
+      "author": "吟游之鸽-安铎沃克",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6ac91d8d0000000015001bf1",
+      "summary": null,
+      "likes": 27,
+      "comments": 5,
+      "collects": 1,
+      "location": null,
+      "first_seen_at": "2026-10-10T03:13:39.166431Z",
+      "last_seen_at": "2026-10-18T09:36:10.193520Z"
+    },
+    {
+      "id": "6ad442dc0000000031000245",
+      "keyword": "上海 ONLY",
+      "matched_keywords": [
+        "上海 ONLY"
+      ],
+      "title": null,
+      "author": "财来",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6ad442dc0000000031000245",
+      "summary": null,
+      "likes": 3,
+      "comments": 7,
+      "collects": 0,
+      "location": null,
+      "first_seen_at": "2026-10-18T09:32:35.300123Z",
+      "last_seen_at": "2026-10-18T09:32:35.300123Z"
+    },
+    {
+      "id": "6ad4467e000000002a004bc0",
+      "keyword": "上海 ONLY",
+      "matched_keywords": [
+        "上海 ONLY"
+      ],
+      "title": "【如懿传ONLY】查！追出宫也得茶！",
+      "author": "剧本杀薛珍珠",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6ad4467e000000002a004bc0",
+      "summary": null,
+      "likes": 652,
+      "comments": 208,
+      "collects": 47,
+      "location": null,
+      "first_seen_at": "2026-10-18T09:32:35.300102Z",
+      "last_seen_at": "2026-10-18T09:32:35.300102Z"
+    },
+    {
+      "id": "6ad44ef1000000002a00cbde",
+      "keyword": "上海 ONLY",
+      "matched_keywords": [
+        "上海 ONLY"
+      ],
+      "title": "魂ONLY请支持！🙇‍♀️🙌",
+      "author": "小雨柠檬茶",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6ad44ef1000000002a00cbde",
+      "summary": null,
+      "likes": 18,
+      "comments": 3,
+      "collects": 0,
+      "location": null,
+      "first_seen_at": "2026-10-18T09:32:35.300083Z",
+      "last_seen_at": "2026-10-18T09:32:35.300083Z"
+    },
+    {
+      "id": "6ad45067000000002902e445",
+      "keyword": "上海 ONLY",
+      "matched_keywords": [
+        "上海 ONLY"
+      ],
+      "title": "全体漂泊者注意！次元壁破裂版鸣潮only来啦",
+      "author": "壹万流明",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6ad45067000000002902e445",
+      "summary": null,
+      "likes": 14,
+      "comments": 1,
+      "collects": 5,
+      "location": null,
+      "first_seen_at": "2026-10-18T09:32:35.300053Z",
+      "last_seen_at": "2026-10-18T09:32:35.300053Z"
+    },
+    {
+      "id": "6ad45ead000000002600a437",
+      "keyword": "上海 ONLY",
+      "matched_keywords": [
+        "上海 ONLY"
+      ],
+      "title": "终于等到：上海燕only！！",
+      "author": "春风归",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6ad45ead000000002600a437",
+      "summary": null,
+      "likes": 132,
+      "comments": 18,
+      "collects": 21,
+      "location": null,
+      "first_seen_at": "2026-10-18T09:32:35.299758Z",
+      "last_seen_at": "2026-10-18T09:32:35.299758Z"
+    },
+    {
+      "id": "6ad47d43000000002f030ba4",
+      "keyword": "上海 ONLY",
+      "matched_keywords": [
+        "上海 ONLY"
+      ],
+      "title": "万一我抽中了呢🤤上海万有引力覆面系ONLY",
+      "author": "番茄国在逃大王-",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6ad47d43000000002f030ba4",
+      "summary": null,
+      "likes": 1,
+      "comments": 1,
+      "collects": 0,
+      "location": null,
+      "first_seen_at": "2026-10-18T09:32:35.299727Z",
+      "last_seen_at": "2026-10-18T09:32:35.299727Z"
+    },
+    {
+      "id": "6ad4700b000000002900c04f",
+      "keyword": "上海 ONLY",
+      "matched_keywords": [
+        "上海 ONLY"
+      ],
+      "title": "上海绝区零only同人展的爱芮呀！",
+      "author": "紫色人的心",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6ad4700b000000002900c04f",
+      "summary": null,
+      "likes": 92,
+      "comments": 24,
+      "collects": 5,
+      "location": null,
+      "first_seen_at": "2026-10-18T09:32:35.299442Z",
+      "last_seen_at": "2026-10-18T09:32:35.299442Z"
+    },
+    {
+      "id": "6ad49003000000000c00af90",
+      "keyword": "上海 ONLY",
+      "matched_keywords": [
+        "上海 ONLY"
+      ],
+      "title": "JOJOonly场地图",
+      "author": "11.14上海JOJO2.0启动中！",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6ad49003000000000c00af90",
+      "summary": null,
+      "likes": 4,
+      "comments": 3,
+      "collects": 1,
+      "location": null,
+      "first_seen_at": "2026-10-18T09:32:35.299062Z",
+      "last_seen_at": "2026-10-18T09:32:35.299062Z"
+    },
+    {
+      "id": "6ac9cead00000000180182ef",
+      "keyword": "杭州 手作 文创 市集",
+      "matched_keywords": [
+        "杭州 宠物主题 市集",
+        "杭州 手作 文创 市集"
+      ],
+      "title": "杭州10-11月必逛26个市集🥳大多免费！",
+      "author": "杭州周末去哪",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6ac9cead00000000180182ef",
+      "summary": null,
+      "likes": 468,
+      "comments": 14,
+      "collects": 456,
+      "location": null,
+      "first_seen_at": "2026-10-12T00:26:18.313334Z",
+      "last_seen_at": "2026-10-18T09:32:18.420636Z"
+    },
+    {
+      "id": "6ab4d205000000000202a522",
+      "keyword": "杭州 角落生物 快闪",
+      "matched_keywords": [
+        "杭州 角落生物 快闪"
+      ],
+      "title": "超前路透‼️得力美味治愈联萌萌晕了🥹",
+      "author": "杭州湖滨银泰in77",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6ab4d205000000000202a522",
+      "summary": null,
+      "likes": 385,
+      "comments": 32,
+      "collects": 111,
+      "location": null,
+      "first_seen_at": "2026-10-12T00:24:49.239836Z",
+      "last_seen_at": "2026-10-18T09:27:03.446399Z"
+    },
+    {
+      "id": "6ac0eccc000000000200d03d",
+      "keyword": "杭州 角落生物 快闪",
+      "matched_keywords": [
+        "杭州 角落生物 快闪"
+      ],
+      "title": "当去了一趟角落生物快闪",
+      "author": "grrrrrrr_10",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6ac0eccc000000000200d03d",
+      "summary": null,
+      "likes": 185,
+      "comments": 26,
+      "collects": 16,
+      "location": null,
+      "first_seen_at": "2026-10-12T00:24:49.239793Z",
+      "last_seen_at": "2026-10-18T09:27:03.446047Z"
+    },
+    {
+      "id": "6ac26b2a000000001b01e5ca",
+      "keyword": "杭州 角落生物 快闪",
+      "matched_keywords": [
+        "杭州 角落生物 快闪"
+      ],
+      "title": "全图鉴来啦",
+      "author": "角落角落",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6ac26b2a000000001b01e5ca",
+      "summary": null,
+      "likes": 180,
+      "comments": 1,
+      "collects": 55,
+      "location": null,
+      "first_seen_at": "2026-10-16T00:14:12.756090Z",
+      "last_seen_at": "2026-10-18T09:27:03.446028Z"
+    },
+    {
+      "id": "6ab6ac640000000013018d69",
+      "keyword": "杭州 角落生物 快闪",
+      "matched_keywords": [
+        "杭州 三丽鸥 快闪",
+        "杭州 角落生物 快闪"
+      ],
+      "title": "杭州湖滨银泰一日游总结！",
+      "author": "only_y",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6ab6ac640000000013018d69",
+      "summary": null,
+      "likes": 116,
+      "comments": 11,
+      "collects": 41,
+      "location": null,
+      "first_seen_at": "2026-10-16T00:14:12.756142Z",
+      "last_seen_at": "2026-10-18T09:25:44.479293Z"
+    },
+    {
+      "id": "6ad32bbf00000000150123bd",
+      "keyword": "杭州 模型展",
+      "matched_keywords": [
+        "杭州 模型展"
+      ],
+      "title": "杭州展限定",
+      "author": "超人聊模型",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6ad32bbf00000000150123bd",
+      "summary": null,
+      "likes": 6,
+      "comments": 2,
+      "collects": 0,
+      "location": null,
+      "first_seen_at": "2026-10-18T03:18:49.782571Z",
+      "last_seen_at": "2026-10-18T09:21:44.368727Z"
+    },
+    {
+      "id": "6ad38481000000000a01c4e0",
+      "keyword": "杭州 模型展",
+      "matched_keywords": [
+        "杭州 模型展"
+      ],
+      "title": "杭州模型节套票指南",
+      "author": "超人聊模型",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6ad38481000000000a01c4e0",
+      "summary": null,
+      "likes": 5,
+      "comments": 1,
+      "collects": 0,
+      "location": null,
+      "first_seen_at": "2026-10-18T03:18:03.512495Z",
+      "last_seen_at": "2026-10-18T09:21:44.368720Z"
+    },
+    {
+      "id": "6ac39772000000001203a558",
+      "keyword": "杭州 TRPG",
+      "matched_keywords": [
+        "杭州 COC",
+        "杭州 DND",
+        "杭州 TRPG"
+      ],
+      "title": "原图直出五人小队coc",
+      "author": "凰和纱想玩跑团",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6ac39772000000001203a558",
+      "summary": null,
+      "likes": 4,
+      "comments": 11,
+      "collects": 1,
+      "location": null,
+      "first_seen_at": "2026-10-08T05:08:48.999539Z",
+      "last_seen_at": "2026-10-18T09:13:25.269098Z"
+    },
+    {
+      "id": "6acdac9e000000001403b37a",
+      "keyword": "杭州 DND",
+      "matched_keywords": [
+        "杭州 DND",
+        "杭州 TRPG"
+      ],
+      "title": "【DND模组预告】谦卑林版哈利波特滑铲中",
+      "author": "雷霆大",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6acdac9e000000001403b37a",
+      "summary": null,
+      "likes": 43,
+      "comments": 14,
+      "collects": 6,
+      "location": null,
+      "first_seen_at": "2026-10-15T05:08:51.080256Z",
+      "last_seen_at": "2026-10-18T09:12:08.760768Z"
+    },
+    {
+      "id": "6ad483f4000000002701c53e",
+      "keyword": "杭州 桌游",
+      "matched_keywords": [
+        "杭州 桌游"
+      ],
+      "title": "找桌游搭子",
+      "author": "牵着蚂蚁的小猪🐷",
+      "published_at": "2026-10-18T08:31:48Z",
+      "url": "https://www.xiaohongshu.com/explore/6ad483f4000000002701c53e",
+      "summary": "周末一起玩呀 毛线类或者轻策略的新手局 主打轻松搞笑轻社交 主包上城区02浅e人 周末太无聊了想入坑桌游 找搭子一起玩 可以长期约 熟悉之后可以一起约饭约徒步 谁不想在杭州多几个朋友呢 想玩的快d我 #搞笑[话题]# #桌游[话题]# #搭子[话题]#",
+      "likes": 0,
+      "comments": 7,
+      "collects": 0,
+      "location": "浙江",
+      "first_seen_at": "2026-10-18T09:13:54.480757Z",
+      "last_seen_at": "2026-10-18T09:13:54.480757Z"
+    },
+    {
+      "id": "6ad47840000000002901b697",
+      "keyword": "杭州 桌游",
+      "matched_keywords": [
+        "杭州 桌游"
+      ],
+      "title": null,
+      "author": "ᝰꫛ",
+      "published_at": "2026-10-18T07:41:52Z",
+      "url": "https://www.xiaohongshu.com/explore/6ad47840000000002901b697",
+      "summary": "杭州桌游｜体验式选购太香了！ 今天被这家桌游店狠狠种草✨ 就在萧山万象汇3楼！ 特别适合新手小白，完全不用担心不会玩～ 店里主打体验式选购，可以先试玩再入手。 店员讲解超耐心，会理性推荐，体验感太棒啦👍 周末和朋友来泡一下午，快乐加倍！ #PKIQ爱玩桌游[话题]# #桌游[话题]# #益智桌游[话题]# #萧山万象汇[话题]#",
+      "likes": 1,
+      "comments": 1,
+      "collects": 1,
+      "location": "浙江",
+      "first_seen_at": "2026-10-18T09:14:07.028990Z",
+      "last_seen_at": "2026-10-18T09:14:07.028990Z"
+    },
+    {
+      "id": "6ad477b8000000002a00d30f",
+      "keyword": "杭州 潮玩 市集",
+      "matched_keywords": [
+        "杭州 潮玩 市集"
+      ],
+      "title": "河坊街南宋御街和匠心市集招募啦",
+      "author": "漫作市界",
+      "published_at": "2026-10-18T07:39:36Z",
+      "url": "https://www.xiaohongshu.com/explore/6ad477b8000000002a00d30f",
+      "summary": "如果你有手艺、有原创、有故事 欢迎来千年御街摆摊，让你的好物遇见懂它的人。 ✅招募品类 ▪️非遗手作｜剪纸、花丝、蓝染、传统手艺 ▪️原创文创｜宋韵周边、手绘、艺术小物 ▪️国潮好物｜宋韵潮玩、复古杂货 ▪️轻体验类｜手作体验、绘画、宋式小互动 📍位置：河坊街×南宋御街｜匠心市集 🔥优势：景区高客流，打卡氛围感拉满，老街自带小红书流量，游客+本地年轻人双客群 期待和各位匠人一起，在南宋烟火里，贩卖匠心与美好🌿 #市集[话题]# #年轻人摆摊[话题]# #大城里市集[话题]# #闲下来交换市集[话题]# #南宋御街[话题]# #杭州匠心市集[话题]# #市集摆摊[话题]# #招募摊主[话题]# #杭州市集[话题]#",
+      "likes": 0,
+      "comments": 0,
+      "collects": 1,
+      "location": "浙江",
+      "first_seen_at": "2026-10-18T09:27:47.074892Z",
+      "last_seen_at": "2026-10-18T09:27:47.074892Z"
+    },
+    {
+      "id": "6ad45ee9000000002800af51",
+      "keyword": "杭州 模型展",
+      "matched_keywords": [
+        "杭州 模型展"
+      ],
+      "title": "玩转RC拉力遥控车，就来 HCFC杭州模型节",
+      "author": "中国杭州国际模型文化节",
+      "published_at": "2026-10-18T05:53:45Z",
+      "url": "https://www.xiaohongshu.com/explore/6ad45ee9000000002800af51",
+      "summary": "杭州模型节｜RC 拉力车体验区来啦🔥静态模型看不够，来赛场飞驰！ 2026 杭州国际模型文化节重磅上线 RC 拉力遥控车互动体验区，集观摩、体验、竞技、教学、社交于一体，小白、亲子、硬核玩家全都能找到乐趣✨ ⏰时间：10.30–11.1 9:00-17:00 📍地点：杭州国际博览中心二期 1E 馆 H42 拉力体验区｜J34 猎斧赛车打卡区 五大组别赛事轮番开赛！新人不用自带车，教练现场教学，完成挑战领取完赛证书；自带车玩家可参与娱乐 PK、杭州 RC 积分赛、WRC 仿真拉力赛，还有 M 车 / BBX 复古拉力开心赛，氛围感拉满。 还有6 场免费车友课堂！RC 车壳喷涂、改装 OP、拉力文化摄影干货分享，逛展就能免费听课。J34 打卡区还有斯巴鲁经典拉力真车亮相，上手体验桌面小比例遥控车，拍照、操控一站式打卡。 长图内含完整活动细则，这个周末带上家人、模友一起来感受 RC 拉力的速度与激情🏁 #杭州模型节[话题]# #RC[话题]# #杭州周末去哪儿[话题]# #杭州遛娃[话题]# #模型展[话题]#",
+      "likes": 2,
+      "comments": 0,
+      "collects": 2,
+      "location": "浙江",
+      "first_seen_at": "2026-10-18T09:21:32.331189Z",
+      "last_seen_at": "2026-10-18T09:21:32.331189Z"
+    },
+    {
+      "id": "6ad45c26000000003100143e",
+      "keyword": "杭州 工联CC",
+      "matched_keywords": [
+        "杭州 工联CC"
+      ],
+      "title": "买小夏娃娃的宝宝别跑空啦",
+      "author": "PCLL0724",
+      "published_at": "2026-10-18T05:41:58Z",
+      "url": "https://www.xiaohongshu.com/explore/6ad45c26000000003100143e",
+      "summary": "#goodslove[话题]##杭州工联cc[话题]# #光与夜之恋三丽鸥二期娃[话题]#",
+      "likes": 1,
+      "comments": 5,
+      "collects": 0,
+      "location": "浙江",
+      "first_seen_at": "2026-10-18T09:00:33.618535Z",
+      "last_seen_at": "2026-10-18T09:00:33.618535Z"
+    },
+    {
+      "id": "6ad45681000000002701e492",
+      "keyword": "杭州 桌游",
+      "matched_keywords": [
+        "杭州 桌游"
+      ],
+      "title": "出大宋百商图",
+      "author": "菲律宾悍妇哦",
+      "published_at": "2026-10-18T05:17:53Z",
+      "url": "https://www.xiaohongshu.com/explore/6ad45681000000002701e492",
+      "summary": "全新个人闲置山姆特宋百商图特别版国风桌游财商启蒙合家欢大宋百商图 购于线下山姆实体店，就玩过两次，非常非常新。现在没时间玩了，在家闲置有点占地方。 整个东西比较沉，最好杭州闸弄口自提#桌游[话题]# #大宋百商[话题]#",
+      "likes": 0,
+      "comments": 1,
+      "collects": 0,
+      "location": "浙江",
+      "first_seen_at": "2026-10-18T09:14:19.448392Z",
+      "last_seen_at": "2026-10-18T09:14:19.448392Z"
+    },
+    {
+      "id": "6ad450fe000000002601f507",
+      "keyword": "杭州 工联CC",
+      "matched_keywords": [
+        "杭州 工联CC"
+      ],
+      "title": "工联cc打卡",
+      "author": "可爱萤火虫",
+      "published_at": "2026-10-18T04:54:22Z",
+      "url": "https://www.xiaohongshu.com/explore/6ad450fe000000002601f507",
+      "summary": "线下打卡，杭州逆水寒乐谷联动 周边都好好看！就是热门男角色没了 #逆水寒乐谷联动[话题]# #逆水寒手游[话题]##网易乐谷[话题]#",
+      "likes": 0,
+      "comments": 0,
+      "collects": 0,
+      "location": "浙江",
+      "first_seen_at": "2026-10-18T09:00:46.374142Z",
+      "last_seen_at": "2026-10-18T09:00:46.374142Z"
+    },
+    {
+      "id": "6ad44e0b000000002701f237",
+      "keyword": "杭州 桌游",
+      "matched_keywords": [
+        "杭州 桌游"
+      ],
+      "title": "杭州桌游馆",
+      "author": "小罗罗",
+      "published_at": "2026-10-18T04:41:47Z",
+      "url": "https://www.xiaohongshu.com/explore/6ad44e0b000000002701f237",
+      "summary": "地点:拱墅区 年龄18-25微卡颜 工作轻松上班时间自由工作氛围融洽 希望工作态度良好时间观念感强 时薪3@@ 当天结算不压不欠，有意者dd#桌游[话题]# #有经验者优先[话题]# #招募令[话题]# #桌面游戏[话题]# #剧本杀上车吗[话题]# #消遣好去处[话题]# #休闲娱乐[话题]# #剧本杀店[话题]# #线下剧本杀[话题]# #电玩[话题]#",
+      "likes": 0,
+      "comments": 0,
+      "collects": 0,
+      "location": "浙江",
+      "first_seen_at": "2026-10-18T09:14:32.148729Z",
+      "last_seen_at": "2026-10-18T09:14:32.148729Z"
+    },
+    {
+      "id": "6ad445420000000028009026",
+      "keyword": "杭州 潮玩 市集",
+      "matched_keywords": [
+        "杭州 潮玩 市集"
+      ],
+      "title": "闯入奇趣宇宙✨杭州大娃怪市，怪可爱的市集",
+      "author": "漫小青",
+      "published_at": "2026-10-18T04:04:18Z",
+      "url": "https://www.xiaohongshu.com/explore/6ad445420000000028009026",
+      "summary": "逛市集的快乐，是晚风、手作和好听的歌🎸 在大娃怪市遇见有趣的灵魂#杭州市集[话题]# #大娃怪市[话题]#",
+      "likes": 0,
+      "comments": 0,
+      "collects": 0,
+      "location": "浙江",
+      "first_seen_at": "2026-10-18T09:27:20.590184Z",
+      "last_seen_at": "2026-10-18T09:27:20.590184Z"
+    },
     {
       "id": "6a601600000000001102dce8",
       "keyword": "上海 BilibiliWorld",
@@ -741,42 +1512,6 @@
       "last_seen_at": "2026-10-18T03:18:49.782607Z"
     },
     {
-      "id": "6ad32bbf00000000150123bd",
-      "keyword": "杭州 模型展",
-      "matched_keywords": [
-        "杭州 模型展"
-      ],
-      "title": "杭州展限定",
-      "author": "超人聊模型",
-      "published_at": null,
-      "url": "https://www.xiaohongshu.com/explore/6ad32bbf00000000150123bd",
-      "summary": null,
-      "likes": 6,
-      "comments": 2,
-      "collects": 0,
-      "location": null,
-      "first_seen_at": "2026-10-18T03:18:49.782571Z",
-      "last_seen_at": "2026-10-18T03:18:49.782571Z"
-    },
-    {
-      "id": "6ad38481000000000a01c4e0",
-      "keyword": "杭州 模型展",
-      "matched_keywords": [
-        "杭州 模型展"
-      ],
-      "title": "杭州模型节套票指南",
-      "author": "超人聊模型",
-      "published_at": null,
-      "url": "https://www.xiaohongshu.com/explore/6ad38481000000000a01c4e0",
-      "summary": null,
-      "likes": 4,
-      "comments": 0,
-      "collects": 0,
-      "location": null,
-      "first_seen_at": "2026-10-18T03:18:03.512495Z",
-      "last_seen_at": "2026-10-18T03:18:03.512495Z"
-    },
-    {
       "id": "6abfa7c4000000001a02928d",
       "keyword": "杭州 VOCALOID",
       "matched_keywords": [
@@ -885,25 +1620,6 @@
       "last_seen_at": "2026-10-18T03:11:36.899054Z"
     },
     {
-      "id": "6acdac9e000000001403b37a",
-      "keyword": "杭州 DND",
-      "matched_keywords": [
-        "杭州 DND",
-        "杭州 TRPG"
-      ],
-      "title": "【DND模组预告】谦卑林版哈利波特滑铲中",
-      "author": "雷霆大",
-      "published_at": null,
-      "url": "https://www.xiaohongshu.com/explore/6acdac9e000000001403b37a",
-      "summary": null,
-      "likes": 43,
-      "comments": 14,
-      "collects": 6,
-      "location": null,
-      "first_seen_at": "2026-10-15T05:08:51.080256Z",
-      "last_seen_at": "2026-10-18T03:11:24.130756Z"
-    },
-    {
       "id": "6ad1f3fc000000000b0076a6",
       "keyword": "杭州 湖滨88 联动",
       "matched_keywords": [
@@ -933,12 +1649,12 @@
       "published_at": "2026-10-18T02:02:04Z",
       "url": "https://www.xiaohongshu.com/explore/6ad4289c0000000029018b01",
       "summary": "谁懂啊家人们！ 本来以为还有好几天🥹 猛然意识到番茄青年周年庆今天收官⁉️ 不要等到明年再后悔😭69‑149拿下各式潮衣包包！ 就在工联CC番茄青年🍅 活动今晚截止 ⚠️热门款随时被扫空 🙀想来抓紧！ #杭州宝藏服装店[话题]# #工联cc探店[话题]# #平价穿搭[话题]# #街头潮搭[话题]# #周末去哪儿杭州[话题]##番茄青年周年庆[话题]##番茄青年[话题]#",
-      "likes": 3,
+      "likes": 5,
       "comments": 0,
       "collects": 0,
       "location": "浙江",
       "first_seen_at": "2026-10-18T03:00:19.565774Z",
-      "last_seen_at": "2026-10-18T03:00:19.565774Z"
+      "last_seen_at": "2026-10-18T09:00:46.374113Z"
     },
     {
       "id": "6ad419be0000000030006c29",
@@ -974,7 +1690,25 @@
       "collects": 0,
       "location": "浙江",
       "first_seen_at": "2026-10-18T03:17:49.183509Z",
-      "last_seen_at": "2026-10-18T03:17:49.183509Z"
+      "last_seen_at": "2026-10-18T09:21:44.368705Z"
+    },
+    {
+      "id": "6ad3becf000000001b01e8ec",
+      "keyword": "杭州 潮玩 市集",
+      "matched_keywords": [
+        "杭州 潮玩 市集"
+      ],
+      "title": "逛「大娃怪市」的一天｜好逛吗？",
+      "author": "腻害的王撇撇",
+      "published_at": "2026-10-17T18:30:39Z",
+      "url": "https://www.xiaohongshu.com/explore/6ad3becf000000001b01e8ec",
+      "summary": "好逛好逛！大娃又来杭州了[派对R] [拔草R]个人感觉比上次好逛，好多没见过的小东西~ [向右R]价格几十到几百不等，值不值主要看自己喜不喜欢了，有些手工的成本不高但是需要花心思，花时间技术 [购物车R]购入了首饰&捕梦网&小药盒&挂件，都很貌美 [萌萌哒R]ps：我又来了买过的首饰店，@发酵长线条手作 在小姐姐摊位前完全走不动hhh，摊位都忘拍了，最后买了项链➕戒指，太喜欢辽[爱心R] 📍地址：西溪印象城1层-东门外广场 🚇地铁：3号线洪园C口直达 #大娃怪市杭州[话题]# #大娃怪市[话题]# #大娃怪市复古市集[话题]#",
+      "likes": 3,
+      "comments": 2,
+      "collects": 3,
+      "location": "浙江",
+      "first_seen_at": "2026-10-18T09:27:34.407291Z",
+      "last_seen_at": "2026-10-18T09:27:34.407291Z"
     },
     {
       "id": "6ad3ab08000000001400264b",
@@ -1119,6 +1853,24 @@
       "location": "浙江",
       "first_seen_at": "2026-10-18T03:07:34.426822Z",
       "last_seen_at": "2026-10-18T03:07:34.426822Z"
+    },
+    {
+      "id": "6ad36874000000001c00dbf8",
+      "keyword": "杭州 潮玩 市集",
+      "matched_keywords": [
+        "杭州 潮玩 市集"
+      ],
+      "title": "杭州湘湖市集招募！秋日湖畔慢节奏市集🍂",
+      "author": "东北银在杭州",
+      "published_at": "2026-10-17T12:22:12Z",
+      "url": "https://www.xiaohongshu.com/explore/6ad36874000000001c00dbf8",
+      "summary": "主题：湘湖越界湖山集·慢熟市集招募 ⛺️湘湖越界三周年庆来了～湖山集·慢熟启动摊主招募，邀您共赴秋日湖畔的盛典! ⏰市集时间 2026年10月30日-11月1日(每日10:00-18:00) 🏠市集地点 湘湖越界 - 🍃摊位要求：会布置，产品过硬，好看、出片、精致、有打卡效应（划重点） 🪀摊位意向:原创手作，温暖手作，花艺、绿植、农产品等自然好物，亲子周边，潮玩童趣，轻食小吃(谢绝油炸大功率及咖啡品类)等 - 自2024年11月首次推出湖山集以来，已成功举办多期主题市集，人气持续升温，成为湘湖周边文旅热点! 本次市集亮点我们提供： ✅主题美陈、基础陈设(如伞)、桌椅、电场景焕新 🍂秋日农场主题美陈上新，街区环境UPUP天然客流； 🚥坐拥西湖\"姊妹湖\"湘湖的优越区位，假日人流自然汇聚； 🎤每日精彩演艺互动，持续吸引人群驻足； 🍴街区汇聚米其林、黑珍珠餐厅，形成网红餐厅圈，人气UP - 报名方式：⬇️⬇️ 主办方将根据品牌调性与产品特色,筛选优质摊主 #杭州[话题]# #杭州市集[话题]# #杭州活动[话题]# #杭州集市[话题]# #杭州摆摊[话题]# #杭州市集招募[话题]# #杭州集",
+      "likes": 6,
+      "comments": 3,
+      "collects": 7,
+      "location": "浙江",
+      "first_seen_at": "2026-10-18T09:27:58.933987Z",
+      "last_seen_at": "2026-10-18T09:27:58.933987Z"
     },
     {
       "id": "6ad3677e000000000b006d33",
@@ -2238,6 +2990,24 @@
       "last_seen_at": "2026-10-17T09:17:31.767756Z"
     },
     {
+      "id": "6ad2ffef0000000012039c00",
+      "keyword": "杭州 TRPG",
+      "matched_keywords": [
+        "杭州 TRPG"
+      ],
+      "title": "杭州RPG黄子韬（没孩子版）和景林（锦衣卫·林）",
+      "author": "魏满十八岁",
+      "published_at": "2026-10-17T04:56:15Z",
+      "url": "https://www.xiaohongshu.com/explore/6ad2ffef0000000012039c00",
+      "summary": "回国前黄子韬 下颌线锋利 还瘦[暗中观察R] 景林（锦衣卫·林） 有没有宝宝上车品一品 10:22 22:00 吴情： 🈳（东风/景林 ） #夜雨奇谈叁[话题]# #杭州RPG剧场[话题]# #剧本杀推荐[话题]# #黄子韬[话题]# #沉浸式演绎剧场[话题]# #剧本杀[话题]# #沉浸剧天花板[话题]#",
+      "likes": 0,
+      "comments": 0,
+      "collects": 0,
+      "location": "浙江",
+      "first_seen_at": "2026-10-18T09:11:26.095273Z",
+      "last_seen_at": "2026-10-18T09:11:26.095273Z"
+    },
+    {
       "id": "6ad2f75f000000001303ed74",
       "keyword": "杭州 animate 活动",
       "matched_keywords": [
@@ -2437,25 +3207,6 @@
       "location": null,
       "first_seen_at": "2026-10-16T05:16:06.835607Z",
       "last_seen_at": "2026-10-17T03:24:33.328080Z"
-    },
-    {
-      "id": "6aca2fed000000001a025d05",
-      "keyword": "上海 TRPG",
-      "matched_keywords": [
-        "上海 TRPG",
-        "上海 跑团"
-      ],
-      "title": "上海招募一些沉浸向pl非商跑团～",
-      "author": "lucasqiu",
-      "published_at": null,
-      "url": "https://www.xiaohongshu.com/explore/6aca2fed000000001a025d05",
-      "summary": null,
-      "likes": 11,
-      "comments": 11,
-      "collects": 1,
-      "location": null,
-      "first_seen_at": "2026-10-11T03:15:51.281964Z",
-      "last_seen_at": "2026-10-17T03:24:18.876935Z"
     },
     {
       "id": "69f9ab53000000003601bb77",
@@ -2946,7 +3697,7 @@
       "collects": 0,
       "location": "广东",
       "first_seen_at": "2026-10-17T03:08:33.884699Z",
-      "last_seen_at": "2026-10-17T09:08:10.461266Z"
+      "last_seen_at": "2026-10-18T09:11:50.126392Z"
     },
     {
       "id": "6ad1bf24000000000a0213ee",
@@ -2967,6 +3718,24 @@
       "last_seen_at": "2026-10-17T03:14:43.221127Z"
     },
     {
+      "id": "6ad26945000000001b01dcdc",
+      "keyword": "杭州 宠物主题 市集",
+      "matched_keywords": [
+        "杭州 宠物主题 市集"
+      ],
+      "title": "杭州它博集—Day1羊毛🦙速通攻略，请查收！",
+      "author": "团子爱转圈🍡",
+      "published_at": "2026-10-17T01:00:57Z",
+      "url": "https://www.xiaohongshu.com/explore/6ad26945000000001b01dcdc",
+      "summary": "每年必来的“它博集”[鼓掌R][鼓掌R][鼓掌R] 趁大部队还没抵达，周五下午就先🐛了～ 总体感觉还是蛮不错的，有吃有玩，基本上都是国内品牌，老面孔了。宠物用品一应俱全，9.9/19.9展会特价活动也不少，还有义诊，鲜食试吃摊位。🆓打卡礼品🎁也很多，但是数量有限，薅羊毛记得早点到哈哈，发完就🈚️ ⏰集市时间 10月16日 15:00-21:00（20:30停止入场） 10月17日 13:00-21:00（20:30停止入场） 10月18日 13:00-20:00（19:30停止入场） 一共大概一百个摊位，慢慢逛各种打卡的话应该可以逛3个小时左右，速通就直奔主会场1h绰绰有余[自拍R] [种草R]图🔟是地图，可以结合👀 布局没有太大变化，去年来过的朋友应该很熟悉，入口进去先是草坪（游戏区），过了中央舞台就是主会场—“好物集市”。左边🈶“晚风食廊”（吃饭区），最里面是“心愈工坊”（活动区），要玩酷币游戏的，就先冲最里面，赚到钱逛一圈回去再玩。 交通指南⬇️ 地铁🚇 2号线/6号线：钱江世纪城站（B口）直行约200米 打车🚗 定位：杭州钱江世纪公园A10栋 自驾🅿️ 导航杭州钱江世纪公园A区",
+      "likes": 51,
+      "comments": 15,
+      "collects": 28,
+      "location": "浙江",
+      "first_seen_at": "2026-10-18T09:32:04.608079Z",
+      "last_seen_at": "2026-10-18T09:32:04.608079Z"
+    },
+    {
       "id": "6ad2490600000000180040a5",
       "keyword": "杭州 工联CC",
       "matched_keywords": [
@@ -2983,6 +3752,24 @@
       "location": "浙江",
       "first_seen_at": "2026-10-17T03:00:46.987967Z",
       "last_seen_at": "2026-10-17T03:00:46.987967Z"
+    },
+    {
+      "id": "6ad242e7000000001303ed0e",
+      "keyword": "杭州 TRPG",
+      "matched_keywords": [
+        "杭州 TRPG"
+      ],
+      "title": "远征杭州rpg第二站-彼岸甄选",
+      "author": "凉鹰",
+      "published_at": "2026-10-16T15:29:43Z",
+      "url": "https://www.xiaohongshu.com/explore/6ad242e7000000001303ed0e",
+      "summary": "今天品尝了一把彼岸甄选的西子，可以说是相当美味 带进去的酸奶碗基本也没怎么动，没时间吃，根本没时间吃，一直在爽谈，我的云汀帅帅的很安心 我玩的云汀-玉镜这个线，确实是很厉害，让我这个大菠萝头也是吃到了爱情线，我皮的几下也是都接住了戏，自由度搞起来哈哈哈。作为一刷0透的玩家虽然很多走向是能猜到的，但是玉镜的演绎很出色！ 最后就是，这位公子，初次见面，我在找一个走失已久的人，我感觉就是你，但不知我是否是你梦中的那个女孩呢@yu玉镜 今天的女玩家都是非常可爱的宝子，结束还去一起吃了烙锅，可以说是审美和玩的部分有着相当一致的认可了！果然女孩纸都是超级棒的！ 刚好约了后面几场，下次要第一时间认出来我！@草莓熊 #杭州沉浸式剧场[话题]# #彼岸甄选杭州店[话题]# #西子花朝[话题]# #西子花朝江黛雪[话题]#",
+      "likes": 7,
+      "comments": 3,
+      "collects": 0,
+      "location": "浙江",
+      "first_seen_at": "2026-10-18T09:11:38.271554Z",
+      "last_seen_at": "2026-10-18T09:11:38.271554Z"
     },
     {
       "id": "6ad23b9b000000000a027fbc",
@@ -4154,12 +4941,12 @@
       "published_at": "2026-10-16T07:37:48Z",
       "url": "https://www.xiaohongshu.com/explore/6ad1d44c00000000020133cd",
       "summary": "规则:dnd5r 模组:龙铸试炼 Dm:晓法师 时间:10月20日下午1点 地点:南星桥附近或滨江 玩家人数:3-4人 模组风格: 解谜，小游戏，战斗 背景:一位巨龙法师的魔法卡牌在实验事故中飞入星界，散落在世界各地。她需要一众机智勇敢的冒险者为她取回这些卡牌！ 资源:3级开卡，.dnd3或27buy，phb+配套世设书《棱镜天穹战役指南》 说明: 1.婉拒纯新，需有跑团经历，能独立完成角色卡。 2.你可以做任何行为，但需承担相应的后果。 #杭州跑团[话题]##dnd[话题]##trpg[话题]#",
-      "likes": 2,
+      "likes": 3,
       "comments": 1,
       "collects": 1,
       "location": "浙江",
       "first_seen_at": "2026-10-16T09:36:18.859765Z",
-      "last_seen_at": "2026-10-18T03:11:24.130722Z"
+      "last_seen_at": "2026-10-18T09:11:13.090423Z"
     },
     {
       "id": "6ad1cf050000000014001aae",
@@ -4196,6 +4983,24 @@
       "location": "浙江",
       "first_seen_at": "2026-10-16T09:31:07.668851Z",
       "last_seen_at": "2026-10-16T09:31:07.668851Z"
+    },
+    {
+      "id": "6ad1cb8e000000001c01f981",
+      "keyword": "杭州 工联CC",
+      "matched_keywords": [
+        "杭州 工联CC"
+      ],
+      "title": "10.18周日工联cc营业中～",
+      "author": "只想摸鱼ing",
+      "published_at": "2026-10-16T07:00:30Z",
+      "url": "https://www.xiaohongshu.com/explore/6ad1cb8e000000001c01f981",
+      "summary": "欢迎来逛～[派对R] 深空新谷：明日、炽型定格、春野漫歌系列都有[自拍R] 有光夜的疾影狂想曲系列～[自拍R] 制作人的粉红兔！！！🐰 祁煜🐟26生日谷齐全～ 漫冬购物袋齐全～未全展示，有想要的可以滴滴我预留[扯脸H] 生日娃有复数的可挑脸～ 哥的部分有库存啦（无尽夏、心途、猫很想你、竹林等～） 世外有柏源的生日谷[派对R] #杭州工联cc[话题]# #工联cc玩谷市集[话题]# #恋与深空[话题]# #恋与制作人[话题]# #世界之外[话题]# #光与夜之恋[话题]# #线下吃谷[话题]# #大人们吃一口吧[话题]#",
+      "likes": 4,
+      "comments": 2,
+      "collects": 0,
+      "location": "浙江",
+      "first_seen_at": "2026-10-18T09:00:20.716782Z",
+      "last_seen_at": "2026-10-18T09:00:20.716782Z"
     },
     {
       "id": "6ad1cae9000000000a01cf8a",
@@ -5341,25 +6146,6 @@
       "last_seen_at": "2026-10-16T00:20:31.439893Z"
     },
     {
-      "id": "6ac51995000000001501068a",
-      "keyword": "上海 TRPG ONLY",
-      "matched_keywords": [
-        "上海 DND ONLY",
-        "上海 TRPG ONLY"
-      ],
-      "title": "dndo4结算画面",
-      "author": "随风飘荡的花花（展会版）",
-      "published_at": null,
-      "url": "https://www.xiaohongshu.com/explore/6ac51995000000001501068a",
-      "summary": null,
-      "likes": 27,
-      "comments": 3,
-      "collects": 0,
-      "location": null,
-      "first_seen_at": "2026-10-09T09:40:08.020722Z",
-      "last_seen_at": "2026-10-16T00:20:31.439877Z"
-    },
-    {
       "id": "6ab546750000000018016270",
       "keyword": "上海 ONLY",
       "matched_keywords": [
@@ -5509,81 +6295,6 @@
       "last_seen_at": "2026-10-16T00:19:15.495179Z"
     },
     {
-      "id": "6ac26275000000001800421f",
-      "keyword": "上海 COC",
-      "matched_keywords": [
-        "上海 COC",
-        "上海 TRPG"
-      ],
-      "title": "【置顶】一些自我介绍(=^‥^=)",
-      "author": "吴钩越剑",
-      "published_at": null,
-      "url": "https://www.xiaohongshu.com/explore/6ac26275000000001800421f",
-      "summary": null,
-      "likes": 74,
-      "comments": 11,
-      "collects": 17,
-      "location": null,
-      "first_seen_at": "2026-10-11T03:17:26.271789Z",
-      "last_seen_at": "2026-10-16T00:19:15.495168Z"
-    },
-    {
-      "id": "6ab1cbea000000003101ea22",
-      "keyword": "上海 DND",
-      "matched_keywords": [
-        "上海 DND",
-        "上海 TRPG"
-      ],
-      "title": "上海闵行非商团面团招募（已满）",
-      "author": "Acropolis",
-      "published_at": null,
-      "url": "https://www.xiaohongshu.com/explore/6ab1cbea000000003101ea22",
-      "summary": null,
-      "likes": 15,
-      "comments": 11,
-      "collects": 2,
-      "location": null,
-      "first_seen_at": "2026-09-23T09:41:31.747204Z",
-      "last_seen_at": "2026-10-16T00:19:15.495159Z"
-    },
-    {
-      "id": "6ac0ba2e0000000018012cb8",
-      "keyword": "上海 TRPG",
-      "matched_keywords": [
-        "上海 TRPG"
-      ],
-      "title": "擅长dnd世设的伟大dm在哪里",
-      "author": "ViewPointCity",
-      "published_at": null,
-      "url": "https://www.xiaohongshu.com/explore/6ac0ba2e0000000018012cb8",
-      "summary": null,
-      "likes": 65,
-      "comments": 49,
-      "collects": 4,
-      "location": null,
-      "first_seen_at": "2026-10-16T00:19:15.495141Z",
-      "last_seen_at": "2026-10-16T00:19:15.495141Z"
-    },
-    {
-      "id": "69ec52c80000000036000fbd",
-      "keyword": "上海 跑团",
-      "matched_keywords": [
-        "上海 TRPG",
-        "上海 跑团"
-      ],
-      "title": "今天谁带团丨三年上千场团的从容，他叫稀饭",
-      "author": "灰镜-trpg",
-      "published_at": null,
-      "url": "https://www.xiaohongshu.com/explore/69ec52c80000000036000fbd",
-      "summary": null,
-      "likes": 47,
-      "comments": 36,
-      "collects": 11,
-      "location": null,
-      "first_seen_at": "2026-09-21T00:09:10.207059Z",
-      "last_seen_at": "2026-10-16T00:19:15.495095Z"
-    },
-    {
       "id": "6acef89400000000180296b7",
       "keyword": "杭州 宠物主题 市集",
       "matched_keywords": [
@@ -5726,78 +6437,6 @@
       "location": null,
       "first_seen_at": "2026-10-16T00:16:36.855081Z",
       "last_seen_at": "2026-10-16T00:16:36.855081Z"
-    },
-    {
-      "id": "6ab6ac640000000013018d69",
-      "keyword": "杭州 角落生物 快闪",
-      "matched_keywords": [
-        "杭州 角落生物 快闪"
-      ],
-      "title": "杭州湖滨银泰一日游总结！",
-      "author": "only_y",
-      "published_at": null,
-      "url": "https://www.xiaohongshu.com/explore/6ab6ac640000000013018d69",
-      "summary": null,
-      "likes": 109,
-      "comments": 11,
-      "collects": 38,
-      "location": null,
-      "first_seen_at": "2026-10-16T00:14:12.756142Z",
-      "last_seen_at": "2026-10-16T00:14:12.756142Z"
-    },
-    {
-      "id": "6ab4d205000000000202a522",
-      "keyword": "杭州 角落生物 快闪",
-      "matched_keywords": [
-        "杭州 角落生物 快闪"
-      ],
-      "title": "超前路透‼️得力美味治愈联萌萌晕了🥹",
-      "author": "杭州湖滨银泰in77",
-      "published_at": null,
-      "url": "https://www.xiaohongshu.com/explore/6ab4d205000000000202a522",
-      "summary": null,
-      "likes": 373,
-      "comments": 27,
-      "collects": 108,
-      "location": null,
-      "first_seen_at": "2026-10-12T00:24:49.239836Z",
-      "last_seen_at": "2026-10-16T00:14:12.756131Z"
-    },
-    {
-      "id": "6ac0eccc000000000200d03d",
-      "keyword": "杭州 角落生物 快闪",
-      "matched_keywords": [
-        "杭州 角落生物 快闪"
-      ],
-      "title": "当去了一趟角落生物快闪",
-      "author": "grrrrrrr_10",
-      "published_at": null,
-      "url": "https://www.xiaohongshu.com/explore/6ac0eccc000000000200d03d",
-      "summary": null,
-      "likes": 176,
-      "comments": 26,
-      "collects": 15,
-      "location": null,
-      "first_seen_at": "2026-10-12T00:24:49.239793Z",
-      "last_seen_at": "2026-10-16T00:14:12.756112Z"
-    },
-    {
-      "id": "6ac26b2a000000001b01e5ca",
-      "keyword": "杭州 角落生物 快闪",
-      "matched_keywords": [
-        "杭州 角落生物 快闪"
-      ],
-      "title": "全图鉴来啦",
-      "author": "角落角落",
-      "published_at": null,
-      "url": "https://www.xiaohongshu.com/explore/6ac26b2a000000001b01e5ca",
-      "summary": null,
-      "likes": 137,
-      "comments": 0,
-      "collects": 44,
-      "location": null,
-      "first_seen_at": "2026-10-16T00:14:12.756090Z",
-      "last_seen_at": "2026-10-16T00:14:12.756090Z"
     },
     {
       "id": "6aacd2ea00000000290158c9",
@@ -6177,7 +6816,7 @@
       "collects": 0,
       "location": "浙江",
       "first_seen_at": "2026-10-16T00:05:11.578956Z",
-      "last_seen_at": "2026-10-18T03:11:24.130743Z"
+      "last_seen_at": "2026-10-18T09:11:13.090405Z"
     },
     {
       "id": "6ad0d6b3000000001303d86c",
@@ -7138,19 +7777,20 @@
       "id": "6ad09bdd0000000018018f23",
       "keyword": "杭州 工联CC",
       "matched_keywords": [
+        "杭州 三丽鸥 快闪",
         "杭州 工联CC"
       ],
-      "title": "【更新周四17：22】光夜三丽鸥杭州",
+      "title": "【更新周五19：18】光夜三丽鸥杭州",
       "author": "日期",
       "published_at": "2026-10-15T09:24:45Z",
       "url": "https://www.xiaohongshu.com/explore/6ad09bdd0000000018018f23",
       "summary": "水印时间：周四17：22 地点：杭州工联CCgoodslove 排队：无需排队，可带包进入 #光与夜之恋[话题]#",
-      "likes": 1,
-      "comments": 1,
+      "likes": 10,
+      "comments": 9,
       "collects": 0,
       "location": "浙江",
       "first_seen_at": "2026-10-15T09:30:20.757246Z",
-      "last_seen_at": "2026-10-15T09:30:20.757246Z"
+      "last_seen_at": "2026-10-18T09:25:44.479184Z"
     },
     {
       "id": "6ad09b8e000000001203d4e3",
@@ -8077,26 +8717,6 @@
       "last_seen_at": "2026-10-15T05:10:27.404344Z"
     },
     {
-      "id": "6ac39772000000001203a558",
-      "keyword": "杭州 TRPG",
-      "matched_keywords": [
-        "杭州 COC",
-        "杭州 DND",
-        "杭州 TRPG"
-      ],
-      "title": "原图直出五人小队coc",
-      "author": "凰和纱想玩跑团",
-      "published_at": null,
-      "url": "https://www.xiaohongshu.com/explore/6ac39772000000001203a558",
-      "summary": null,
-      "likes": 4,
-      "comments": 11,
-      "collects": 1,
-      "location": null,
-      "first_seen_at": "2026-10-08T05:08:48.999539Z",
-      "last_seen_at": "2026-10-15T05:10:10.068567Z"
-    },
-    {
       "id": "69c2b953000000001a03109f",
       "keyword": "杭州 COC",
       "matched_keywords": [
@@ -8805,6 +9425,24 @@
       "last_seen_at": "2026-10-18T03:02:33.332098Z"
     },
     {
+      "id": "6accaf01000000001203ad05",
+      "keyword": "杭州 宠物主题 市集",
+      "matched_keywords": [
+        "杭州 宠物主题 市集"
+      ],
+      "title": "杭州百狗夜行又又又杀回来啦！期待！",
+      "author": "枕一束暖阳",
+      "published_at": "2026-10-12T09:57:21Z",
+      "url": "https://www.xiaohongshu.com/explore/6accaf01000000001203ad05",
+      "summary": "杭州百狗夜行又又又杀回来啦！从去年十月底开始到今年，正好一年，但已经是第4️⃣届了，杭州养宠人的热情度太高了吧！ 之前就刷到过前三届的阵仗，杭州狗子们排面真的拉满🐕这次看介绍好像还在加码，不仅有老传统萌宠巡游花车、主题装扮方阵，现场还有宠物造型师🆓妆造，主题市集也来了好多新面孔，不像个普通活动，更像是毛孩子春晚！ 第四届了，前三届没赶上的本人，这次说什么也要去凑个热闹！10.30-11.1，杭州大厦501城市广场，一起一起！ #杭州百狗夜行[话题]# #杭州第四届百狗夜行[话题]# #杭州宠物活动[话题]# #百狗夜行[话题]# #杭州宠物[话题]# #杭州宠物市集[话题]# #杭州大厦501[话题]# #宠物聚会[话题]#",
+      "likes": 15,
+      "comments": 0,
+      "collects": 7,
+      "location": "浙江",
+      "first_seen_at": "2026-10-18T09:31:51.320997Z",
+      "last_seen_at": "2026-10-18T09:31:51.320997Z"
+    },
+    {
       "id": "6ab61bd500000000150062d5",
       "keyword": "杭州 Good Smile Cafe",
       "matched_keywords": [
@@ -9506,24 +10144,6 @@
       "location": null,
       "first_seen_at": "2026-10-12T00:26:18.313347Z",
       "last_seen_at": "2026-10-12T00:26:18.313347Z"
-    },
-    {
-      "id": "6ac9cead00000000180182ef",
-      "keyword": "杭州 手作 文创 市集",
-      "matched_keywords": [
-        "杭州 手作 文创 市集"
-      ],
-      "title": "杭州10-11月必逛26个市集🥳大多免费！",
-      "author": "杭州周末去哪",
-      "published_at": null,
-      "url": "https://www.xiaohongshu.com/explore/6ac9cead00000000180182ef",
-      "summary": null,
-      "likes": 100,
-      "comments": 2,
-      "collects": 94,
-      "location": null,
-      "first_seen_at": "2026-10-12T00:26:18.313334Z",
-      "last_seen_at": "2026-10-12T00:26:18.313334Z"
     },
     {
       "id": "6acaebf10000000013019b69",
@@ -12201,7 +12821,7 @@
       "collects": 6,
       "location": "浙江",
       "first_seen_at": "2026-10-16T05:05:46.409841Z",
-      "last_seen_at": "2026-10-18T03:11:24.130762Z"
+      "last_seen_at": "2026-10-18T09:12:08.760735Z"
     },
     {
       "id": "6acaee3500000000140397b4",
@@ -13852,25 +14472,6 @@
       "last_seen_at": "2026-10-10T09:01:29.148166Z"
     },
     {
-      "id": "6ac63be8000000001a03107c",
-      "keyword": "上海 DND",
-      "matched_keywords": [
-        "上海 DND",
-        "上海 DND ONLY"
-      ],
-      "title": "这个龙太酷了",
-      "author": "圆满",
-      "published_at": null,
-      "url": "https://www.xiaohongshu.com/explore/6ac63be8000000001a03107c",
-      "summary": null,
-      "likes": 15,
-      "comments": 3,
-      "collects": 1,
-      "location": null,
-      "first_seen_at": "2026-10-09T05:14:01.252251Z",
-      "last_seen_at": "2026-10-10T03:14:57.424278Z"
-    },
-    {
       "id": "6ac63b9d000000000b005bff",
       "keyword": "上海 DND",
       "matched_keywords": [
@@ -13890,24 +14491,6 @@
       "last_seen_at": "2026-10-10T03:14:57.424271Z"
     },
     {
-      "id": "6ac36df1000000000f0397ac",
-      "keyword": "上海 DND ONLY",
-      "matched_keywords": [
-        "上海 DND ONLY"
-      ],
-      "title": "【CQ5.0&D&D Only 摊宣和纪念】",
-      "author": "The Leaf",
-      "published_at": null,
-      "url": "https://www.xiaohongshu.com/explore/6ac36df1000000000f0397ac",
-      "summary": null,
-      "likes": 17,
-      "comments": 3,
-      "collects": 0,
-      "location": null,
-      "first_seen_at": "2026-10-10T03:14:57.424263Z",
-      "last_seen_at": "2026-10-10T03:14:57.424263Z"
-    },
-    {
       "id": "6ab9055a0000000012038b06",
       "keyword": "上海 DND",
       "matched_keywords": [
@@ -13925,25 +14508,6 @@
       "location": null,
       "first_seen_at": "2026-09-28T09:40:02.821206Z",
       "last_seen_at": "2026-10-10T03:14:57.424254Z"
-    },
-    {
-      "id": "6abb7ef3000000001303f4af",
-      "keyword": "杭州 跑团",
-      "matched_keywords": [
-        "上海 DND ONLY",
-        "杭州 跑团"
-      ],
-      "title": "2026年底跑团展会汇总！",
-      "author": "念魔王",
-      "published_at": null,
-      "url": "https://www.xiaohongshu.com/explore/6abb7ef3000000001303f4af",
-      "summary": null,
-      "likes": 60,
-      "comments": 6,
-      "collects": 13,
-      "location": null,
-      "first_seen_at": "2026-09-29T09:35:43.582127Z",
-      "last_seen_at": "2026-10-10T03:14:57.424244Z"
     },
     {
       "id": "6ac605cd0000000019025675",
@@ -13980,24 +14544,6 @@
       "location": null,
       "first_seen_at": "2026-10-09T05:14:01.252221Z",
       "last_seen_at": "2026-10-10T03:13:39.166460Z"
-    },
-    {
-      "id": "6ac91d8d0000000015001bf1",
-      "keyword": "上海 DND",
-      "matched_keywords": [
-        "上海 DND"
-      ],
-      "title": "《轻游记：地球真棒！》",
-      "author": "吟游之鸽-安铎沃克",
-      "published_at": null,
-      "url": "https://www.xiaohongshu.com/explore/6ac91d8d0000000015001bf1",
-      "summary": null,
-      "likes": 14,
-      "comments": 1,
-      "collects": 1,
-      "location": null,
-      "first_seen_at": "2026-10-10T03:13:39.166431Z",
-      "last_seen_at": "2026-10-10T03:13:39.166431Z"
     },
     {
       "id": "6ac89710000000000a02302b",
@@ -16207,6 +16753,24 @@
       "location": null,
       "first_seen_at": "2026-10-08T05:08:01.333912Z",
       "last_seen_at": "2026-10-09T09:33:33.766362Z"
+    },
+    {
+      "id": "6ac8b3c6000000001c02e5ee",
+      "keyword": "杭州 宠物主题 市集",
+      "matched_keywords": [
+        "杭州 宠物主题 市集"
+      ],
+      "title": "定档！第四届杭州百狗夜行，狗狗Cos巡游！",
+      "author": "pemily宠加",
+      "published_at": "2026-10-09T09:28:38Z",
+      "url": "https://www.xiaohongshu.com/explore/6ac8b3c6000000001c02e5ee",
+      "summary": "杭州百狗夜行来啦！又是一年猫朋狗友变装大会！ 爱狗人速来﹣狗狗Costume巡游！🐶🐱 🐾 萌宠花车×十大萌宠变装装扮巡游方阵！ 小恶魔、小天使、小南瓜……c位出道当明星～ 听取“哇”声一片”！ 快带小狗加入队伍，看看谁才是显眼包！ 🎪 10+人宠互动，快乐不止走一圈！ 参与人宠互动活动，还有额外萌宠礼包等你拿🎁 🛍️ 60+全国宠物品牌，猫朋狗友一起逛！ 蓝氏、领先、麦富迪、霸弗、比瑞吉……品牌福利一起安排！ [烟花R][烟花R] 没狗也能来！小狗应援团就差你了！ 应援点随机发糖、萌宠灯牌墙、打怪应援位…… ruaruaruarua为小狗打call！毛茸茸超治愈～ 🎁 前1000名参加巡游的毛孩子，可领取超值巡游礼包！🍎👇晒出毛孩子萌照吧～ 无需门票！养宠人、无宠爱宠人都欢迎！ 📍杭州大厦501 🗓️ 10.30—11.1～ #杭州百狗夜行[话题]# #百狗夜行[话题]# #二次元花车巡礼[话题]# #杭州大厦501[话题]# #杭州周末去哪儿[话题]# #第四届百狗夜行[话题]# #宠友集[话题]# #pemily人宠友好平台[话题]# #宠物活动[话题]# #我的养宠日常[话题]",
+      "likes": 960,
+      "comments": 797,
+      "collects": 465,
+      "location": "浙江",
+      "first_seen_at": "2026-10-18T09:31:38.096865Z",
+      "last_seen_at": "2026-10-18T09:31:38.096865Z"
     },
     {
       "id": "6ac8b354000000001802d9be",
@@ -20148,11 +20712,11 @@
       "url": "https://www.xiaohongshu.com/explore/6ac46d890000000015011557",
       "summary": "捞捞跑团人，线上有文字/语音，线下的面团在北京、上海、武汉和杭州，直接蹲蹲或下方咨询就可，萌新大欢迎。 #跑团[话题]# #克苏鲁跑团[话题]# #coc[话题]# #COC[话题]# #克苏鲁神话[话题]# #克苏鲁[话题]# #桌游[话题]# #dnd[话题]# #DND[话题]# #龙与地下城[话题]#",
       "likes": 10,
-      "comments": 38,
+      "comments": 46,
       "collects": 3,
       "location": "北京",
       "first_seen_at": "2026-10-11T09:06:28.092714Z",
-      "last_seen_at": "2026-10-17T03:24:18.876875Z"
+      "last_seen_at": "2026-10-18T09:11:13.090354Z"
     },
     {
       "id": "6ac35fdf0000000014000d8e",
@@ -20170,7 +20734,7 @@
       "collects": 1,
       "location": "浙江",
       "first_seen_at": "2026-10-16T00:05:51.484249Z",
-      "last_seen_at": "2026-10-16T00:05:51.484249Z"
+      "last_seen_at": "2026-10-18T09:11:13.090417Z"
     },
     {
       "id": "6abfa0360000000018010718",
@@ -24383,26 +24947,6 @@
       "location": null,
       "first_seen_at": "2026-09-23T09:41:47.509712Z",
       "last_seen_at": "2026-09-29T05:11:22.854551Z"
-    },
-    {
-      "id": "6ab289310000000031008119",
-      "keyword": "上海 DND",
-      "matched_keywords": [
-        "上海 DND",
-        "上海 DND ONLY",
-        "上海 ONLY"
-      ],
-      "title": "高考冲刺一个月终于关窗了💪",
-      "author": "北极兔生产中心",
-      "published_at": null,
-      "url": "https://www.xiaohongshu.com/explore/6ab289310000000031008119",
-      "summary": null,
-      "likes": 113,
-      "comments": 21,
-      "collects": 1,
-      "location": null,
-      "first_seen_at": "2026-09-23T09:41:31.747189Z",
-      "last_seen_at": "2026-09-29T05:11:22.854523Z"
     },
     {
       "id": "6ab88579000000001c00e34a",
@@ -34786,12 +35330,12 @@
       "published_at": "2026-09-25T06:35:34Z",
       "url": "https://www.xiaohongshu.com/explore/6ab61636000000001802b110",
       "summary": "昨天第一次去玩了跑团，玩的是coc。[萌萌哒R] 本人完全圈外人，这次是阴差阳错被朋友拉去玩。我对跑团唯一的印象，就是怪奇物语，威尔天天问我们能回去玩龙与地下城了吗哈哈哈哈哈哈哈，当时就在想这么好玩？现在我完全理解成为超越，已向所有朋友发送跑团邀请[皱眉R][皱眉R][皱眉R] 我玩了几年剧本杀，打多了有点疲了。结果这一次第一次尝试跑团，直接打开了新世界。原来跑团并没有我想象的那么复杂、那么难，甚至什么都不用准备，你只需要坐在那里就好。主持人会一步一步引导你，带你车卡，带你设定各种数值，整个流程非常的简单，甚至不用怎么太动脑子。车卡的时候会有一种莫名的灵魂共振宿命感，车出来的角色跟我自己真的特别贴合～ 跑团跟剧本杀不一样的是整个故事是由玩家一步一步自己设计、探索出来的，主持人只是给你提供了一个场景，怎么行动怎么表演怎么交流，都是你说了算。有一种很奇特的感觉，就好像你真的在那个虚幻世界里面探了一次案，完全心流同步。 我现在真的相信有骰神、像在控制整个故事，每个人物做出的选择、故事的推进都特别的合理、严丝合缝，这当然也归功于主持人的功力，在这里补一句像素核子的KP老师真的特别有意思特别用心",
-      "likes": 73,
+      "likes": 75,
       "comments": 26,
       "collects": 14,
       "location": "浙江",
       "first_seen_at": "2026-09-25T09:37:41.268143Z",
-      "last_seen_at": "2026-10-15T05:08:35.057958Z"
+      "last_seen_at": "2026-10-18T09:13:25.269055Z"
     },
     {
       "id": "6ab60a1b000000001c01e1a5",
@@ -95674,6 +96218,24 @@
       "location": "浙江",
       "first_seen_at": "2026-09-19T09:03:49.673024Z",
       "last_seen_at": "2026-09-20T09:02:31.504995Z"
+    },
+    {
+      "id": "6a8840240000000033012ac5",
+      "keyword": "杭州 三丽鸥 快闪",
+      "matched_keywords": [
+        "杭州 三丽鸥 快闪"
+      ],
+      "title": "路过湖滨 被这个三丽鸥硬控了10分钟……",
+      "author": "暴躁小Z",
+      "published_at": "2026-08-21T12:10:12Z",
+      "url": "https://www.xiaohongshu.com/explore/6a8840240000000033012ac5",
+      "summary": "巨型Hello Kitty装置拍照很可爱，现场很出片。 但是！真的好热好热🥵 露天场地几乎没有遮阳，大太阳站着排队浑身冒汗。 人也不少，到处都是打卡拍照的人。 打卡盖章点位还挺多，全部盖完大概花了10分钟。 盖完章可以参与抽奖，我抽到了一张明信片。 实话实说，拍照好看是真的，但在户外排队暴晒，逛完已经大汗淋漓了[笑哭R] 👇给打算来的小伙伴们几点小建议： 1️⃣尽量傍晚再来，避开正午大太阳 2️⃣做好防晒，带好扇子和水 3️⃣想要盖章抽奖预留十几分钟 4️⃣不要对奖品抱有太大期待 路过拍两张照片还是可以的，特意大老远跑来就不太建议。 ✨有没有打卡过了的姐妹，你们抽到啥了？ #杭州三丽鸥快闪[话题]# #Hellokitty[话题]# #三丽鸥[话题]# #杭州湖滨银泰[话题]# #杭州活动[话题]# #杭州周末去哪儿[话题]# #活动分享[话题]#",
+      "likes": 58,
+      "comments": 7,
+      "collects": 19,
+      "location": null,
+      "first_seen_at": "2026-10-18T09:25:16.809930Z",
+      "last_seen_at": "2026-10-18T09:25:16.809930Z"
     },
     {
       "id": "6a867857000000003203252a",

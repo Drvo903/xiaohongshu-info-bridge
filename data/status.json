@@ -1,33 +1,52 @@
 {
-  "updated_at": "2026-10-18T11:25:16.185807+08:00",
+  "updated_at": "2026-10-18T17:37:30.348036+08:00",
   "collector_status": "partial",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 5294,
+  "full_result_count": 5325,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-10-18T11:25:16.185807+08:00",
+  "last_successful_run": "2026-10-18T17:37:30.348036+08:00",
   "failed_keywords": [
+    "杭州 湖滨88",
+    "杭州 in77 活动",
+    "杭州 animate 活动",
     "杭州 ONLY",
-    "杭州 TRPG",
     "杭州 漫展",
-    "杭州 快闪"
+    "杭州 ACG Live",
+    "杭州 VOCALOID",
+    "杭州 快闪",
+    "杭州 手作 文创 市集",
+    "上海 DND"
   ],
   "warnings": [
-    "4 keyword(s) failed after fallback",
-    "6 keyword(s) recovered by fallback",
-    "2 public detail request(s) failed or timed out"
+    "10 keyword(s) failed after fallback",
+    "7 keyword(s) recovered by fallback"
   ],
   "failed_keyword_details": [
     {
-      "keyword": "杭州 ONLY",
+      "keyword": "杭州 湖滨88",
       "stage": "search",
       "reason": "context_deadline_exceeded",
       "attempts": 2,
       "fallback_used": true
     },
     {
-      "keyword": "杭州 TRPG",
+      "keyword": "杭州 in77 活动",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "杭州 animate 活动",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "杭州 ONLY",
       "stage": "search",
       "reason": "context_deadline_exceeded",
       "attempts": 2,
@@ -41,7 +60,35 @@
       "fallback_used": true
     },
     {
+      "keyword": "杭州 ACG Live",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "杭州 VOCALOID",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
       "keyword": "杭州 快闪",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "杭州 手作 文创 市集",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "上海 DND",
       "stage": "search",
       "reason": "context_deadline_exceeded",
       "attempts": 2,
@@ -49,14 +96,15 @@
     }
   ],
   "search_fallback_success": [
-    "杭州 湖滨88",
-    "杭州 in77 活动",
-    "杭州 DND",
-    "杭州 ACG Live",
-    "杭州 二次元",
-    "杭州 大悦城 二次元"
+    "杭州 跑团",
+    "杭州 COC",
+    "杭州 三丽鸥 快闪",
+    "杭州 角落生物 快闪",
+    "杭州 宠物主题 市集",
+    "上海 DND ONLY",
+    "上海 TRPG"
   ],
-  "search_fallback_success_count": 6,
-  "search_failure_count": 4,
-  "detail_failure_count": 2
+  "search_fallback_success_count": 7,
+  "search_failure_count": 10,
+  "detail_failure_count": 0
 }
