@@ -1,30 +1,22 @@
 {
-  "updated_at": "2026-10-22T13:19:11.680685+08:00",
+  "updated_at": "2026-10-22T17:44:21.382034+08:00",
   "collector_status": "partial",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 5428,
+  "full_result_count": 5492,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-10-22T13:19:11.680685+08:00",
+  "last_successful_run": "2026-10-22T17:44:21.382034+08:00",
   "failed_keywords": [
-    "杭州 跑团",
-    "杭州 动漫咖啡"
+    "杭州 三丽鸥 快闪"
   ],
   "warnings": [
-    "2 keyword(s) failed after fallback",
-    "5 keyword(s) recovered by fallback"
+    "1 keyword(s) failed after fallback",
+    "3 keyword(s) recovered by fallback"
   ],
   "failed_keyword_details": [
     {
-      "keyword": "杭州 跑团",
-      "stage": "search",
-      "reason": "context_deadline_exceeded",
-      "attempts": 2,
-      "fallback_used": true
-    },
-    {
-      "keyword": "杭州 动漫咖啡",
+      "keyword": "杭州 三丽鸥 快闪",
       "stage": "search",
       "reason": "context_deadline_exceeded",
       "attempts": 2,
@@ -32,13 +24,11 @@
     }
   ],
   "search_fallback_success": [
-    "杭州 工联CC",
     "杭州 in77 活动",
     "杭州 animate 活动",
-    "杭州 快闪",
-    "杭州 二次元"
+    "上海 BML"
   ],
-  "search_fallback_success_count": 5,
-  "search_failure_count": 2,
+  "search_fallback_success_count": 3,
+  "search_failure_count": 1,
   "detail_failure_count": 0
 }
