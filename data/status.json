@@ -1,38 +1,30 @@
 {
-  "updated_at": "2026-10-23T17:53:09.428078+08:00",
+  "updated_at": "2026-10-24T11:22:37.040344+08:00",
   "collector_status": "partial",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 5634,
+  "full_result_count": 5687,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-10-23T17:53:09.428078+08:00",
+  "last_successful_run": "2026-10-24T11:22:37.040344+08:00",
   "failed_keywords": [
-    "杭州 DND",
-    "杭州 工联CC TAPIOCA",
-    "上海 ONLY"
+    "杭州 湖滨88",
+    "杭州 联动"
   ],
   "warnings": [
-    "3 keyword(s) failed after fallback",
-    "6 keyword(s) recovered by fallback"
+    "2 keyword(s) failed after fallback",
+    "8 keyword(s) recovered by fallback"
   ],
   "failed_keyword_details": [
     {
-      "keyword": "杭州 DND",
+      "keyword": "杭州 湖滨88",
       "stage": "search",
       "reason": "context_deadline_exceeded",
       "attempts": 2,
       "fallback_used": true
     },
     {
-      "keyword": "杭州 工联CC TAPIOCA",
-      "stage": "search",
-      "reason": "context_deadline_exceeded",
-      "attempts": 2,
-      "fallback_used": true
-    },
-    {
-      "keyword": "上海 ONLY",
+      "keyword": "杭州 联动",
       "stage": "search",
       "reason": "context_deadline_exceeded",
       "attempts": 2,
@@ -40,14 +32,16 @@
     }
   ],
   "search_fallback_success": [
-    "杭州 跑团",
+    "杭州 in77 活动",
     "杭州 TRPG",
-    "杭州 漫展",
-    "杭州 快闪",
-    "上海 DND",
-    "上海 DND ONLY"
+    "杭州 DND",
+    "杭州 桌游",
+    "杭州 ACG Live",
+    "杭州 VOCALOID",
+    "杭州 in77 主题市集",
+    "上海 BW"
   ],
-  "search_fallback_success_count": 6,
-  "search_failure_count": 3,
+  "search_fallback_success_count": 8,
+  "search_failure_count": 2,
   "detail_failure_count": 0
 }
