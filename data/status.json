@@ -1,30 +1,31 @@
 {
-  "updated_at": "2026-10-24T11:22:37.040344+08:00",
+  "updated_at": "2026-10-24T17:21:35.578077+08:00",
   "collector_status": "partial",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 5687,
+  "full_result_count": 5736,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-10-24T11:22:37.040344+08:00",
+  "last_successful_run": "2026-10-24T17:21:35.578077+08:00",
   "failed_keywords": [
-    "杭州 湖滨88",
-    "杭州 联动"
+    "杭州 TRPG",
+    "杭州 VOCALOID"
   ],
   "warnings": [
     "2 keyword(s) failed after fallback",
-    "8 keyword(s) recovered by fallback"
+    "6 keyword(s) recovered by fallback",
+    "2 public detail request(s) failed or timed out"
   ],
   "failed_keyword_details": [
     {
-      "keyword": "杭州 湖滨88",
+      "keyword": "杭州 TRPG",
       "stage": "search",
       "reason": "context_deadline_exceeded",
       "attempts": 2,
       "fallback_used": true
     },
     {
-      "keyword": "杭州 联动",
+      "keyword": "杭州 VOCALOID",
       "stage": "search",
       "reason": "context_deadline_exceeded",
       "attempts": 2,
@@ -33,15 +34,13 @@
   ],
   "search_fallback_success": [
     "杭州 in77 活动",
-    "杭州 TRPG",
     "杭州 DND",
-    "杭州 桌游",
-    "杭州 ACG Live",
-    "杭州 VOCALOID",
-    "杭州 in77 主题市集",
-    "上海 BW"
+    "杭州 COC",
+    "杭州 动漫咖啡",
+    "杭州 ACG",
+    "上海 TRPG"
   ],
-  "search_fallback_success_count": 8,
+  "search_fallback_success_count": 6,
   "search_failure_count": 2,
-  "detail_failure_count": 0
+  "detail_failure_count": 2
 }
