@@ -1,17 +1,26 @@
 {
-  "updated_at": "2026-10-26T08:48:59.378108+08:00",
+  "updated_at": "2026-10-26T14:08:41.400098+08:00",
   "collector_status": "partial",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 5879,
+  "full_result_count": 5887,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-10-26T08:48:59.378108+08:00",
+  "last_successful_run": "2026-10-26T14:08:41.400098+08:00",
   "failed_keywords": [
+    "杭州 DND",
+    "杭州 COC",
     "杭州 桌游",
+    "杭州 漫展",
+    "杭州 ACG Live",
+    "杭州 VOCALOID",
+    "杭州 模型展",
     "杭州 快闪",
-    "上海 TRPG",
-    "上海 TRPG ONLY",
+    "杭州 工联CC Good Smile Store",
+    "杭州 工联CC JUMP SHOP CAFE",
+    "杭州 工联CC TAPIOCA",
+    "杭州 工联CC 新店",
+    "杭州 湖滨88 联动",
     "上海 跑团",
     "上海 跑团节",
     "上海 血染钟楼",
@@ -23,16 +32,60 @@
     "上海 同人展",
     "上海 ONLY",
     "上海 DND",
-    "上海 DND ONLY"
+    "上海 DND ONLY",
+    "上海 TRPG",
+    "上海 TRPG ONLY",
+    "上海 COC"
   ],
   "warnings": [
-    "16 keyword(s) failed after fallback",
-    "3 keyword(s) recovered by fallback",
-    "2 public detail request(s) failed or timed out"
+    "28 keyword(s) failed after fallback",
+    "3 keyword(s) recovered by fallback"
   ],
   "failed_keyword_details": [
     {
+      "keyword": "杭州 DND",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "杭州 COC",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
       "keyword": "杭州 桌游",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "杭州 漫展",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "杭州 ACG Live",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "杭州 VOCALOID",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "杭州 模型展",
       "stage": "search",
       "reason": "context_deadline_exceeded",
       "attempts": 2,
@@ -46,14 +99,35 @@
       "fallback_used": true
     },
     {
-      "keyword": "上海 TRPG",
+      "keyword": "杭州 工联CC Good Smile Store",
       "stage": "search",
       "reason": "context_deadline_exceeded",
       "attempts": 2,
       "fallback_used": true
     },
     {
-      "keyword": "上海 TRPG ONLY",
+      "keyword": "杭州 工联CC JUMP SHOP CAFE",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "杭州 工联CC TAPIOCA",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "杭州 工联CC 新店",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "杭州 湖滨88 联动",
       "stage": "search",
       "reason": "context_deadline_exceeded",
       "attempts": 2,
@@ -142,14 +216,35 @@
       "reason": "context_deadline_exceeded",
       "attempts": 2,
       "fallback_used": true
+    },
+    {
+      "keyword": "上海 TRPG",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "上海 TRPG ONLY",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "上海 COC",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
     }
   ],
   "search_fallback_success": [
-    "杭州 ONLY",
-    "杭州 ACG Live",
-    "杭州 桌游 跑团"
+    "杭州 工联CC",
+    "杭州 in77 活动",
+    "杭州 ONLY"
   ],
   "search_fallback_success_count": 3,
-  "search_failure_count": 16,
-  "detail_failure_count": 2
+  "search_failure_count": 28,
+  "detail_failure_count": 0
 }
