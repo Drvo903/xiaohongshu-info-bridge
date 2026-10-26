@@ -1,33 +1,36 @@
 {
-  "updated_at": "2026-10-25T17:29:16.033595+08:00",
+  "updated_at": "2026-10-26T08:48:59.378108+08:00",
   "collector_status": "partial",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 5841,
+  "full_result_count": 5879,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-10-25T17:29:16.033595+08:00",
+  "last_successful_run": "2026-10-26T08:48:59.378108+08:00",
   "failed_keywords": [
-    "杭州 TRPG",
     "杭州 桌游",
-    "杭州 VOCALOID",
-    "杭州 模型展",
+    "杭州 快闪",
+    "上海 TRPG",
+    "上海 TRPG ONLY",
+    "上海 跑团",
     "上海 跑团节",
+    "上海 血染钟楼",
     "上海 COMICUP",
-    "上海 CP"
+    "上海 CP",
+    "上海 BilibiliWorld",
+    "上海 BW",
+    "上海 BML",
+    "上海 同人展",
+    "上海 ONLY",
+    "上海 DND",
+    "上海 DND ONLY"
   ],
   "warnings": [
-    "7 keyword(s) failed after fallback",
-    "4 keyword(s) recovered by fallback"
+    "16 keyword(s) failed after fallback",
+    "3 keyword(s) recovered by fallback",
+    "2 public detail request(s) failed or timed out"
   ],
   "failed_keyword_details": [
-    {
-      "keyword": "杭州 TRPG",
-      "stage": "search",
-      "reason": "context_deadline_exceeded",
-      "attempts": 2,
-      "fallback_used": true
-    },
     {
       "keyword": "杭州 桌游",
       "stage": "search",
@@ -36,14 +39,28 @@
       "fallback_used": true
     },
     {
-      "keyword": "杭州 VOCALOID",
+      "keyword": "杭州 快闪",
       "stage": "search",
       "reason": "context_deadline_exceeded",
       "attempts": 2,
       "fallback_used": true
     },
     {
-      "keyword": "杭州 模型展",
+      "keyword": "上海 TRPG",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "上海 TRPG ONLY",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "上海 跑团",
       "stage": "search",
       "reason": "context_deadline_exceeded",
       "attempts": 2,
@@ -51,6 +68,13 @@
     },
     {
       "keyword": "上海 跑团节",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "上海 血染钟楼",
       "stage": "search",
       "reason": "context_deadline_exceeded",
       "attempts": 2,
@@ -69,15 +93,63 @@
       "reason": "context_deadline_exceeded",
       "attempts": 2,
       "fallback_used": true
+    },
+    {
+      "keyword": "上海 BilibiliWorld",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "上海 BW",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "上海 BML",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "上海 同人展",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "上海 ONLY",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "上海 DND",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "上海 DND ONLY",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
     }
   ],
   "search_fallback_success": [
-    "杭州 工联CC",
-    "杭州 湖滨88",
-    "杭州 漫展",
-    "杭州 COMIPLUS"
+    "杭州 ONLY",
+    "杭州 ACG Live",
+    "杭州 桌游 跑团"
   ],
-  "search_fallback_success_count": 4,
-  "search_failure_count": 7,
-  "detail_failure_count": 0
+  "search_fallback_success_count": 3,
+  "search_failure_count": 16,
+  "detail_failure_count": 2
 }
