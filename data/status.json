@@ -1,50 +1,24 @@
 {
-  "updated_at": "2026-11-01T11:19:23.262397+08:00",
-  "collector_status": "partial",
+  "updated_at": "2026-11-01T17:15:14.640237+08:00",
+  "collector_status": "ok",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 6127,
+  "full_result_count": 6183,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-11-01T11:19:23.262397+08:00",
-  "failed_keywords": [
-    "杭州 in77 活动",
-    "杭州 ONLY",
-    "杭州 VOCALOID"
-  ],
+  "last_successful_run": "2026-11-01T17:15:14.640237+08:00",
+  "failed_keywords": [],
   "warnings": [
-    "3 keyword(s) failed after fallback",
-    "3 keyword(s) recovered by fallback"
+    "4 keyword(s) recovered by fallback"
   ],
-  "failed_keyword_details": [
-    {
-      "keyword": "杭州 in77 活动",
-      "stage": "search",
-      "reason": "context_deadline_exceeded",
-      "attempts": 2,
-      "fallback_used": true
-    },
-    {
-      "keyword": "杭州 ONLY",
-      "stage": "search",
-      "reason": "context_deadline_exceeded",
-      "attempts": 2,
-      "fallback_used": true
-    },
-    {
-      "keyword": "杭州 VOCALOID",
-      "stage": "search",
-      "reason": "context_deadline_exceeded",
-      "attempts": 2,
-      "fallback_used": true
-    }
-  ],
+  "failed_keyword_details": [],
   "search_fallback_success": [
-    "杭州 模型展",
-    "杭州 快闪",
-    "杭州 COMIPLUS"
+    "杭州 湖滨88",
+    "杭州 in77 活动",
+    "杭州 DND",
+    "杭州 模型展"
   ],
-  "search_fallback_success_count": 3,
-  "search_failure_count": 3,
+  "search_fallback_success_count": 4,
+  "search_failure_count": 0,
   "detail_failure_count": 0
 }
