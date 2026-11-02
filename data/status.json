@@ -1,67 +1,24 @@
 {
-  "updated_at": "2026-11-02T08:25:04.454809+08:00",
-  "collector_status": "partial",
+  "updated_at": "2026-11-02T13:14:38.922415+08:00",
+  "collector_status": "ok",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 6145,
+  "full_result_count": 6125,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-11-02T08:25:04.454809+08:00",
-  "failed_keywords": [
-    "杭州 animate 活动",
-    "杭州 ONLY",
-    "杭州 工联CC JUMP SHOP CAFE",
-    "上海 CP",
-    "上海 BW"
-  ],
+  "last_successful_run": "2026-11-02T13:14:38.922415+08:00",
+  "failed_keywords": [],
   "warnings": [
-    "5 keyword(s) failed after fallback",
-    "4 keyword(s) recovered by fallback"
+    "3 keyword(s) recovered by fallback",
+    "1 public detail request(s) failed or timed out"
   ],
-  "failed_keyword_details": [
-    {
-      "keyword": "杭州 animate 活动",
-      "stage": "search",
-      "reason": "context_deadline_exceeded",
-      "attempts": 2,
-      "fallback_used": true
-    },
-    {
-      "keyword": "杭州 ONLY",
-      "stage": "search",
-      "reason": "context_deadline_exceeded",
-      "attempts": 2,
-      "fallback_used": true
-    },
-    {
-      "keyword": "杭州 工联CC JUMP SHOP CAFE",
-      "stage": "search",
-      "reason": "context_deadline_exceeded",
-      "attempts": 2,
-      "fallback_used": true
-    },
-    {
-      "keyword": "上海 CP",
-      "stage": "search",
-      "reason": "context_deadline_exceeded",
-      "attempts": 2,
-      "fallback_used": true
-    },
-    {
-      "keyword": "上海 BW",
-      "stage": "search",
-      "reason": "context_deadline_exceeded",
-      "attempts": 2,
-      "fallback_used": true
-    }
-  ],
+  "failed_keyword_details": [],
   "search_fallback_success": [
-    "杭州 in77 活动",
-    "杭州 工联CC Good Smile Store",
-    "杭州 湖滨88 联动",
+    "杭州 湖滨88",
+    "杭州 TRPG",
     "上海 BML"
   ],
-  "search_fallback_success_count": 4,
-  "search_failure_count": 5,
-  "detail_failure_count": 0
+  "search_fallback_success_count": 3,
+  "search_failure_count": 0,
+  "detail_failure_count": 1
 }
