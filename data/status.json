@@ -1,32 +1,32 @@
 {
-  "updated_at": "2026-11-04T13:28:04.870114+08:00",
+  "updated_at": "2026-11-04T17:49:36.621786+08:00",
   "collector_status": "partial",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 5918,
+  "full_result_count": 5972,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-11-04T13:28:04.870114+08:00",
+  "last_successful_run": "2026-11-04T17:49:36.621786+08:00",
   "failed_keywords": [
-    "杭州 湖滨88",
-    "上海 COC",
+    "杭州 漫展",
+    "杭州 万圣节 活动",
     "上海 跑团"
   ],
   "warnings": [
     "3 keyword(s) failed after fallback",
-    "9 keyword(s) recovered by fallback",
-    "2 public detail request(s) failed or timed out"
+    "3 keyword(s) recovered by fallback",
+    "1 public detail request(s) failed or timed out"
   ],
   "failed_keyword_details": [
     {
-      "keyword": "杭州 湖滨88",
+      "keyword": "杭州 漫展",
       "stage": "search",
       "reason": "context_deadline_exceeded",
       "attempts": 2,
       "fallback_used": true
     },
     {
-      "keyword": "上海 COC",
+      "keyword": "杭州 万圣节 活动",
       "stage": "search",
       "reason": "context_deadline_exceeded",
       "attempts": 2,
@@ -41,17 +41,11 @@
     }
   ],
   "search_fallback_success": [
-    "杭州 工联CC",
-    "杭州 animate 活动",
-    "杭州 ONLY",
+    "杭州 in77 活动",
     "杭州 COC",
-    "杭州 VOCALOID",
-    "杭州 模型展",
-    "杭州 in77 签售",
-    "上海 TRPG",
-    "上海 TRPG ONLY"
+    "杭州 模型展"
   ],
-  "search_fallback_success_count": 9,
+  "search_fallback_success_count": 3,
   "search_failure_count": 3,
-  "detail_failure_count": 2
+  "detail_failure_count": 1
 }
