@@ -1,71 +1,30 @@
 {
-  "updated_at": "2026-11-05T08:26:57.034300+08:00",
+  "updated_at": "2026-11-05T13:19:06.351782+08:00",
   "collector_status": "partial",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 6009,
+  "full_result_count": 6048,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-11-05T08:26:57.034300+08:00",
+  "last_successful_run": "2026-11-05T13:19:06.351782+08:00",
   "failed_keywords": [
-    "杭州 animate 活动",
-    "杭州 ONLY",
-    "杭州 TRPG",
-    "杭州 DND",
-    "杭州 模型展",
-    "上海 TRPG",
-    "上海 跑团"
+    "杭州 漫展",
+    "杭州 ACG Live"
   ],
   "warnings": [
-    "7 keyword(s) failed after fallback",
-    "2 keyword(s) recovered by fallback",
-    "1 public detail request(s) failed or timed out"
+    "2 keyword(s) failed after fallback",
+    "5 keyword(s) recovered by fallback"
   ],
   "failed_keyword_details": [
     {
-      "keyword": "杭州 animate 活动",
+      "keyword": "杭州 漫展",
       "stage": "search",
       "reason": "context_deadline_exceeded",
       "attempts": 2,
       "fallback_used": true
     },
     {
-      "keyword": "杭州 ONLY",
-      "stage": "search",
-      "reason": "context_deadline_exceeded",
-      "attempts": 2,
-      "fallback_used": true
-    },
-    {
-      "keyword": "杭州 TRPG",
-      "stage": "search",
-      "reason": "context_deadline_exceeded",
-      "attempts": 2,
-      "fallback_used": true
-    },
-    {
-      "keyword": "杭州 DND",
-      "stage": "search",
-      "reason": "context_deadline_exceeded",
-      "attempts": 2,
-      "fallback_used": true
-    },
-    {
-      "keyword": "杭州 模型展",
-      "stage": "search",
-      "reason": "context_deadline_exceeded",
-      "attempts": 2,
-      "fallback_used": true
-    },
-    {
-      "keyword": "上海 TRPG",
-      "stage": "search",
-      "reason": "context_deadline_exceeded",
-      "attempts": 2,
-      "fallback_used": true
-    },
-    {
-      "keyword": "上海 跑团",
+      "keyword": "杭州 ACG Live",
       "stage": "search",
       "reason": "context_deadline_exceeded",
       "attempts": 2,
@@ -73,10 +32,13 @@
     }
   ],
   "search_fallback_success": [
-    "杭州 工联CC",
-    "杭州 桌游"
+    "杭州 跑团",
+    "杭州 TRPG",
+    "杭州 COC",
+    "杭州 模型展",
+    "杭州 Good Smile Cafe"
   ],
-  "search_fallback_success_count": 2,
-  "search_failure_count": 7,
-  "detail_failure_count": 1
+  "search_fallback_success_count": 5,
+  "search_failure_count": 2,
+  "detail_failure_count": 0
 }
