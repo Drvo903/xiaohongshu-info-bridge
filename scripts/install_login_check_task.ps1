@@ -15,10 +15,9 @@ $action = New-ScheduledTaskAction `
 
 $startAt = (Get-Date).Date.AddDays(1).AddHours(7)
 $trigger = New-ScheduledTaskTrigger `
-    -Once `
+    -Daily `
     -At $startAt `
-    -RepetitionInterval (New-TimeSpan -Days 2) `
-    -RepetitionDuration (New-TimeSpan -Days 3650)
+    -DaysInterval 2
 
 $settings = New-ScheduledTaskSettingsSet `
     -Hidden `
