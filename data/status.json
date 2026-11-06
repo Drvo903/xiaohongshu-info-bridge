@@ -1,21 +1,47 @@
 {
-  "updated_at": "2026-11-05T17:53:14.307058+08:00",
+  "updated_at": "2026-11-06T09:12:10.022630+08:00",
   "collector_status": "partial",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 6087,
+  "full_result_count": 6076,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-11-05T17:53:14.307058+08:00",
+  "last_successful_run": "2026-11-06T09:12:10.022630+08:00",
   "failed_keywords": [
     "杭州 工联CC",
     "杭州 湖滨88",
-    "杭州 VOCALOID"
+    "杭州 animate 活动",
+    "杭州 跑团",
+    "杭州 TRPG",
+    "杭州 DND",
+    "杭州 桌游",
+    "杭州 漫展",
+    "杭州 ACG Live",
+    "杭州 VOCALOID",
+    "杭州 模型展",
+    "杭州 快闪",
+    "杭州 工联CC Good Smile Store",
+    "杭州 工联CC JUMP SHOP CAFE",
+    "杭州 工联CC TAPIOCA",
+    "上海 跑团",
+    "上海 跑团节",
+    "上海 血染钟楼",
+    "上海 COMICUP",
+    "上海 CP",
+    "上海 BilibiliWorld",
+    "上海 BW",
+    "上海 BML",
+    "上海 同人展",
+    "上海 ONLY",
+    "上海 DND",
+    "上海 DND ONLY",
+    "上海 TRPG",
+    "上海 TRPG ONLY",
+    "上海 COC"
   ],
   "warnings": [
-    "3 keyword(s) failed after fallback",
-    "6 keyword(s) recovered by fallback",
-    "2 public detail request(s) failed or timed out"
+    "30 keyword(s) failed after fallback",
+    "2 keyword(s) recovered by fallback"
   ],
   "failed_keyword_details": [
     {
@@ -33,7 +59,196 @@
       "fallback_used": true
     },
     {
+      "keyword": "杭州 animate 活动",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "杭州 跑团",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "杭州 TRPG",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "杭州 DND",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "杭州 桌游",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "杭州 漫展",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "杭州 ACG Live",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
       "keyword": "杭州 VOCALOID",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "杭州 模型展",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "杭州 快闪",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "杭州 工联CC Good Smile Store",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "杭州 工联CC JUMP SHOP CAFE",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "杭州 工联CC TAPIOCA",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "上海 跑团",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "上海 跑团节",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "上海 血染钟楼",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "上海 COMICUP",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "上海 CP",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "上海 BilibiliWorld",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "上海 BW",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "上海 BML",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "上海 同人展",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "上海 ONLY",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "上海 DND",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "上海 DND ONLY",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "上海 TRPG",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "上海 TRPG ONLY",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "上海 COC",
       "stage": "search",
       "reason": "context_deadline_exceeded",
       "attempts": 2,
@@ -41,14 +256,10 @@
     }
   ],
   "search_fallback_success": [
-    "杭州 跑团",
-    "杭州 桌游",
-    "杭州 快闪",
-    "杭州 主题饮品",
-    "杭州 西湖区 周末活动",
-    "上海 COMICUP"
+    "杭州 COC",
+    "杭州 武林广场 市集"
   ],
-  "search_fallback_success_count": 6,
-  "search_failure_count": 3,
-  "detail_failure_count": 2
+  "search_fallback_success_count": 2,
+  "search_failure_count": 30,
+  "detail_failure_count": 0
 }
