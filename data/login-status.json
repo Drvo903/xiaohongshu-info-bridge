@@ -1,8 +1,6 @@
 {
-  "checked_at": "2026-11-09T07:00:08.445235+08:00",
-  "login_status": "login_required",
+  "checked_at": "2026-11-11T07:00:05.398773+08:00",
+  "login_status": "ok",
   "source": "xiaohongshu-mcp",
-  "warnings": [
-    "LOGIN_REQUIRED"
-  ]
+  "warnings": []
 }
