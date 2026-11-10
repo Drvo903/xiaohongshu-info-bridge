@@ -1,30 +1,46 @@
 {
-  "updated_at": "2026-11-10T13:18:11.633525+08:00",
+  "updated_at": "2026-11-10T17:53:25.532327+08:00",
   "collector_status": "partial",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 5173,
+  "full_result_count": 5151,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-11-10T13:18:11.633525+08:00",
+  "last_successful_run": "2026-11-10T17:53:25.532327+08:00",
   "failed_keywords": [
-    "杭州 湖滨88",
-    "杭州 湖滨银泰 快闪"
+    "杭州 DND",
+    "杭州 COC",
+    "杭州 工联CC JUMP SHOP CAFE",
+    "杭州 工联CC TAPIOCA"
   ],
   "warnings": [
-    "2 keyword(s) failed after fallback",
-    "2 keyword(s) recovered by fallback"
+    "4 keyword(s) failed after fallback",
+    "4 keyword(s) recovered by fallback"
   ],
   "failed_keyword_details": [
     {
-      "keyword": "杭州 湖滨88",
+      "keyword": "杭州 DND",
       "stage": "search",
       "reason": "context_deadline_exceeded",
       "attempts": 2,
       "fallback_used": true
     },
     {
-      "keyword": "杭州 湖滨银泰 快闪",
+      "keyword": "杭州 COC",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "杭州 工联CC JUMP SHOP CAFE",
+      "stage": "search",
+      "reason": "context_deadline_exceeded",
+      "attempts": 2,
+      "fallback_used": true
+    },
+    {
+      "keyword": "杭州 工联CC TAPIOCA",
       "stage": "search",
       "reason": "context_deadline_exceeded",
       "attempts": 2,
@@ -32,10 +48,12 @@
     }
   ],
   "search_fallback_success": [
-    "杭州 COC",
-    "上海 血染钟楼"
+    "杭州 in77 活动",
+    "杭州 animate 活动",
+    "杭州 快闪",
+    "杭州 工联CC Good Smile Store"
   ],
-  "search_fallback_success_count": 2,
-  "search_failure_count": 2,
+  "search_fallback_success_count": 4,
+  "search_failure_count": 4,
   "detail_failure_count": 0
 }
