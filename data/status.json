@@ -1,22 +1,23 @@
 {
-  "updated_at": "2026-11-11T08:17:06.899497+08:00",
+  "updated_at": "2026-11-11T13:16:03.588877+08:00",
   "collector_status": "partial",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 5196,
+  "full_result_count": 5251,
   "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-11-11T08:17:06.899497+08:00",
+  "last_successful_run": "2026-11-11T13:16:03.588877+08:00",
   "failed_keywords": [
-    "杭州 in77 活动"
+    "杭州 跑团"
   ],
   "warnings": [
     "1 keyword(s) failed after fallback",
-    "4 keyword(s) recovered by fallback"
+    "2 keyword(s) recovered by fallback",
+    "1 public detail request(s) failed or timed out"
   ],
   "failed_keyword_details": [
     {
-      "keyword": "杭州 in77 活动",
+      "keyword": "杭州 跑团",
       "stage": "search",
       "reason": "context_deadline_exceeded",
       "attempts": 2,
@@ -24,12 +25,10 @@
     }
   ],
   "search_fallback_success": [
-    "杭州 工联CC",
-    "杭州 animate 活动",
     "杭州 ONLY",
-    "上海 跑团节"
+    "杭州 菊花展 赏花"
   ],
-  "search_fallback_success_count": 4,
+  "search_fallback_success_count": 2,
   "search_failure_count": 1,
-  "detail_failure_count": 0
+  "detail_failure_count": 1
 }
