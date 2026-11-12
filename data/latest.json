@@ -1,10 +1,46 @@
 {
-  "updated_at": "2026-11-11T18:27:49.235582+08:00",
+  "updated_at": "2026-11-12T09:15:16.231210+08:00",
   "source": "xiaohongshu",
   "window_days": 7,
   "max_results": 200,
   "result_count": 200,
   "results": [
+    {
+      "id": "6ae04ef300000000180246ac",
+      "keyword": "杭州 DND",
+      "matched_keywords": [
+        "杭州 DND"
+      ],
+      "title": "万一有呢！",
+      "author": "大蜂蜜奶狗堂堂登基",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6ae04ef300000000180246ac",
+      "summary": null,
+      "likes": 4,
+      "comments": 7,
+      "collects": 1,
+      "location": null,
+      "first_seen_at": "2026-10-31T03:07:45.924627Z",
+      "last_seen_at": "2026-11-12T00:15:34.384760Z"
+    },
+    {
+      "id": "68e2c39e0000000004029548",
+      "keyword": "杭州 DND",
+      "matched_keywords": [
+        "杭州 DND"
+      ],
+      "title": "新手KP点击就送！自绘无尽食欲全彩地图",
+      "author": "杭州笔骰跑团PenDiceTrpg",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/68e2c39e0000000004029548",
+      "summary": null,
+      "likes": 612,
+      "comments": 28,
+      "collects": 316,
+      "location": null,
+      "first_seen_at": "2026-11-04T00:09:32.214683Z",
+      "last_seen_at": "2026-11-12T00:15:34.384753Z"
+    },
     {
       "id": "6aeac6580000000018038f95",
       "keyword": "上海 跑团",
@@ -1473,24 +1509,6 @@
       "last_seen_at": "2026-11-11T05:10:29.134222Z"
     },
     {
-      "id": "68e2c39e0000000004029548",
-      "keyword": "杭州 DND",
-      "matched_keywords": [
-        "杭州 DND"
-      ],
-      "title": "新手KP点击就送！自绘无尽食欲全彩地图",
-      "author": "杭州笔骰跑团PenDiceTrpg",
-      "published_at": null,
-      "url": "https://www.xiaohongshu.com/explore/68e2c39e0000000004029548",
-      "summary": null,
-      "likes": 612,
-      "comments": 28,
-      "collects": 316,
-      "location": null,
-      "first_seen_at": "2026-11-04T00:09:32.214683Z",
-      "last_seen_at": "2026-11-11T05:08:31.453081Z"
-    },
-    {
       "id": "6ae3677b000000002b011e3d",
       "keyword": "杭州 DND",
       "matched_keywords": [
@@ -1782,6 +1800,7 @@
       "id": "6af343d700000000230118b9",
       "keyword": "杭州 TRPG",
       "matched_keywords": [
+        "杭州 DND",
         "杭州 TRPG"
       ],
       "title": "[大大小小の小活动] 织就蜘网，无声猎杀",
@@ -1789,12 +1808,12 @@
       "published_at": "2026-11-11T02:20:05Z",
       "url": "https://www.xiaohongshu.com/explore/6af343d700000000230118b9",
       "summary": "享受吧！罗丝的信徒们！ 享受你们阴险的背叛 享受你们精妙的骗局 享受你们 虚伪的假面 享受你们相互作为祭品 你死我活的一生 唯有寂静与黑暗的利刃 才能带领家族走向荣耀之路 而那些不懂优雅行事 发出声音的弱者 只会成为被围猎的祭品 #dnd跑团[话题]# #TRPG[话题]# #杭州桌游[话题]# #coc跑团[话题]# #跑团[话题]# #博得之门3[话题]# #卓尔精灵[话题]#",
-      "likes": 54,
-      "comments": 2,
-      "collects": 0,
+      "likes": 187,
+      "comments": 6,
+      "collects": 14,
       "location": "浙江",
       "first_seen_at": "2026-11-11T05:07:55.198431Z",
-      "last_seen_at": "2026-11-11T05:07:55.198431Z"
+      "last_seen_at": "2026-11-12T00:15:34.384702Z"
     },
     {
       "id": "6af26ee9000000002b01395c",
@@ -2630,24 +2649,6 @@
       "location": null,
       "first_seen_at": "2026-11-04T00:09:20.402960Z",
       "last_seen_at": "2026-11-11T00:09:44.925765Z"
-    },
-    {
-      "id": "6ae04ef300000000180246ac",
-      "keyword": "杭州 DND",
-      "matched_keywords": [
-        "杭州 DND"
-      ],
-      "title": "万一有呢！",
-      "author": "大蜂蜜奶狗堂堂登基",
-      "published_at": null,
-      "url": "https://www.xiaohongshu.com/explore/6ae04ef300000000180246ac",
-      "summary": null,
-      "likes": 4,
-      "comments": 7,
-      "collects": 1,
-      "location": null,
-      "first_seen_at": "2026-10-31T03:07:45.924627Z",
-      "last_seen_at": "2026-11-11T00:09:25.479939Z"
     },
     {
       "id": "6af36ad5000000002a02d61e",

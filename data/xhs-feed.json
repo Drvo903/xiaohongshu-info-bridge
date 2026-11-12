@@ -1,7 +1,43 @@
 {
-  "updated_at": "2026-11-11T10:27:49.235582Z",
+  "updated_at": "2026-11-12T01:15:16.231210Z",
   "source": "xiaohongshu",
   "results": [
+    {
+      "id": "6ae04ef300000000180246ac",
+      "keyword": "杭州 DND",
+      "matched_keywords": [
+        "杭州 DND"
+      ],
+      "title": "万一有呢！",
+      "author": "大蜂蜜奶狗堂堂登基",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/6ae04ef300000000180246ac",
+      "summary": null,
+      "likes": 4,
+      "comments": 7,
+      "collects": 1,
+      "location": null,
+      "first_seen_at": "2026-10-31T03:07:45.924627Z",
+      "last_seen_at": "2026-11-12T00:15:34.384760Z"
+    },
+    {
+      "id": "68e2c39e0000000004029548",
+      "keyword": "杭州 DND",
+      "matched_keywords": [
+        "杭州 DND"
+      ],
+      "title": "新手KP点击就送！自绘无尽食欲全彩地图",
+      "author": "杭州笔骰跑团PenDiceTrpg",
+      "published_at": null,
+      "url": "https://www.xiaohongshu.com/explore/68e2c39e0000000004029548",
+      "summary": null,
+      "likes": 612,
+      "comments": 28,
+      "collects": 316,
+      "location": null,
+      "first_seen_at": "2026-11-04T00:09:32.214683Z",
+      "last_seen_at": "2026-11-12T00:15:34.384753Z"
+    },
     {
       "id": "6aeac6580000000018038f95",
       "keyword": "上海 跑团",
@@ -1470,24 +1506,6 @@
       "last_seen_at": "2026-11-11T05:10:29.134222Z"
     },
     {
-      "id": "68e2c39e0000000004029548",
-      "keyword": "杭州 DND",
-      "matched_keywords": [
-        "杭州 DND"
-      ],
-      "title": "新手KP点击就送！自绘无尽食欲全彩地图",
-      "author": "杭州笔骰跑团PenDiceTrpg",
-      "published_at": null,
-      "url": "https://www.xiaohongshu.com/explore/68e2c39e0000000004029548",
-      "summary": null,
-      "likes": 612,
-      "comments": 28,
-      "collects": 316,
-      "location": null,
-      "first_seen_at": "2026-11-04T00:09:32.214683Z",
-      "last_seen_at": "2026-11-11T05:08:31.453081Z"
-    },
-    {
       "id": "6ae3677b000000002b011e3d",
       "keyword": "杭州 DND",
       "matched_keywords": [
@@ -1779,6 +1797,7 @@
       "id": "6af343d700000000230118b9",
       "keyword": "杭州 TRPG",
       "matched_keywords": [
+        "杭州 DND",
         "杭州 TRPG"
       ],
       "title": "[大大小小の小活动] 织就蜘网，无声猎杀",
@@ -1786,12 +1805,12 @@
       "published_at": "2026-11-11T02:20:05Z",
       "url": "https://www.xiaohongshu.com/explore/6af343d700000000230118b9",
       "summary": "享受吧！罗丝的信徒们！ 享受你们阴险的背叛 享受你们精妙的骗局 享受你们 虚伪的假面 享受你们相互作为祭品 你死我活的一生 唯有寂静与黑暗的利刃 才能带领家族走向荣耀之路 而那些不懂优雅行事 发出声音的弱者 只会成为被围猎的祭品 #dnd跑团[话题]# #TRPG[话题]# #杭州桌游[话题]# #coc跑团[话题]# #跑团[话题]# #博得之门3[话题]# #卓尔精灵[话题]#",
-      "likes": 54,
-      "comments": 2,
-      "collects": 0,
+      "likes": 187,
+      "comments": 6,
+      "collects": 14,
       "location": "浙江",
       "first_seen_at": "2026-11-11T05:07:55.198431Z",
-      "last_seen_at": "2026-11-11T05:07:55.198431Z"
+      "last_seen_at": "2026-11-12T00:15:34.384702Z"
     },
     {
       "id": "6af26ee9000000002b01395c",
@@ -2627,24 +2646,6 @@
       "location": null,
       "first_seen_at": "2026-11-04T00:09:20.402960Z",
       "last_seen_at": "2026-11-11T00:09:44.925765Z"
-    },
-    {
-      "id": "6ae04ef300000000180246ac",
-      "keyword": "杭州 DND",
-      "matched_keywords": [
-        "杭州 DND"
-      ],
-      "title": "万一有呢！",
-      "author": "大蜂蜜奶狗堂堂登基",
-      "published_at": null,
-      "url": "https://www.xiaohongshu.com/explore/6ae04ef300000000180246ac",
-      "summary": null,
-      "likes": 4,
-      "comments": 7,
-      "collects": 1,
-      "location": null,
-      "first_seen_at": "2026-10-31T03:07:45.924627Z",
-      "last_seen_at": "2026-11-11T00:09:25.479939Z"
     },
     {
       "id": "6af36ad5000000002a02d61e",
@@ -6591,11 +6592,11 @@
       "url": "https://www.xiaohongshu.com/explore/6af18d27000000002c01ba77",
       "summary": "我是女生，工作党只有周末有时间线下玩，是非常新的新人，只跑过商团的几个新手模组，玩过一周目博德之门 希望能交到面团的朋友，周末一起跑团玩 如果可以的话这周末去店里一起玩[皱眉R]，觉得玩的不错的话还能一起吃晚饭 主要就是希望能交到更多朋友！ #coc[话题]# #dnd[话题]# #跑团[话题]# #跑团pc[话题]# #杭州[话题]#",
       "likes": 6,
-      "comments": 21,
+      "comments": 27,
       "collects": 2,
       "location": "浙江",
       "first_seen_at": "2026-11-10T00:06:37.774749Z",
-      "last_seen_at": "2026-11-11T05:08:31.453045Z"
+      "last_seen_at": "2026-11-12T00:15:34.384739Z"
     },
     {
       "id": "6af18b8d000000002c01c78b",
@@ -95167,97 +95168,6 @@
       "location": "浙江",
       "first_seen_at": "2026-09-15T05:01:19.189658Z",
       "last_seen_at": "2026-09-30T09:31:58.645524Z"
-    },
-    {
-      "id": "6aa56990000000002b01cb96",
-      "keyword": "杭州 ONLY",
-      "matched_keywords": [
-        "杭州 ONLY"
-      ],
-      "title": "可是宝宝这几下扭的真的很萌呀~",
-      "author": "曦難",
-      "published_at": "2026-09-12T15:02:40Z",
-      "url": "https://www.xiaohongshu.com/explore/6aa56990000000002b01cb96",
-      "summary": "顶着这么帅一张脸净干点萌萌的事!#心跳帧only[话题]##杭州线下[话题]##三金三金[话题]##伪夜场[话题]#",
-      "likes": 210,
-      "comments": 2,
-      "collects": 10,
-      "location": "浙江",
-      "first_seen_at": "2026-09-15T09:38:22.069017Z",
-      "last_seen_at": "2026-09-15T09:38:22.069017Z"
-    },
-    {
-      "id": "6aa569520000000025036543",
-      "keyword": "杭州 ACG",
-      "matched_keywords": [
-        "杭州 ACG"
-      ],
-      "title": "杭州大学生乐队找鼓手",
-      "author": "禾火AkiMiike",
-      "published_at": "2026-09-12T15:01:38Z",
-      "url": "https://www.xiaohongshu.com/explore/6aa569520000000025036543",
-      "summary": "浙理工 原鼓手更适合键盘，所以需要一名新鼓手 乐队风格：日摇/ACG 排练室:本校学生活动中心 排练频率:根据队友课表共同商量决定，平常可能有单独的队友约排练室，可以一起来玩 成员情况:主要为大二生组成，后续会争取校外演出机会，整体水平偏基础稳步提升ing 乐队歌单:老人与海，猛独侵袭，夏霞（此三首可以不用练） 新学期歌单安排:空之箱（九月）影色舞（十月）又三郎（十一月）届不到的爱（十一月）秋妈妈（十二月） 我们需要你带演奏视频，或者开学的时候找个机会先交流交流 相对期待大一大二的友友来#鼓手[话题]# #乐队[话题]# #bangdream[话题]#",
-      "likes": 4,
-      "comments": 8,
-      "collects": 0,
-      "location": "浙江",
-      "first_seen_at": "2026-09-14T05:03:31.916398Z",
-      "last_seen_at": "2026-09-15T09:32:28.061454Z"
-    },
-    {
-      "id": "6aa55227000000001001c035",
-      "keyword": "杭州 ACG",
-      "matched_keywords": [
-        "杭州 ACG"
-      ],
-      "title": "杭州9.12日音拼盘结算",
-      "author": "Melina",
-      "published_at": "2026-09-12T13:22:47Z",
-      "url": "https://www.xiaohongshu.com/explore/6aa55227000000001001c035",
-      "summary": "观感非常好，中饭拖了太久导致踩点极限赶在开场前到，感谢滴滴司机飙车让我听到了完整的猛独侵袭，也是第一次线下实战猛独mix可惜没记全，其他队发挥也很好，火鸟爽打风火轮+托举f一串起飞落地，也是体验上人墙了，最后安可轨迹全场一起阿里嘎多一起挥手，还有金色的雨，太感动了 #bangdream[话题]#",
-      "likes": 15,
-      "comments": 2,
-      "collects": 0,
-      "location": "浙江",
-      "first_seen_at": "2026-09-16T00:03:55.731653Z",
-      "last_seen_at": "2026-09-24T00:03:28.334070Z"
-    },
-    {
-      "id": "6aa53d3000000000120269bb",
-      "keyword": "杭州 动漫",
-      "matched_keywords": [
-        "杭州 动漫"
-      ],
-      "title": "杭州大厦 ZPARK 动漫人的乐园",
-      "author": "森罗万象",
-      "published_at": "2026-09-12T11:53:20Z",
-      "url": "https://www.xiaohongshu.com/explore/6aa53d3000000000120269bb",
-      "summary": "幸运E居然在这里抽到了隐藏大奖！！！@ZPARK 地址:杭州大厦中央商城 B2F ZPARK街区(地铁武林广场站D出口直达)",
-      "likes": 2,
-      "comments": 0,
-      "collects": 1,
-      "location": "浙江",
-      "first_seen_at": "2026-09-16T00:05:56.860779Z",
-      "last_seen_at": "2026-09-16T00:05:56.860779Z"
-    },
-    {
-      "id": "6aa535f1000000002902eaaf",
-      "keyword": "杭州 二次元",
-      "matched_keywords": [
-        "杭州 二次元",
-        "杭州 动漫"
-      ],
-      "title": "SHONEN JUMP SHOP·CAFE！开业特别入店须知",
-      "author": "工联CC次元站",
-      "published_at": "2026-09-12T11:22:25Z",
-      "url": "https://www.xiaohongshu.com/explore/6aa535f1000000002902eaaf",
-      "summary": "SHONEN JUMP SHOP·CAFE杭州工联CC店即将于9月26日正式开业！9月25日将开启试营业！ 请务必仔细阅读以下新店开业期间特别入店须知❗️ >SHOP商品区< 📍2026年9月25日至10月7日，实行全预约制 ⏰9月21日 20:00，将开启SHOP商品区预约通道 >CAFE餐饮区< 📍全预约制（新店开业期间，将率先开启2026年9月25日至10月8日场次的预约通道） ⏰9月20日 20:00，将开启CAFE餐饮区预约通道 >STATION外带区< 📍2026年9月25日至9月30日，实行全预约制 ⏰9月23日 20:00，将开启STATION外带区预约通道 >JUMPRI打印区< 📍2026年9月25日至10月7日，实行现场取号制 👉\"预约\"及\"取号\"，均使用官方小🍊序\"SHONEN JUMP SHOP&CAFE\"👈 📝请滑动图片查看详细内容！ 📝具体情报，敬请关注后续发布的相关公告！ ▶︎正式开业：2026年9月26日 ▶︎试营业：2026年9月25日 ▶︎营业时间：10:00-22:00 ▶︎门店地址：浙江省杭州市上城区延安路90号杭州工联CC·B1外广场 (地铁",
-      "likes": 386,
-      "comments": 16,
-      "collects": 166,
-      "location": "浙江",
-      "first_seen_at": "2026-09-16T00:01:27.468400Z",
-      "last_seen_at": "2026-09-18T00:07:23.643406Z"
     }
   ]
 }
