@@ -1,115 +1,17 @@
 {
-  "updated_at": "2026-11-22T17:35:59.711363+08:00",
-  "collector_status": "partial",
+  "updated_at": "2026-11-26T08:08:47.873858+08:00",
+  "collector_status": "ok",
   "login_status": "ok",
   "last_github_upload_status": "ok",
-  "full_result_count": 4197,
-  "latest_result_count": 191,
+  "full_result_count": 3823,
+  "latest_result_count": 200,
   "latest_window_days": 7,
-  "last_successful_run": "2026-11-22T17:35:59.711363+08:00",
-  "failed_keywords": [
-    "杭州 湖滨88",
-    "杭州 in77 活动",
-    "杭州 ONLY",
-    "杭州 跑团",
-    "杭州 TRPG",
-    "杭州 DND",
-    "杭州 COC",
-    "杭州 桌游",
-    "杭州 漫展",
-    "杭州 ACG Live",
-    "杭州 大悦城 二次元"
-  ],
-  "warnings": [
-    "11 keyword(s) failed after fallback",
-    "4 keyword(s) recovered by fallback"
-  ],
-  "failed_keyword_details": [
-    {
-      "keyword": "杭州 湖滨88",
-      "stage": "search",
-      "reason": "context_deadline_exceeded",
-      "attempts": 2,
-      "fallback_used": true
-    },
-    {
-      "keyword": "杭州 in77 活动",
-      "stage": "search",
-      "reason": "context_deadline_exceeded",
-      "attempts": 2,
-      "fallback_used": true
-    },
-    {
-      "keyword": "杭州 ONLY",
-      "stage": "search",
-      "reason": "context_deadline_exceeded",
-      "attempts": 2,
-      "fallback_used": true
-    },
-    {
-      "keyword": "杭州 跑团",
-      "stage": "search",
-      "reason": "context_deadline_exceeded",
-      "attempts": 2,
-      "fallback_used": true
-    },
-    {
-      "keyword": "杭州 TRPG",
-      "stage": "search",
-      "reason": "context_deadline_exceeded",
-      "attempts": 2,
-      "fallback_used": true
-    },
-    {
-      "keyword": "杭州 DND",
-      "stage": "search",
-      "reason": "context_deadline_exceeded",
-      "attempts": 2,
-      "fallback_used": true
-    },
-    {
-      "keyword": "杭州 COC",
-      "stage": "search",
-      "reason": "context_deadline_exceeded",
-      "attempts": 2,
-      "fallback_used": true
-    },
-    {
-      "keyword": "杭州 桌游",
-      "stage": "search",
-      "reason": "context_deadline_exceeded",
-      "attempts": 2,
-      "fallback_used": true
-    },
-    {
-      "keyword": "杭州 漫展",
-      "stage": "search",
-      "reason": "context_deadline_exceeded",
-      "attempts": 2,
-      "fallback_used": true
-    },
-    {
-      "keyword": "杭州 ACG Live",
-      "stage": "search",
-      "reason": "context_deadline_exceeded",
-      "attempts": 2,
-      "fallback_used": true
-    },
-    {
-      "keyword": "杭州 大悦城 二次元",
-      "stage": "search",
-      "reason": "context_deadline_exceeded",
-      "attempts": 2,
-      "fallback_used": true
-    }
-  ],
-  "search_fallback_success": [
-    "杭州 VOCALOID",
-    "杭州 美食节 小吃市集",
-    "杭州 菊花展 赏花",
-    "杭州 万圣节 活动"
-  ],
-  "search_fallback_success_count": 4,
-  "search_failure_count": 11,
+  "last_successful_run": "2026-11-26T08:08:47.873858+08:00",
+  "failed_keywords": [],
+  "warnings": [],
+  "failed_keyword_details": [],
+  "search_fallback_success": [],
+  "search_fallback_success_count": 0,
+  "search_failure_count": 0,
   "detail_failure_count": 0
 }
